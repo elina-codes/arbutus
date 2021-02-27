@@ -1,5 +1,5 @@
 import React from "react"
-import { string } from "prop-types"
+import { string, element, func } from "prop-types"
 import {
   AppBar,
   Toolbar,
@@ -7,10 +7,14 @@ import {
   Button,
   IconButton,
   Grid,
+  useScrollTrigger,
+  Slide,
+  CssBaseline,
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
-import HeaderLink from "./link"
+import { Link } from "components"
 import useStyles from "./styles"
+import placeholderData from "src/placeholder-data"
 
 const topBarLinksMap = new Map([
   ["1-800-510-8040", "tel:18005108040"],
@@ -18,65 +22,81 @@ const topBarLinksMap = new Map([
   ["Brokers", "/"],
 ])
 
-const mainBarLinksMap = new Map([
-  ["Understand leasing", "/"],
-  ["About us", "/"],
-  ["Industries we serve", "/"],
-  ["FAQ", "/"],
-  ["Contact us", "/"],
-])
+const HideOnScroll = ({ children, window }) => {
+  const trigger = useScrollTrigger({ target: window ? window() : undefined })
 
-const Header = ({ siteTitle }) => {
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  )
+}
+
+HideOnScroll.propTypes = {
+  children: element.isRequired,
+  window: func,
+}
+
+const Header = ({ siteTitle, ...props }) => {
   const classes = useStyles()
   const topBarLinks = Array.from(topBarLinksMap)
-  const mainBarLinks = Array.from(mainBarLinksMap)
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" color="inherit">
-        <Toolbar className={classes.topToolbar} variant="dense">
-          <nav>
-            <Grid container spacing={2} alignItems="center" justify="flex-end">
-              {topBarLinks.map(([text, path]) => (
-                <Grid item>
-                  <HeaderLink key={`topBarLink-${text}`} to={path}>
-                    {text}
-                  </HeaderLink>
-                </Grid>
-              ))}
-            </Grid>
-          </nav>
-        </Toolbar>
-        <Toolbar className={classes.mainToolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            {siteTitle}
-          </Typography>
-          <nav>
-            <Grid container spacing={2} alignItems="center">
-              {mainBarLinks.map(([text, path]) => (
-                <Grid item>
-                  <HeaderLink key={`mainBarLink-${text}`} to={path}>
-                    {text}
-                  </HeaderLink>
-                </Grid>
-              ))}
-              <Grid item>
-                <Button color="secondary" variant="contained">
-                  Get started
-                </Button>
+      <CssBaseline />
+      <HideOnScroll {...props}>
+        <AppBar color="inherit">
+          <Toolbar className={classes.topToolbar} variant="dense">
+            <nav>
+              <Grid
+                container
+                spacing={2}
+                alignItems="center"
+                justify="flex-end"
+              >
+                {topBarLinks.map(([text, path]) => (
+                  <Grid item>
+                    <Link key={`topBarLink-${text}`} href={path}>
+                      {text}
+                    </Link>
+                  </Grid>
+                ))}
               </Grid>
-            </Grid>
-          </nav>
-        </Toolbar>
-      </AppBar>
+            </nav>
+          </Toolbar>
+          <Toolbar className={classes.mainToolbar}>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              {siteTitle}
+            </Typography>
+            <nav>
+              <Grid container spacing={2} alignItems="center">
+                {placeholderData.navData.map(([text, path]) => (
+                  <Grid item>
+                    <Link key={`mainBarLink-${text}`} href={path}>
+                      {text}
+                    </Link>
+                  </Grid>
+                ))}
+                <Grid item>
+                  <Button color="secondary" variant="contained">
+                    Get started
+                  </Button>
+                </Grid>
+              </Grid>
+            </nav>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
+      <Toolbar variant="dense" />
+      <Toolbar />
     </div>
   )
 }

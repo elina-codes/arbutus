@@ -32,6 +32,10 @@ const arbutusTheme = {
       fontSize: 18,
       color: "inherit",
     },
+    h5: {
+      fontSize: 16,
+      color: "inherit",
+    },
   },
   overrides: {
     body: {

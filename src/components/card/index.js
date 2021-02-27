@@ -8,11 +8,8 @@ import {
   CardContent as MuiCardContent,
   Typography,
 } from "@material-ui/core"
-import useStyles from "./styles"
 
 const Card = ({ title, meta, image, actions, children }) => {
-  const classes = useStyles()
-
   return (
     <MuiCard>
       <MuiCardActionArea>
