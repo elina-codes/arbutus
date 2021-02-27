@@ -5,14 +5,25 @@ const config = {
   secondary: "#ff5722",
   borderRadius: 10,
   sectionPadding: {
-    paddingLeft: "5%",
-    paddingRight: "5%",
+    default: {
+      padding: "30px 5%",
+    },
+    x: {
+      paddingLeft: "5%",
+      paddingRight: "5%",
+    },
+    y: {
+      paddingTop: 30,
+      paddingBottom: 30,
+    },
   },
 }
 
 const arbutusTheme = {
   borderRadius: config.borderRadius,
-  sectionPadding: config.sectionPadding,
+  sectionPadding: config.sectionPadding.default,
+  sectionPaddingX: config.sectionPadding.x,
+  sectionPaddingY: config.sectionPadding.y,
   palette: {
     primary: {
       main: config.primary,

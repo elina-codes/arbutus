@@ -32,6 +32,7 @@ const FooterMenu = () => {
     },
     {
       title: "Blog",
+      flex: 3,
       items: [
         {
           title:
@@ -78,6 +79,7 @@ const FooterMenu = () => {
             className={classes.footerMenuSection}
             key={`footerMenu-section-${i}`}
             p={3}
+            flex={section.flex || 2}
           >
             <Typography variant="h5">{section?.title}</Typography>
             <List>

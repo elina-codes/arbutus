@@ -12,14 +12,12 @@ const Footer = () => {
     <>
       <Reviews />
       <ContactForm />
-      <div className={classes.footer}>
-        <Menu />
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <Menu />
+      <footer className={classes.footer}>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
     </>
   )
 }
