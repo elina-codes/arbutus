@@ -1,6 +1,5 @@
 import React from "react"
 import { string, node } from "prop-types"
-import { Typography } from "@material-ui/core"
 import useStyles from "./styles"
 import SectionHeading from "./heading"
 
@@ -17,7 +16,7 @@ const Section = ({
   return (
     <div className={[classes.section, className].join(" ")} {...props}>
       <SectionHeading {...{ title, subtitle, description }} />
-      <Typography>{children}</Typography>
+      {children}
     </div>
   )
 }

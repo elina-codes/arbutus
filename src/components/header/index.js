@@ -55,10 +55,8 @@ const Header = ({ siteTitle, ...props }) => {
                 justify="flex-end"
               >
                 {topBarLinks.map(([text, path]) => (
-                  <Grid item>
-                    <Link key={`topBarLink-${text}`} href={path}>
-                      {text}
-                    </Link>
+                  <Grid item key={`topBarLink-${text}`}>
+                    <Link href={path}>{text}</Link>
                   </Grid>
                 ))}
               </Grid>
@@ -73,16 +71,14 @@ const Header = ({ siteTitle, ...props }) => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h6" component="span" className={classes.title}>
               {siteTitle}
             </Typography>
             <nav>
               <Grid container spacing={2} alignItems="center">
-                {placeholderData.navData.map(([text, path]) => (
-                  <Grid item>
-                    <Link key={`mainBarLink-${text}`} href={path}>
-                      {text}
-                    </Link>
+                {placeholderData.navData.map(({ title, href }) => (
+                  <Grid item key={`mainBarLink-${title}`}>
+                    <Link href={href}>{title}</Link>
                   </Grid>
                 ))}
                 <Grid item>

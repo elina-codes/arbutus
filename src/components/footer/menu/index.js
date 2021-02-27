@@ -1,16 +1,8 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
-import {
-  Box,
-  Button,
-  Link,
-  List,
-  ListItem,
-  Typography,
-} from "@material-ui/core"
+import { Box, Button, List, ListItem, Typography } from "@material-ui/core"
 import useStyles from "./styles"
 import placeholderData from "src/placeholder-data"
-import { Section } from "components"
+import { Link, Section } from "components"
 
 const FooterMenu = () => {
   const classes = useStyles()
@@ -95,10 +87,11 @@ const FooterMenu = () => {
                     </Button>
                   ) : (
                     <Link
-                      component={GatsbyLink}
-                      href={item?.href}
-                      external={item.external}
-                      color="inherit"
+                      {...{
+                        href: item?.href,
+                        external: item?.external,
+                        color: "inherit",
+                      }}
                     >
                       {item.title}
                     </Link>
