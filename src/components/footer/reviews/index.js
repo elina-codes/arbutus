@@ -1,8 +1,9 @@
 import React from "react"
 import { array } from "prop-types"
+import { Section } from "components"
 
 const Reviews = ({ data }) => {
-  return <div>Reviews {data}</div>
+  return <Section>Reviews {data}</Section>
 }
 
 Reviews.propTypes = {

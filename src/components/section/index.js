@@ -4,11 +4,18 @@ import { Typography } from "@material-ui/core"
 import useStyles from "./styles"
 import SectionHeading from "./heading"
 
-const Section = ({ title, subtitle, description, children }) => {
+const Section = ({
+  className,
+  title,
+  subtitle,
+  description,
+  children,
+  ...props
+}) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.section}>
+    <div className={[classes.section, className].join(" ")} {...props}>
       <SectionHeading {...{ title, subtitle, description }} />
       <Typography>{children}</Typography>
     </div>

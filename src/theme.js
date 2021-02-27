@@ -1,17 +1,24 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 
-const palette = {
+const config = {
   primary: "#01446f",
   secondary: "#ff5722",
+  borderRadius: 10,
+  sectionPadding: {
+    paddingLeft: "5%",
+    paddingRight: "5%",
+  },
 }
 
 const arbutusTheme = {
+  borderRadius: config.borderRadius,
+  sectionPadding: config.sectionPadding,
   palette: {
     primary: {
-      main: palette.primary,
+      main: config.primary,
     },
     secondary: {
-      main: palette.secondary,
+      main: config.secondary,
     },
   },
   typography: {
@@ -22,7 +29,7 @@ const arbutusTheme = {
     h2: {
       textTransform: "uppercase",
       fontSize: 10,
-      color: palette.secondary,
+      color: config.secondary,
     },
     h3: {
       fontSize: 26,
@@ -39,7 +46,7 @@ const arbutusTheme = {
   },
   overrides: {
     body: {
-      color: palette.primary,
+      color: config.primary,
     },
   },
 }

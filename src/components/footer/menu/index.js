@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core"
 import useStyles from "./styles"
 import placeholderData from "src/placeholder-data"
+import { Section } from "components"
 
 const FooterMenu = () => {
   const classes = useStyles()
@@ -70,7 +71,7 @@ const FooterMenu = () => {
   ]
 
   return (
-    <div className={classes.footerMenu}>
+    <Section className={classes.footerMenu}>
       <Box display="flex">
         {sections.map((section, i) => (
           <Box
@@ -106,7 +107,7 @@ const FooterMenu = () => {
           </Box>
         ))}
       </Box>
-    </div>
+    </Section>
   )
 }
 
