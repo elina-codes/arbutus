@@ -1,5 +1,5 @@
 import React from "react"
-import { string, element, func } from "prop-types"
+import { bool, string, element, func } from "prop-types"
 import {
   AppBar,
   Toolbar,
@@ -16,11 +16,21 @@ import { Link } from "components"
 import useStyles from "./styles"
 import placeholderData from "src/placeholder-data"
 
-const topBarLinksMap = new Map([
-  ["1-800-510-8040", "tel:18005108040"],
-  ["Success Stories", "/"],
-  ["Brokers", "/"],
-])
+const topBarLinks = [
+  {
+    title: "1-800-510-8040",
+    href: "tel:18005108040",
+    external: true,
+  },
+  {
+    title: "Success Stories",
+    href: "/",
+  },
+  {
+    title: "Brokers",
+    href: "/",
+  },
+]
 
 const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({ target: window ? window() : undefined })
@@ -37,9 +47,19 @@ HideOnScroll.propTypes = {
   window: func,
 }
 
+const NavLink = ({ title, href, external }) => (
+  <Grid item>
+    <Link {...{ href, external, color: "inherit" }}>{title}</Link>
+  </Grid>
+)
+NavLink.propTypes = {
+  title: string,
+  href: string,
+  external: bool,
+}
+
 const Header = ({ siteTitle, ...props }) => {
   const classes = useStyles()
-  const topBarLinks = Array.from(topBarLinksMap)
 
   return (
     <div className={classes.root}>
@@ -54,10 +74,8 @@ const Header = ({ siteTitle, ...props }) => {
                 alignItems="center"
                 justify="flex-end"
               >
-                {topBarLinks.map(([text, path]) => (
-                  <Grid item key={`topBarLink-${text}`}>
-                    <Link href={path}>{text}</Link>
-                  </Grid>
+                {topBarLinks.map(item => (
+                  <NavLink {...item} key={`topBarLink-${item.title}`} />
                 ))}
               </Grid>
             </nav>
@@ -76,10 +94,8 @@ const Header = ({ siteTitle, ...props }) => {
             </Typography>
             <nav>
               <Grid container spacing={2} alignItems="center">
-                {placeholderData.navData.map(({ title, href }) => (
-                  <Grid item key={`mainBarLink-${title}`}>
-                    <Link href={href}>{title}</Link>
-                  </Grid>
+                {placeholderData.navData.map(item => (
+                  <NavLink {...item} key={`mainBarLink-${item.title}`} />
                 ))}
                 <Grid item>
                   <Button color="secondary" variant="contained">
