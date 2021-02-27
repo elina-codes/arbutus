@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { string } from "prop-types"
 import {
   AppBar,
   Toolbar,
@@ -9,7 +9,7 @@ import {
   Grid,
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
-import HeaderLink from "./link/index.js"
+import HeaderLink from "./link"
 import useStyles from "./styles"
 
 const topBarLinksMap = new Map([
@@ -82,7 +82,7 @@ const Header = ({ siteTitle }) => {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: string,
 }
 
 export default Header
