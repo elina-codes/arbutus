@@ -1,8 +1,33 @@
 import React from "react"
 import { bool, string, node } from "prop-types"
 import useStyles from "./styles"
-import SectionHeading from "./heading"
-import { Button } from "@material-ui/core"
+import { Button, Typography } from "@material-ui/core"
+
+const SectionHeading = ({ title, subtitle, description, hero, leftAlign }) => {
+  const classes = useStyles()
+
+  return (
+    <div
+      className={[
+        classes.sectionHeading,
+        leftAlign || hero ? classes.leftAlign : "",
+      ].join(" ")}
+    >
+      {title && <Typography variant={hero ? "h1" : "h2"}>{title}</Typography>}
+      {subtitle && <Typography variant="h3">{subtitle}</Typography>}
+      {description && <Typography variant="h4">{description}</Typography>}
+    </div>
+  )
+}
+
+SectionHeading.propTypes = {
+  align: string,
+  title: string,
+  subtitle: string,
+  description: string,
+  hero: bool,
+  leftAlign: bool,
+}
 
 const Section = ({
   bgImage,
@@ -23,7 +48,7 @@ const Section = ({
         " "
       )}
       {...props}
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={bgImage && { backgroundImage: `url(${bgImage})` }}
     >
       <SectionHeading {...{ title, subtitle, description, hero }} />
       {children}

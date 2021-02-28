@@ -19,6 +19,12 @@ const config = {
   },
 }
 
+const typographyCommon = {
+  "&:not(:last-child)": {
+    marginBottom: "0.7em",
+  },
+}
+
 const arbutusTheme = {
   borderRadius: config.borderRadius,
   sectionPadding: config.sectionPadding.default,
@@ -39,7 +45,9 @@ const arbutusTheme = {
     },
     h2: {
       textTransform: "uppercase",
-      fontSize: 10,
+      fontSize: 14,
+      fontWeight: 900,
+      letterSpacing: 1,
       color: config.secondary,
     },
     h3: {
@@ -58,6 +66,11 @@ const arbutusTheme = {
   overrides: {
     body: {
       color: config.primary,
+    },
+    MuiTypography: {
+      root: {
+        ...typographyCommon,
+      },
     },
   },
 }
