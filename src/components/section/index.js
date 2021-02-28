@@ -1,7 +1,7 @@
 import React from "react"
 import { bool, string, node } from "prop-types"
 import useStyles from "./styles"
-import { Button, Typography } from "@material-ui/core"
+import { Button, Container, Typography } from "@material-ui/core"
 
 const SectionHeading = ({ title, subtitle, description, hero, leftAlign }) => {
   const classes = useStyles()
@@ -50,13 +50,15 @@ const Section = ({
       {...props}
       style={bgImage && { backgroundImage: `url(${bgImage})` }}
     >
-      <SectionHeading {...{ title, subtitle, description, hero }} />
-      {children}
-      {button && (
-        <Button variant="contained" color="secondary">
-          {button}
-        </Button>
-      )}
+      <Container>
+        <SectionHeading {...{ title, subtitle, description, hero }} />
+        {children}
+        {button && (
+          <Button variant="contained" color="secondary">
+            {button}
+          </Button>
+        )}
+      </Container>
     </div>
   )
 }
