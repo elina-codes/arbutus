@@ -11,6 +11,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Section
+      hero
+      title={placeholderData.shortTitle}
+      description={placeholderData.paragraph}
+      button={placeholderData.button}
+      bgImage={placeholderData.image}
+    ></Section>
+    <Section
       title={placeholderData.shortTitle}
       subtitle={placeholderData.longTitle}
       description={placeholderData.paragraph}

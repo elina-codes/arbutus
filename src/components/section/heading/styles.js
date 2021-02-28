@@ -1,9 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles"
 
-const styles = makeStyles(theme => ({
-  sectionHeading: {
-    textAlign: "center",
-  },
-}))
+const styles = makeStyles(theme => ({}))
 
 export default styles
