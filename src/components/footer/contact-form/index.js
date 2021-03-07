@@ -8,7 +8,7 @@ const ContactForm = ({ children }) => {
 
   return (
     <Section className={classes.root}>
-      <Section title="Contact form" className={classes.contactForm}>
+      <Section dark title="Contact form" className={classes.contactForm}>
         Form Placeholder
       </Section>
     </Section>

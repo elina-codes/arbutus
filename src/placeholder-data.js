@@ -10,6 +10,7 @@ const placeholderData = {
   paragraph:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque augue ac felis finibus auctor. Curabitur et enim felis. Donec porttitor cursus erat, sit amet commodo lacus faucibus quis. Pellentesque efficitur ultrices massa, sed elementum magna tincidunt a. Etiam vulputate, nulla a ultrices blandit, lacus arcu porta ipsum, in consectetur magna sem ut erat. In viverra ante in erat fringilla bibendum. Nam sed nibh vehicula purus dignissim pharetra. Vestibulum sed lectus nec diam posuere imperdiet. Phasellus gravida metus lectus, id aliquam ex dictum in.",
   button: "Call to Action",
+  list: ["Aenean varius nib", "Nunc tempus purus", "Phasellus vehicula"],
   image: PlaceholderImage,
   link: {
     title: "Placeholder link",
@@ -31,7 +32,7 @@ const placeholderData = {
     },
     {
       title: "FAQ",
-      href: "/",
+      href: "/faq",
     },
     {
       title: "Contact us",

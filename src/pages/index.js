@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 import Layout from "components/layout"
 import Image from "components/image"
 import SEO from "components/seo"
-import { Card, Section } from "components"
+import { Banner, Card, Section } from "components"
 import placeholderData from "../placeholder-data"
+import { Button } from "@material-ui/core"
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,15 @@ const IndexPage = () => (
       button={placeholderData.button}
       bgImage={placeholderData.image}
     ></Section>
+    <Banner
+      cta={
+        <Button color="secondary" variant="contained">
+          {placeholderData.button}
+        </Button>
+      }
+    >
+      Do something over here
+    </Banner>
     <Section
       title={placeholderData.shortTitle}
       subtitle={placeholderData.longTitle}

@@ -7,7 +7,6 @@ const styles = makeStyles(theme => ({
   contactForm: {
     minHeight: 400,
     borderRadius: theme.borderRadius,
-    background: "blue",
   },
 }))
 

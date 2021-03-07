@@ -64,7 +64,7 @@ const FooterMenu = () => {
   ]
 
   return (
-    <Section className={classes.footerMenu}>
+    <Section dark className={classes.footerMenu}>
       <Box display="flex">
         {sections.map((section, i) => (
           <Box
@@ -73,7 +73,7 @@ const FooterMenu = () => {
             p={3}
             flex={section.flex || 2}
           >
-            <Typography variant="h5">{section?.title}</Typography>
+            <Typography variant="h4">{section?.title}</Typography>
             <List>
               {section?.items?.map((item, j) => (
                 <ListItem

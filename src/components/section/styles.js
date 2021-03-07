@@ -22,6 +22,10 @@ const styles = makeStyles(theme => ({
     textAlign: "left",
     alignSelf: "flex-start",
   },
+  dark: {
+    color: "white",
+    backgroundColor: theme.palette.primary.main,
+  },
 }))
 
 export default styles

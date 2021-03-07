@@ -49,7 +49,7 @@ HideOnScroll.propTypes = {
 
 const NavLink = ({ title, href, external }) => (
   <Grid item>
-    <Link {...{ href, external, color: "inherit" }}>{title}</Link>
+    <Link {...{ to: href, external, color: "inherit" }}>{title}</Link>
   </Grid>
 )
 NavLink.propTypes = {

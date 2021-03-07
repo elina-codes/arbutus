@@ -1,9 +1,17 @@
 import React from "react"
 import { bool, string, node } from "prop-types"
 import useStyles from "./styles"
+import { classNames } from "src/helpers"
 import { Button, Container, Typography } from "@material-ui/core"
 
-const SectionHeading = ({ title, subtitle, description, hero, leftAlign }) => {
+const SectionHeading = ({
+  title,
+  subtitle,
+  description,
+  buttons,
+  hero,
+  leftAlign,
+}) => {
   const classes = useStyles()
 
   return (
@@ -14,8 +22,17 @@ const SectionHeading = ({ title, subtitle, description, hero, leftAlign }) => {
       ].join(" ")}
     >
       {title && <Typography variant={hero ? "h1" : "h2"}>{title}</Typography>}
-      {subtitle && <Typography variant="h3">{subtitle}</Typography>}
-      {description && <Typography variant="h4">{description}</Typography>}
+      {subtitle && (
+        <Typography variant="h3" component={hero ? "h2" : "h3"}>
+          {subtitle}
+        </Typography>
+      )}
+      {description && (
+        <Typography variant="h4" component={hero ? "h3" : "h4"}>
+          {description}
+        </Typography>
+      )}
+      {buttons && <div className={classes.buttonContainer}>{buttons}</div>}
     </div>
   )
 }
@@ -25,6 +42,7 @@ SectionHeading.propTypes = {
   title: string,
   subtitle: string,
   description: string,
+  buttons: node,
   hero: bool,
   leftAlign: bool,
 }
@@ -34,6 +52,7 @@ const Section = ({
   button,
   children,
   className,
+  dark,
   description,
   hero,
   subtitle,
@@ -41,12 +60,18 @@ const Section = ({
   ...props
 }) => {
   const classes = useStyles()
+  const styleClasses = [classes.section, className]
+
+  if (hero) {
+    styleClasses.push(classes.hero)
+  }
+  if (dark) {
+    styleClasses.push(classes.dark)
+  }
 
   return (
     <div
-      className={[classes.section, hero ? classes.hero : "", className].join(
-        " "
-      )}
+      className={classNames(...styleClasses)}
       {...props}
       style={bgImage && { backgroundImage: `url(${bgImage})` }}
     >
@@ -67,6 +92,7 @@ Section.propTypes = {
   align: string,
   bgImage: string,
   button: string,
+  dark: bool,
   children: node,
   description: string,
   hero: bool,

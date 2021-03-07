@@ -4,18 +4,13 @@ const config = {
   primary: "#01446f",
   secondary: "#ff5722",
   borderRadius: 10,
-  sectionPadding: {
-    default: {
-      padding: "30px 5%",
-    },
-    x: {
-      paddingLeft: "5%",
-      paddingRight: "5%",
-    },
-    y: {
-      paddingTop: 30,
-      paddingBottom: 30,
-    },
+  sectionPaddingX: {
+    paddingLeft: "5%",
+    paddingRight: "5%",
+  },
+  sectionPaddingY: {
+    paddingTop: 50,
+    paddingBottom: 50,
   },
 }
 
@@ -27,9 +22,9 @@ const typographyCommon = {
 
 const arbutusTheme = {
   borderRadius: config.borderRadius,
-  sectionPadding: config.sectionPadding.default,
-  sectionPaddingX: config.sectionPadding.x,
-  sectionPaddingY: config.sectionPadding.y,
+  sectionPadding: { ...config.sectionPaddingX, ...config.sectionPaddingY },
+  sectionPaddingX: config.sectionPaddingX,
+  sectionPaddingY: config.sectionPaddingY,
   palette: {
     primary: {
       main: config.primary,
@@ -61,6 +56,7 @@ const arbutusTheme = {
     h5: {
       fontSize: 16,
       color: "inherit",
+      fontWeight: 900,
     },
   },
   overrides: {
