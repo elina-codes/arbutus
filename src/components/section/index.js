@@ -1,25 +1,26 @@
 import React from "react"
-import { bool, string, node } from "prop-types"
+import { bool, object, string, node } from "prop-types"
 import useStyles from "./styles"
 import { classNames } from "src/helpers"
 import { Button, Container, Typography } from "@material-ui/core"
+import Image from "components/image"
 
 const SectionHeading = ({
   title,
   subtitle,
   description,
-  buttons,
+  headerButtons,
   hero,
-  leftAlign,
+  center,
 }) => {
   const classes = useStyles()
 
   return (
     <div
-      className={[
+      className={classNames(
         classes.sectionHeading,
-        leftAlign || hero ? classes.leftAlign : "",
-      ].join(" ")}
+        center ? classes.center : ""
+      )}
     >
       {title && <Typography variant={hero ? "h1" : "h2"}>{title}</Typography>}
       {subtitle && (
@@ -32,57 +33,96 @@ const SectionHeading = ({
           {description}
         </Typography>
       )}
-      {buttons && <div className={classes.buttonContainer}>{buttons}</div>}
+      {headerButtons && (
+        <div className={classes.buttonContainer}>{headerButtons}</div>
+      )}
     </div>
   )
 }
 
 SectionHeading.propTypes = {
   align: string,
+  center: bool,
   title: string,
   subtitle: string,
   description: string,
   buttons: node,
   hero: bool,
-  leftAlign: bool,
 }
 
 const Section = ({
   bgImage,
   button,
+  center,
   children,
   className,
   dark,
   description,
   hero,
+  image,
   subtitle,
   title,
+  headerButtons,
   ...props
 }) => {
   const classes = useStyles()
-  const styleClasses = [classes.section, className]
+  const centerSection = !hero && (!image || center)
+  const sectionClasses = [classes.section]
 
   if (hero) {
-    styleClasses.push(classes.hero)
+    sectionClasses.push(classes.hero)
   }
-  if (dark) {
-    styleClasses.push(classes.dark)
+  if (dark || hero) {
+    sectionClasses.push(classes.dark)
+  }
+  if (centerSection) {
+    sectionClasses.push(classes.center)
+  }
+
+  const sectionInnerClasses = [classes.sectionInner]
+  if (image?.position === "right") {
+    sectionInnerClasses.push("imageRight")
+  }
+  if (image?.position === "left") {
+    sectionInnerClasses.push("imageLeft")
   }
 
   return (
     <div
-      className={classNames(...styleClasses)}
+      className={classNames(...sectionClasses, className)}
       {...props}
       style={bgImage && { backgroundImage: `url(${bgImage})` }}
     >
       <Container>
-        <SectionHeading {...{ title, subtitle, description, hero }} />
-        {children}
-        {button && (
-          <Button variant="contained" color="secondary">
-            {button}
-          </Button>
-        )}
+        <div className={classNames(...sectionInnerClasses)}>
+          <div className={classes.sectionContent}>
+            <SectionHeading
+              {...{
+                title,
+                subtitle,
+                description,
+                hero,
+                center: centerSection,
+                buttons: headerButtons,
+              }}
+            />
+            {children}
+            {button && (
+              <Button
+                variant="contained"
+                color="secondary"
+                className={classes.sectionButton}
+              >
+                {button}
+              </Button>
+            )}
+          </div>
+          {image?.src && (
+            <div className={classes.sectionImage}>
+              <img src={image.src} alt={image?.alt} className={classes.image} />
+            </div>
+          )}
+        </div>
       </Container>
     </div>
   )
@@ -94,8 +134,10 @@ Section.propTypes = {
   button: string,
   dark: bool,
   children: node,
+  headerButtons: node,
   description: string,
   hero: bool,
+  image: object,
   subtitle: string,
   title: string,
 }

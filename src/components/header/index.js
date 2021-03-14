@@ -90,7 +90,7 @@ const Header = ({ siteTitle, ...props }) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="span" className={classes.title}>
-              {siteTitle}
+              <Link to="/">{siteTitle}</Link>
             </Typography>
             <nav>
               <Grid container spacing={2} alignItems="center">

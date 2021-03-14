@@ -1,5 +1,6 @@
 import React from "react"
 import PlaceholderImage from "./images/placeholder.jpg"
+import PlaceholderBannerImage from "./images/placeholder-banner.png"
 import { Star } from "phosphor-react"
 
 const placeholderData = {
@@ -12,6 +13,7 @@ const placeholderData = {
   button: "Call to Action",
   list: ["Aenean varius nib", "Nunc tempus purus", "Phasellus vehicula"],
   image: PlaceholderImage,
+  bannerImage: PlaceholderBannerImage,
   link: {
     title: "Placeholder link",
     href: "/",

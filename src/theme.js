@@ -12,6 +12,13 @@ const config = {
     paddingTop: 50,
     paddingBottom: 50,
   },
+  spacing: {
+    xs: 8,
+    sm: 16,
+    md: 24,
+    lg: 32,
+    xl: 40,
+  },
 }
 
 const typographyCommon = {
@@ -33,9 +40,13 @@ const arbutusTheme = {
       main: config.secondary,
     },
   },
+  space: {
+    ...config.spacing,
+  },
   typography: {
     h1: {
-      fontSize: 40,
+      fontSize: 48,
+      fontWeight: 700,
       color: "inherit",
     },
     h2: {
@@ -46,7 +57,8 @@ const arbutusTheme = {
       color: config.secondary,
     },
     h3: {
-      fontSize: 26,
+      fontSize: 36,
+      fontWeight: 700,
       color: "inherit",
     },
     h4: {

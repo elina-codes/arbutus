@@ -1,20 +1,21 @@
 import React from "react"
-
 import Layout from "components/layout"
-import SEO from "components/seo"
 import { Banner, Section } from "components"
 import placeholderData from "../placeholder-data"
 
+const seo = {
+  title: "FAQ",
+}
+
+const topBannerData = {
+  title: "Frequently Asked Questions",
+  description: placeholderData.sentence,
+  cta: placeholderData.button,
+  bgImage: placeholderData.bannerImage,
+}
+
 const IndexPage = () => (
-  <Layout>
-    <SEO title="FAQ" />
-    <Section
-      hero
-      title="Frequently asked questions"
-      description={placeholderData.paragraph}
-      button={placeholderData.button}
-      bgImage={placeholderData.image}
-    ></Section>
+  <Layout {...{ seo, topBannerData }}>
     <Banner data={placeholderData.list} />
     <Section
       title={placeholderData.shortTitle}
