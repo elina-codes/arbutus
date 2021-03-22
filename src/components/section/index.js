@@ -1,9 +1,10 @@
 import React from "react"
 import { bool, object, string, node } from "prop-types"
 import useStyles from "./styles"
-import { classNames } from "src/helpers"
-import { Button, Container, Typography } from "@material-ui/core"
+import classNames from "classnames"
+import { Button, Container } from "@material-ui/core"
 import Image from "components/image"
+import { Text } from "components"
 
 const SectionHeading = ({
   title,
@@ -17,21 +18,20 @@ const SectionHeading = ({
 
   return (
     <div
-      className={classNames(
-        classes.sectionHeading,
-        center ? classes.center : ""
-      )}
+      className={classNames(classes.sectionHeading, {
+        [classes.center]: center,
+      })}
     >
-      {title && <Typography variant={hero ? "h1" : "h2"}>{title}</Typography>}
+      {title && <Text variant={hero ? "h1" : "h2"}>{title}</Text>}
       {subtitle && (
-        <Typography variant="h3" component={hero ? "h2" : "h3"}>
+        <Text variant="h3" component={hero ? "h2" : "h3"}>
           {subtitle}
-        </Typography>
+        </Text>
       )}
       {description && (
-        <Typography variant="h4" component={hero ? "h3" : "h4"}>
+        <Text variant="h4" component={hero ? "h3" : "h4"}>
           {description}
-        </Typography>
+        </Text>
       )}
       {headerButtons && (
         <div className={classes.buttonContainer}>{headerButtons}</div>
@@ -52,69 +52,70 @@ SectionHeading.propTypes = {
 
 const Section = ({
   bgImage,
+  black,
   button,
   center,
   children,
   className,
   dark,
   description,
+  headerButtons,
   hero,
   image,
+  light,
   subtitle,
   title,
-  headerButtons,
   ...props
 }) => {
   const classes = useStyles()
   const centerSection = !hero && (!image || center)
-  const sectionClasses = [classes.section]
-
-  if (hero) {
-    sectionClasses.push(classes.hero)
-  }
-  if (dark || hero) {
-    sectionClasses.push(classes.dark)
-  }
-  if (centerSection) {
-    sectionClasses.push(classes.center)
-  }
-
-  const sectionInnerClasses = [classes.sectionInner]
-  if (image?.position === "right") {
-    sectionInnerClasses.push("imageRight")
-  }
-  if (image?.position === "left") {
-    sectionInnerClasses.push("imageLeft")
-  }
+  const showHeading = title || subtitle || description
 
   return (
     <div
-      className={classNames(...sectionClasses, className)}
+      className={classNames(
+        classes.section,
+        {
+          [classes.light]: light,
+          [classes.dark]: dark || hero,
+          [classes.black]: black,
+          [classes.hero]: hero,
+          [classes.center]: centerSection,
+        },
+        className
+      )}
       {...props}
       style={bgImage && { backgroundImage: `url(${bgImage})` }}
     >
       <Container>
-        <div className={classNames(...sectionInnerClasses)}>
-          <div className={classes.sectionContent}>
-            <SectionHeading
-              {...{
-                title,
-                subtitle,
-                description,
-                hero,
-                center: centerSection,
-                buttons: headerButtons,
-              }}
-            />
-            {children}
+        <div
+          className={classNames(classes.sectionInner, {
+            imageLeft: image?.position === "left",
+            imageRight: image?.position === "right",
+          })}
+        >
+          <div className={classes.sectionMain}>
+            {showHeading && (
+              <SectionHeading
+                {...{
+                  title,
+                  subtitle,
+                  description,
+                  hero,
+                  center: centerSection,
+                  buttons: headerButtons,
+                }}
+              />
+            )}
+            {children && (
+              <div className={classes.sectionContent}>{children}</div>
+            )}
             {button && (
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.sectionButton}
-              >
-                {button}
-              </Button>
+              <div className={classes.buttonContainer}>
+                <Button variant="contained" color="secondary">
+                  {button}
+                </Button>
+              </div>
             )}
           </div>
           {image?.src && (
@@ -131,13 +132,15 @@ const Section = ({
 Section.propTypes = {
   align: string,
   bgImage: string,
+  black: bool,
   button: string,
-  dark: bool,
   children: node,
-  headerButtons: node,
+  dark: bool,
   description: string,
+  headerButtons: node,
   hero: bool,
   image: object,
+  light: bool,
   subtitle: string,
   title: string,
 }

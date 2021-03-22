@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const styles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    color: "white",
+    color: theme.palette.white,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -12,7 +12,7 @@ const styles = makeStyles(theme => ({
     flexGrow: 1,
   },
   topToolbar: {
-    color: "white",
+    color: theme.palette.white,
     background: theme.palette.primary.main,
     fontSize: "small",
     "& nav": {

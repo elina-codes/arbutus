@@ -2,6 +2,8 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const styles = makeStyles(theme => ({
   section: {
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     padding: theme.spacing(3),
     ...theme.sectionPadding,
   },
@@ -32,8 +34,15 @@ const styles = makeStyles(theme => ({
     textAlign: "center",
   },
   dark: {
-    color: "white",
+    color: theme.palette.white,
     backgroundColor: theme.palette.primary.main,
+  },
+  black: {
+    color: theme.palette.white,
+    backgroundColor: theme.palette.black,
+  },
+  light: {
+    backgroundColor: theme.palette.background.light,
   },
   sectionInner: {
     display: "grid",
@@ -50,20 +59,26 @@ const styles = makeStyles(theme => ({
       "&.imageRight": {
         gridTemplate: `
           "main image"
-          / 1fr 1fr`,
+          / 1fr 52%`,
       },
       "&.imageLeft": {
         gridTemplate: `
         "image main"
-        / 1fr 1fr`,
+        / 52% 1fr`,
       },
     },
   },
-  sectionContent: {
+  sectionMain: {
     gridArea: "main",
   },
   sectionImage: {
     gridArea: "image",
+    display: "flex",
+  },
+  sectionContent: {
+    "&:not(:first-child)": {
+      marginTop: theme.space.lg,
+    },
   },
   sectionButton: {
     marginTop: theme.space.md,
@@ -71,6 +86,8 @@ const styles = makeStyles(theme => ({
   image: {
     boxShadow: "rgba(68,87,121,0.15)",
     borderRadius: theme.borderRadius,
+    objectFit: "cover",
+    boxShadow: "4px 8px 30px rgba(68, 87, 121, 0.15)",
   },
 }))
 

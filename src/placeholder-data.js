@@ -30,7 +30,7 @@ const placeholderData = {
     },
     {
       title: "Industries we serve",
-      href: "/",
+      href: "/industries-we-serve",
     },
     {
       title: "FAQ",

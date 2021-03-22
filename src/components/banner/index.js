@@ -1,8 +1,8 @@
 import React from "react"
 import { array, node } from "prop-types"
 import useStyles from "./styles"
-import { Section } from "components"
-import { Box, Typography } from "@material-ui/core"
+import { Section, Text } from "components"
+import { Box } from "@material-ui/core"
 
 const Banner = ({ children, cta, data }) => {
   const classes = useStyles()
@@ -10,9 +10,9 @@ const Banner = ({ children, cta, data }) => {
     <ul className={classes.bannerList}>
       {data.map((item, i) => (
         <li key={`item-${i}-${item}`} className={classes.bannerListItem}>
-          <Typography variant="h5" component="span">
+          <Text variant="h5" component="span">
             {item}
-          </Typography>
+          </Text>
         </li>
       ))}
     </ul>
@@ -25,9 +25,9 @@ const Banner = ({ children, cta, data }) => {
         ) : (
           <>
             <div>
-              <Typography variant="h5" component="span">
+              <Text variant="h5" component="span">
                 {children}
-              </Typography>
+              </Text>
             </div>
             {cta}
           </>

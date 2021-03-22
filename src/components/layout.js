@@ -15,6 +15,7 @@ import "./layout.css"
 import theme from "../theme.js"
 import { Header, Footer, Section } from "."
 import SEO from "./seo"
+import { CssBaseline } from "@material-ui/core"
 
 const Layout = ({ topBannerData, children, seo }) => {
   const {
@@ -37,6 +38,7 @@ const Layout = ({ topBannerData, children, seo }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <SEO {...seo} />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>

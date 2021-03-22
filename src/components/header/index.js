@@ -3,7 +3,6 @@ import { bool, string, element, func } from "prop-types"
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   IconButton,
   Grid,
@@ -12,7 +11,7 @@ import {
   CssBaseline,
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
-import { Link } from "components"
+import { Link, Text } from "components"
 import useStyles from "./styles"
 import placeholderData from "src/placeholder-data"
 
@@ -89,9 +88,9 @@ const Header = ({ siteTitle, ...props }) => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="span" className={classes.title}>
+            <Text variant="h6" component="span" className={classes.title}>
               <Link to="/">{siteTitle}</Link>
-            </Typography>
+            </Text>
             <nav>
               <Grid container spacing={2} alignItems="center">
                 {placeholderData.navData.map(item => (

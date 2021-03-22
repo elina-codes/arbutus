@@ -1,8 +1,8 @@
 import React from "react"
-import { Box, Button, List, ListItem, Typography } from "@material-ui/core"
+import { Box, Button, List, ListItem } from "@material-ui/core"
 import useStyles from "./styles"
 import placeholderData from "src/placeholder-data"
-import { Link, Section } from "components"
+import { Link, Section, Text } from "components"
 
 const FooterMenu = () => {
   const classes = useStyles()
@@ -64,7 +64,7 @@ const FooterMenu = () => {
   ]
 
   return (
-    <Section dark className={classes.footerMenu}>
+    <Section black className={classes.footerMenu}>
       <Box display="flex">
         {sections.map((section, i) => (
           <Box
@@ -73,7 +73,7 @@ const FooterMenu = () => {
             p={3}
             flex={section.flex || 2}
           >
-            <Typography variant="h4">{section?.title}</Typography>
+            <Text variant="h4">{section?.title}</Text>
             <List>
               {section?.items?.map((item, j) => (
                 <ListItem

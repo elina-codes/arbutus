@@ -3,6 +3,8 @@ import { createMuiTheme } from "@material-ui/core/styles"
 const config = {
   primary: "#01446f",
   secondary: "#ff5722",
+  textPrimary: "#003354",
+  backgroundLight: "#F7F8FA",
   borderRadius: 10,
   sectionPaddingX: {
     paddingLeft: "5%",
@@ -39,6 +41,11 @@ const arbutusTheme = {
     secondary: {
       main: config.secondary,
     },
+    white: "#fff",
+    black: "#000",
+    background: {
+      light: config.backgroundLight,
+    },
   },
   space: {
     ...config.spacing,
@@ -60,20 +67,38 @@ const arbutusTheme = {
       fontSize: 36,
       fontWeight: 700,
       color: "inherit",
+      lineHeight: 1.3,
     },
     h4: {
       fontSize: 18,
       color: "inherit",
+      lineHeight: 1.3,
     },
     h5: {
       fontSize: 16,
       color: "inherit",
+      lineHeight: 1.3,
       fontWeight: 900,
     },
   },
   overrides: {
+    MuiCssBaseline: {
+      "@global": {
+        body: {
+          color: config.textPrimary,
+          lineHeight: 1.5,
+          backgroundColor: "#fff",
+        },
+        ".prewrap": {
+          whiteSpace: "pre-wrap",
+        },
+        ".preline": {
+          whiteSpace: "pre-line",
+        },
+      },
+    },
     body: {
-      color: config.primary,
+      color: config.textPrimary,
     },
     MuiTypography: {
       root: {

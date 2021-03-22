@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const styles = makeStyles(theme => ({
   footerMenu: {
-    backgroundColor: "black",
+    backgroundColor: theme.palette.black,
   },
 }))
 

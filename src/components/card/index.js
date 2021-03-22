@@ -6,8 +6,8 @@ import {
   CardActionArea as MuiCardActionArea,
   CardMedia as MuiCardMedia,
   CardContent as MuiCardContent,
-  Typography,
 } from "@material-ui/core"
+import { Text } from "components"
 
 const Card = ({ title, meta, image, actions, children }) => {
   return (
@@ -24,14 +24,14 @@ const Card = ({ title, meta, image, actions, children }) => {
         )}
         <MuiCardContent>
           {meta && (
-            <Typography gutterBottom variant="caption">
+            <Text gutterBottom variant="caption">
               {meta}
-            </Typography>
+            </Text>
           )}
           {title && (
-            <Typography gutterBottom variant="h5" component="h3">
+            <Text gutterBottom variant="h5" component="h3">
               {title}
-            </Typography>
+            </Text>
           )}
           {children}
         </MuiCardContent>
