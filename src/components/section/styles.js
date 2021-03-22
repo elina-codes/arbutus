@@ -23,7 +23,7 @@ const styles = makeStyles(theme => ({
     maxWidth: 540,
   },
   buttonContainer: {
-    marginTop: theme.space.xl,
+    marginTop: theme.space.md,
   },
   center: {
     display: "flex",

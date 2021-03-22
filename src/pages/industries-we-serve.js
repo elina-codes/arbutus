@@ -25,15 +25,20 @@ const IndustriesWeServePage = () => {
     <Layout {...{ seo, topBannerData }}>
       <PageMenu sections={menuSections} />
       {pageSections.map((section, i) => {
-        const { content, image, ...sectionProps } = section
+        const { menuItem, altTitle, content, image, ...sectionProps } = section
         const alternate = i % 2
         const position = alternate ? "right" : "left"
-        const light = alternate
+        const light = !!alternate
         return (
           <Section
-            {...{ light, image: { position, ...image }, ...sectionProps }}
+            {...{
+              key: section.id,
+              light,
+              image: { position, ...image },
+              ...sectionProps,
+            }}
           >
-            <ul style={{ columnCount: 2 }}>
+            <ul style={{ columnCount: 2, marginBottom: 0 }}>
               {content.map(item => (
                 <li key={item}>{item}</li>
               ))}

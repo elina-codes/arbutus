@@ -27,8 +27,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Construction",
+      menuItem: "altTitle",
+      altTitle: "Construction",
+      title: "Construction Equipment",
       subtitle: "Construction equipment leasing made easy.",
       image: {
         src: placeholderData.image,
@@ -51,8 +52,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Forestry",
+      menuItem: "altTitle",
+      altTitle: "Forestry",
+      title: "Forestry Equipment",
       subtitle: "We lease forestry equipment of all sorts.",
       image: {
         src: placeholderData.image,
@@ -71,8 +73,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Hospitality",
+      menuItem: "altTitle",
+      altTitle: "Hospitality",
+      title: "Hospitality Equipment",
       subtitle: "Everything you need for your new restaurant.",
       image: {
         src: placeholderData.image,
@@ -95,8 +98,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Fitness",
+      menuItem: "altTitle",
+      altTitle: "Fitness",
+      title: "Fitness Equipment",
       subtitle: "Leasing gym equipment has never been easier.",
       image: {
         src: placeholderData.image,
@@ -117,8 +121,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Health and Wellness",
+      menuItem: "altTitle",
+      altTitle: "Health and Wellness",
+      title: "Health and Wellness Equipment",
       subtitle: "We also lease health and wellness equipment.",
       image: {
         src: placeholderData.image,
@@ -139,8 +144,9 @@ export const iwsContent = {
       ],
     },
     {
-      menuItem: "title",
-      title: "Manufacturing",
+      menuItem: "altTitle",
+      altTitle: "Manufacturing",
+      title: "Manufacturing Equipment",
       subtitle: "Want manufacturing equipment? We can help with that.",
       image: {
         src: placeholderData.image,
