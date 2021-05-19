@@ -1,21 +1,22 @@
 import React from "react"
-import { bool, node } from "prop-types"
 import classNames from "classnames"
 import useStyles from "./styles"
 
-const ImagePlain = ({ src, alt, className }) => {
+const ImagePlain = ({ src, alt, maxWidth = "none", alignTop, className }) => {
   const classes = useStyles()
 
   return (
-    <div className={classNames(classes.plainImageContainer, className)}>
+    <div
+      className={classNames(
+        classes.plainImageContainer,
+        { [classes.alignTop]: alignTop },
+        className
+      )}
+      style={{ maxWidth }}
+    >
       <img {...{ src, alt }} className={classes.image} />
     </div>
   )
-}
-
-ImagePlain.propTypes = {
-  children: node,
-  preLine: bool,
 }
 
 export default ImagePlain

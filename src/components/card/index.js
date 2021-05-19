@@ -1,5 +1,4 @@
 import React from "react"
-import { string, node, object } from "prop-types"
 import {
   Card as MuiCard,
   CardActions as MuiCardActions,
@@ -39,14 +38,6 @@ const Card = ({ title, meta, image, actions, children }) => {
       {actions && <MuiCardActions>{actions}</MuiCardActions>}
     </MuiCard>
   )
-}
-
-Card.propTypes = {
-  title: string,
-  meta: string,
-  image: object,
-  actions: node,
-  children: node,
 }
 
 export default Card

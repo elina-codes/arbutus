@@ -33,6 +33,13 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      style={[
+        {
+          cssText: `
+            html {scroll-behavior: smooth;}
+          `,
+        },
+      ]}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[

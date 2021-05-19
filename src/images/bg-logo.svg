@@ -1,13 +1,1 @@
-<svg width="280" height="130" viewBox="0 0 280 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.2">
-<ellipse cx="64.5" cy="71" rx="215.5" ry="286" fill="#65666A"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-151" y="-215" width="431" height="572">
-<ellipse cx="64.5" cy="71" rx="215.5" ry="286" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<ellipse opacity="0.8" cx="64.5" cy="71" rx="215.5" ry="286" fill="#65666A"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.580215 35H134.755L155 101.952V368H-33V101.418L0.580215 35Z" fill="#3B3C3F"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M27.6996 -131H98.1439L224 276.9L154.594 336L62.8574 27.3479L-26.4058 336L-96 276.9L27.6996 -131Z" fill="#939498"/>
-</g>
-</g>
-</svg>
+<svg fill="none" height="130" viewBox="0 0 280 130" width="280" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><mask id="a" height="572" maskUnits="userSpaceOnUse" width="431" x="-151" y="-215"><ellipse cx="64.5" cy="71" fill="#fff" rx="215.5" ry="286"/></mask><g opacity=".2"><ellipse cx="64.5" cy="71" fill="#65666a" rx="215.5" ry="286"/><g mask="url(#a)"><ellipse cx="64.5" cy="71" fill="#65666a" opacity=".8" rx="215.5" ry="286"/><g clip-rule="evenodd" fill-rule="evenodd"><path d="m.580215 35h134.174785l20.245 66.952v266.048h-188v-266.582z" fill="#3b3c3f"/><path d="m27.6996-131h70.4443l125.8561 407.9-69.406 59.1-91.7366-308.6521-89.2632 308.6521-69.5942-59.1z" fill="#939498"/></g></g></g></svg>

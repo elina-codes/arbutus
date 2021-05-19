@@ -1,5 +1,4 @@
 import React from "react"
-import { array } from "prop-types"
 import {
   Accordion as MuiAccordion,
   AccordionDetails as MuiAccordionDetails,
@@ -31,10 +30,6 @@ const Accordion = ({ data = [], ...props }) => {
       ))}
     </div>
   )
-}
-
-Accordion.propTypes = {
-  data: array,
 }
 
 export default Accordion

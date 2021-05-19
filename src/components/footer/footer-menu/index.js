@@ -1,23 +1,55 @@
 import React from "react"
-import { Box, Button, List, ListItem } from "@material-ui/core"
+import { phoneNumber, routes } from "src/constants"
+import { Box, List, ListItem } from "@material-ui/core"
 import useStyles from "./styles"
-import placeholderData from "src/placeholder-data"
-import { Link, Section, Text } from "components"
+import { Button, OpenContactModalButton, Link, Section, Text } from "components"
+import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
 
 const FooterMenu = () => {
   const classes = useStyles()
+  const { brokers, aboutUs, blog, contactUs } = routes
 
   const sections = [
     {
       title: "Resources",
-      items: placeholderData.navData,
+      items: [
+        {
+          title: aboutUs.title,
+          href: aboutUs.path,
+        },
+        {
+          title: "News & Press",
+          href: "#",
+        },
+        {
+          title: contactUs.title,
+          href: contactUs.path,
+        },
+        {
+          title: brokers.title,
+          href: brokers.path,
+        },
+        {
+          title: blog.title,
+          href: blog.path,
+        },
+        {
+          title: "Full application form",
+          href: "#",
+        },
+      ],
     },
     {
       title: "Social Media",
       items: [
         {
-          title: placeholderData.icon,
-          href: "/",
+          title: (
+            <>
+              <LinkedInIcon size={26} style={{ verticalAlign: "middle" }} />{" "}
+              LinkedIn
+            </>
+          ),
+          href: "https://ca.linkedin.com/company/arbutus-capital",
           external: true,
         },
       ],
@@ -46,18 +78,15 @@ const FooterMenu = () => {
       items: [
         {
           type: "button",
-          buttonProps: {
-            variant: "contained",
-          },
-          title: placeholderData.button.text,
+          button: (
+            <Button color="default" href={phoneNumber.href}>
+              {phoneNumber.text}
+            </Button>
+          ),
         },
         {
           type: "button",
-          buttonProps: {
-            variant: "contained",
-            color: "secondary",
-          },
-          title: placeholderData.button.text,
+          button: <OpenContactModalButton>Apply Now</OpenContactModalButton>,
         },
       ],
     },
@@ -78,13 +107,12 @@ const FooterMenu = () => {
               {section?.items?.map((item, j) => (
                 <ListItem
                   disableGutters
+                  className={classes.footerMenuListItem}
                   dense
                   key={`footerMenu-section-${i}-item-${j}`}
                 >
                   {item.type === "button" ? (
-                    <Button variant="contained" {...item.buttonProps}>
-                      {item.title}
-                    </Button>
+                    item.button
                   ) : (
                     <Link
                       {...{

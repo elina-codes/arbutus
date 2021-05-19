@@ -1,33 +1,56 @@
+import { routes, phoneNumber } from "src/constants"
 import React from "react"
-import { bool, string, element, func } from "prop-types"
 import {
   AppBar,
   Toolbar,
-  Button,
-  IconButton,
+  // IconButton,
   Grid,
   useScrollTrigger,
   Slide,
   CssBaseline,
 } from "@material-ui/core"
-import MenuIcon from "@material-ui/icons/Menu"
-import { Link, Text } from "components"
+// import MenuIcon from "@material-ui/icons/Menu"
+import { OpenContactModalButton, Link, Text } from "components"
 import useStyles from "./styles"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
+
+const { howItWorks, aboutUs, industries, faq, contactUs } = routes
+const mainBarLinks = [
+  {
+    title: howItWorks.title,
+    href: howItWorks.path,
+  },
+  {
+    title: aboutUs.title,
+    href: aboutUs.path,
+  },
+  {
+    title: industries.title,
+    href: industries.path,
+  },
+  {
+    title: faq.title,
+    href: faq.path,
+  },
+  {
+    title: contactUs.title,
+    href: contactUs.path,
+  },
+]
 
 const topBarLinks = [
   {
-    title: "1-800-510-8040",
-    href: "tel:18005108040",
+    title: phoneNumber.text,
+    href: phoneNumber.href,
     external: true,
   },
   {
-    title: "Success Stories",
-    href: "/",
+    title: routes.successStories.title,
+    href: routes.successStories.path,
   },
   {
-    title: "Brokers",
-    href: "/",
+    title: routes.brokers.title,
+    href: routes.brokers.path,
   },
 ]
 
@@ -41,21 +64,11 @@ const HideOnScroll = ({ children, window }) => {
   )
 }
 
-HideOnScroll.propTypes = {
-  children: element.isRequired,
-  window: func,
-}
-
 const NavLink = ({ title, href, external }) => (
   <Grid item>
-    <Link {...{ to: href, external, color: "inherit" }}>{title}</Link>
+    <Link {...{ href, external, color: "inherit" }}>{title}</Link>
   </Grid>
 )
-NavLink.propTypes = {
-  title: string,
-  href: string,
-  external: bool,
-}
 
 const Header = ({ siteTitle, ...props }) => {
   const classes = useStyles()
@@ -80,26 +93,35 @@ const Header = ({ siteTitle, ...props }) => {
             </nav>
           </Toolbar>
           <Toolbar className={classes.mainToolbar}>
-            <IconButton
+            {/* <IconButton
               edge="start"
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
             >
               <MenuIcon />
-            </IconButton>
-            <Text variant="h6" component="span" className={classes.title}>
-              <Link to="/">{siteTitle}</Link>
+            </IconButton> */}
+            <Text
+              variant="h6"
+              component="span"
+              className={classes.title}
+              style={{ marginBottom: 0 }}
+            >
+              <Link to="/" style={{ display: "flex" }}>
+                <img
+                  src={images.bg.navLogo}
+                  alt="Arbutus Capital"
+                  className={classes.navLogo}
+                />
+              </Link>
             </Text>
             <nav>
               <Grid container spacing={2} alignItems="center">
-                {placeholderData.navData.map(item => (
+                {mainBarLinks.map(item => (
                   <NavLink {...item} key={`mainBarLink-${item.title}`} />
                 ))}
                 <Grid item>
-                  <Button color="secondary" variant="contained">
-                    Get started
-                  </Button>
+                  <OpenContactModalButton>Get started</OpenContactModalButton>
                 </Grid>
               </Grid>
             </nav>
@@ -110,10 +132,6 @@ const Header = ({ siteTitle, ...props }) => {
       <Toolbar />
     </div>
   )
-}
-
-Header.propTypes = {
-  siteTitle: string,
 }
 
 export default Header

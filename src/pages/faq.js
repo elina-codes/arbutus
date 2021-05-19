@@ -1,29 +1,38 @@
 import React from "react"
 import Layout from "components/layout"
-import { Accordion, PageMenu, Section } from "components"
-import placeholderData from "../placeholder-data"
-import { faqContent } from "./faq-content"
-import { renderPageContentAndMenu } from "../helpers"
+import { Button, OpenContactModalButton, PageMenu, Section } from "components"
+import placeholderData from "src/placeholder-data"
+import faqContent from "src/content/faq"
+import { renderPageContentAndMenu } from "src/helpers"
 
 const seo = {
   title: "FAQ",
 }
 
-const topBannerData = {
-  title: "Frequently Asked Questions",
-  description:
-    "Everything you need to know for you to make a great decision. Just click on one of the sections below to find the answer.",
-  cta: placeholderData.button,
-  bgImage: placeholderData.bannerImage,
-}
-
 const FAQPage = () => {
-  const { menuSections, pageSections } = renderPageContentAndMenu(faqContent)
+  const { menuSections, pageSections = [] } = renderPageContentAndMenu(
+    faqContent
+  )
+  const viewButtonTarget = pageSections.find(s => s.id)?.id
+  const topBannerData = {
+    title: "Frequently Asked Questions",
+    description:
+      "Everything you need to know for you to make a great decision. Just click on one of the sections below to find the answer.",
+    cta: (
+      <>
+        <Button color="default" to={`#${viewButtonTarget}`}>
+          View FAQ
+        </Button>
+        <OpenContactModalButton>Chat directly with us</OpenContactModalButton>
+      </>
+    ),
+    bgImage: placeholderData.bannerImage,
+  }
 
   return (
     <Layout {...{ seo, topBannerData }}>
       <PageMenu sections={menuSections} />
-      {pageSections.map(section => {
+      {pageSections.map((section, i) => {
         const {
           id,
           title,
@@ -33,8 +42,16 @@ const FAQPage = () => {
           component: Component,
         } = section
         return (
-          <Section {...{ id, title, subtitle, description }}>
-            {Component ? <Component data={content} /> : content}
+          <Section
+            {...{
+              id,
+              title,
+              subtitle,
+              description,
+              key: `section-${title}-${i}`,
+            }}
+          >
+            {Component ? <Component data={content} /> : <>{content}</>}
           </Section>
         )
       })}

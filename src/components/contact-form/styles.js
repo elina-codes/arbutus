@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles"
 
 const styles = makeStyles(theme => ({
-  footerMenu: {
-    backgroundColor: theme.palette.black,
+  contactFormHeader: {
+    marginBottom: theme.space.md,
+  },
+  contactFormFooter: {
+    marginTop: theme.space.md,
   },
 }))
 

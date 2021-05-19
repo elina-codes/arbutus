@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "components/layout"
-import { PageMenu, Section } from "components"
-import placeholderData from "../placeholder-data"
-import { iwsContent } from "./industries-we-serve-content"
-import { renderPageContentAndMenu } from "../helpers"
-import classNames from "classnames"
+import { OpenContactModalButton, PageMenu, Section, Text } from "components"
+import placeholderData from "src/placeholder-data"
+import iwsContent from "src/content/industries"
+import { renderPageContentAndMenu } from "src/helpers"
 
 const seo = {
   title: "Industries We Serve",
@@ -14,7 +13,7 @@ const topBannerData = {
   title: "Equipment leasing for any industry",
   description:
     "We serve British Columbia, Manitoba, Alberta, and Saskatchewan, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
-  cta: { text: "Get a personalized plan", color: "secondary" },
+  cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
   bgImage: placeholderData.bannerImage,
 }
 
@@ -32,15 +31,24 @@ const IndustriesWeServePage = () => {
         return (
           <Section
             {...{
-              key: section.id,
+              key: section?.id,
               light,
               image: { position, ...image },
               ...sectionProps,
             }}
           >
-            <ul style={{ columnCount: 2, marginBottom: 0 }}>
+            <ul
+              style={{
+                columnCount: 2,
+                marginBottom: 0,
+                marginLeft: 0,
+                listStyle: "none",
+              }}
+            >
               {content.map(item => (
-                <li key={item}>{item}</li>
+                <li key={item} style={{ marginBottom: "0.5em" }}>
+                  <Text>{item}</Text>
+                </li>
               ))}
             </ul>
           </Section>

@@ -1,16 +1,18 @@
-import placeholderData from "../placeholder-data"
+import React from "react"
+import images from "src/images"
+import { OpenContactModalButton } from "components"
 
-export const iwsContent = {
+const iwsContent = {
   sections: [
     {
       menuItem: "title",
       title: "Trucks and Trailers",
       subtitle: "Looking for truck financing? We got you covered.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.truckIndustry,
         alt: "Trucks and Trailers",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Reefer vans",
         "Construction trucks",
@@ -32,10 +34,10 @@ export const iwsContent = {
       title: "Construction Equipment",
       subtitle: "Construction equipment leasing made easy.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.constructionIndustry,
         alt: "Construction",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Bobcats",
         "Gravel trucks",
@@ -57,10 +59,10 @@ export const iwsContent = {
       title: "Forestry Equipment",
       subtitle: "We lease forestry equipment of all sorts.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.forestryIndustry,
         alt: "Forestry",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Logging trucks",
         "Logging trailers",
@@ -78,10 +80,10 @@ export const iwsContent = {
       title: "Hospitality Equipment",
       subtitle: "Everything you need for your new restaurant.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.hospitalityIndustry,
         alt: "Hospitality",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Restaurant equipment",
         "Kitchen equipment",
@@ -103,10 +105,10 @@ export const iwsContent = {
       title: "Fitness Equipment",
       subtitle: "Leasing gym equipment has never been easier.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.gymIndustry,
         alt: "Fitness",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Gym equipment",
         "Treadmills",
@@ -126,10 +128,10 @@ export const iwsContent = {
       title: "Health and Wellness Equipment",
       subtitle: "We also lease health and wellness equipment.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.healthIndustry,
         alt: "Health and Wellness",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "POS systems",
         "Health equipment",
@@ -149,10 +151,10 @@ export const iwsContent = {
       title: "Manufacturing Equipment",
       subtitle: "Want manufacturing equipment? We can help with that.",
       image: {
-        src: placeholderData.image,
+        src: images.equipment.manufacturingIndustry,
         alt: "Manufacturing",
       },
-      button: "Get started",
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
       content: [
         "Presses",
         "Woodworking equipment",
@@ -170,3 +172,5 @@ export const iwsContent = {
     },
   ],
 }
+
+export default iwsContent

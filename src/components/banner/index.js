@@ -1,5 +1,4 @@
 import React from "react"
-import { array, node, object } from "prop-types"
 import useStyles from "./styles"
 import { Section, Text } from "components"
 import * as MUI from "@material-ui/core"
@@ -10,7 +9,7 @@ const Banner = ({ children, cta, data }) => {
     <ul className={classes.bannerList}>
       {data.map((item, i) => (
         <li key={`item-${i}-${item}`} className={classes.bannerListItem}>
-          <Text variant="h5" component="span">
+          <Text variant="h5" strong component="span">
             {item}
           </Text>
         </li>
@@ -28,25 +27,17 @@ const Banner = ({ children, cta, data }) => {
           formatDataList(data)
         ) : (
           <>
-            <div>
-              <Text variant="h4" strong component="span">
+            <div className={classes.bannerContent}>
+              <Text variant="h5" strong component="span">
                 {children}
               </Text>
             </div>
-            <MUI.Button color={cta.color || "secondary"} variant="contained">
-              {cta.text}
-            </MUI.Button>
+            {cta}
           </>
         )}
       </MUI.Box>
     </Section>
   )
-}
-
-Banner.propTypes = {
-  children: node,
-  cta: object,
-  data: array,
 }
 
 export default Banner

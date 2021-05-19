@@ -1,4 +1,4 @@
-import { React } from "react"
+import React from "react"
 import { Accordion } from "components"
 
 const generalFAQ = [
@@ -91,7 +91,7 @@ const capitalFaq = [
   },
 ]
 
-export const faqContent = {
+export default {
   sections: [
     {
       description:

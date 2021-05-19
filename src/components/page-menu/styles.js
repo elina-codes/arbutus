@@ -1,12 +1,20 @@
+import images from "src/images"
 import { makeStyles } from "@material-ui/core/styles"
 
 const styles = makeStyles(theme => ({
+  pageMenu: {
+    backgroundImage: `url(${images.bg.logo})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center left",
+  },
   pageMenuList: {
     flex: 1,
     listStyle: "none",
     margin: 0,
     padding: 0,
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
   },
   pageMenuListItem: {

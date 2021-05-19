@@ -8,8 +8,8 @@
 import React from "react"
 import "fontsource-roboto"
 import { ThemeProvider } from "@material-ui/core/styles"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { ModalProvider } from "src/context"
 
 import "./layout.css"
 import theme from "../theme.js"
@@ -17,7 +17,7 @@ import { Header, Footer, Section } from "."
 import SEO from "./seo"
 import { CssBaseline } from "@material-ui/core"
 
-const Layout = ({ topBannerData, children, seo, variant }) => {
+const Layout = ({ topBannerData, children, seo, showSuccessStories }) => {
   const {
     title: bannerTitle,
     description: bannerDescription,
@@ -25,7 +25,7 @@ const Layout = ({ topBannerData, children, seo, variant }) => {
     bgImage: bannerBg,
     headerButtons,
     variant: bannerVariant,
-  } = topBannerData
+  } = topBannerData || {}
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -39,28 +39,28 @@ const Layout = ({ topBannerData, children, seo, variant }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <SEO {...seo} />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>
-        <Section
-          hero
-          title={bannerTitle}
-          description={bannerDescription}
-          button={bannerButton}
-          bgImage={bannerBg}
-          headerButtons={headerButtons}
-          variant={bannerVariant}
-        />
-        {children}
-      </main>
-      <Footer />
+      <ModalProvider>
+        <CssBaseline />
+        <SEO {...seo} />
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main>
+          {topBannerData && (
+            <Section
+              hero
+              title={bannerTitle}
+              description={bannerDescription}
+              button={bannerButton}
+              bgImage={bannerBg}
+              headerButtons={headerButtons}
+              variant={bannerVariant}
+            />
+          )}
+          {children}
+        </main>
+        <Footer showSuccessStories={showSuccessStories} />
+      </ModalProvider>
     </ThemeProvider>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

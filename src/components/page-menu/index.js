@@ -1,14 +1,13 @@
 import React from "react"
-import { array, string } from "prop-types"
-import useStyles from "./styles"
 import classNames from "classnames"
 import { Section, Text } from "components"
+import useStyles from "./styles"
 
 const PageMenu = ({ className, sections = [] }) => {
   const classes = useStyles()
 
   return (
-    <Section dark className={classNames(classes.pageMenu, className)}>
+    <Section dense dark className={classNames(classes.pageMenu, className)}>
       <ul className={classes.pageMenuList}>
         {sections.map(section => (
           <li key={section.target} className={classes.pageMenuListItem}>
@@ -22,11 +21,6 @@ const PageMenu = ({ className, sections = [] }) => {
       </ul>
     </Section>
   )
-}
-
-PageMenu.propTypes = {
-  sections: array,
-  className: string,
 }
 
 export default PageMenu

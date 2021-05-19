@@ -6,9 +6,22 @@ const styles = makeStyles(theme => ({
     backgroundPosition: "center",
     padding: theme.spacing(3),
     ...theme.sectionPadding,
+    // "&[data-step]": {
+    //   "&:before": {
+    //     content: "attr(data-step)",
+    //     fontSize: 120,
+    //     fontWeight: 900,
+    //     lineHeight: 0.9,
+    //   },
+    // },
   },
   dense: {
     ...theme.sectionPaddingDense,
+  },
+  inner: {
+    borderRadius: theme.borderRadius,
+    height: "100%",
+    textAlign: "left",
   },
   hero: {
     minHeight: 500,
@@ -20,13 +33,16 @@ const styles = makeStyles(theme => ({
   },
   sectionHeading: {
     textAlign: "left",
-    maxWidth: 780,
-  },
-  headingTitles: {
     maxWidth: 540,
+  },
+  sectionHeadingDescription: {
+    lineHeight: 2,
   },
   buttonContainer: {
     marginTop: theme.space.xl,
+    "& .MuiButton-root": {
+      marginRight: theme.space.sm,
+    },
   },
   center: {
     display: "flex",
@@ -46,6 +62,7 @@ const styles = makeStyles(theme => ({
   },
   light: {
     backgroundColor: theme.palette.background.light,
+    color: theme.palette.text.main,
   },
   home: {
     color: theme.palette.text.main,
@@ -53,15 +70,17 @@ const styles = makeStyles(theme => ({
     position: "relative",
     alignItems: "flex-start",
     overflow: "hidden",
+    minHeight: 600,
     "&:after": {
       content: `''`,
       display: "block",
       position: "absolute",
-      inset: "0 35% 0 auto",
+      inset: "0 50% 0 auto",
       backgroundColor: theme.palette.white,
       height: "100%",
       width: "100%",
       transform: "skewX(-20deg)",
+      transformOrigin: "bottom",
     },
     [theme.breakpoints.only("xs")]: {
       paddingBottom: 300,
@@ -82,7 +101,14 @@ const styles = makeStyles(theme => ({
     "&.imageRight, &.imageLeft": {
       gridTemplate: `
         "main"
-        "image"`,
+        "image"
+        / 100%`,
+    },
+    "&.imageFirst": {
+      gridTemplate: `
+        "image"
+        "main"
+        / 100%`,
     },
     [theme.breakpoints.up("md")]: {
       "&.imageRight": {
@@ -132,10 +158,9 @@ const styles = makeStyles(theme => ({
     display: "flex",
   },
   image: {
-    boxShadow: "rgba(68,87,121,0.15)",
     borderRadius: theme.borderRadius,
     objectFit: "cover",
-    boxShadow: "4px 8px 30px rgba(68, 87, 121, 0.15)",
+    boxShadow: theme.boxShadow,
   },
 }))
 

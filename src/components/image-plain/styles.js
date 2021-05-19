@@ -4,12 +4,16 @@ const styles = makeStyles(theme => ({
   plainImageContainer: {
     display: "flex",
     flex: 1,
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  alignTop: {
+    alignSelf: "flex-start",
   },
   image: {
-    boxShadow: "rgba(68,87,121,0.15)",
     borderRadius: theme.borderRadius,
     objectFit: "cover",
-    boxShadow: "4px 8px 30px rgba(68, 87, 121, 0.15)",
+    boxShadow: theme.boxShadow,
   },
 }))
 

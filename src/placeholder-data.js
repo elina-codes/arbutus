@@ -1,49 +1,16 @@
 import React from "react"
-import PlaceholderImage from "./images/placeholder.jpg"
 import PlaceholderBannerImage from "./images/placeholder-banner.png"
-import { Star } from "phosphor-react"
+import PlaceholderSSImage1 from "./images/ss1.png"
+import PlaceholderSSImage2 from "./images/ss2.png"
+import PlaceholderSSImage3 from "./images/ss3.png"
 
 const placeholderData = {
-  shortTitle: "Short Title",
-  longTitle: "Mauris ultricies felis nec nisl consequat condimentum",
-  sentence:
-    "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; curabitur sit amet odio et nunc tincidunt aliquet.",
-  paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque augue ac felis finibus auctor. Curabitur et enim felis. Donec porttitor cursus erat, sit amet commodo lacus faucibus quis. Pellentesque efficitur ultrices massa, sed elementum magna tincidunt a. Etiam vulputate, nulla a ultrices blandit, lacus arcu porta ipsum, in consectetur magna sem ut erat. In viverra ante in erat fringilla bibendum. Nam sed nibh vehicula purus dignissim pharetra. Vestibulum sed lectus nec diam posuere imperdiet. Phasellus gravida metus lectus, id aliquam ex dictum in.",
-  button: {
-    text: "Call to Action",
-    // color: "secondary",
-  },
-  list: ["Aenean varius nib", "Nunc tempus purus", "Phasellus vehicula"],
-  image: PlaceholderImage,
   bannerImage: PlaceholderBannerImage,
-  link: {
-    title: "Placeholder link",
-    href: "/",
+  successStories: {
+    ss1: PlaceholderSSImage1,
+    ss2: PlaceholderSSImage2,
+    ss3: PlaceholderSSImage3,
   },
-  icon: <Star />,
-  navData: [
-    {
-      title: "Understand leasing",
-      href: "/",
-    },
-    {
-      title: "About us",
-      href: "/",
-    },
-    {
-      title: "Industries we serve",
-      href: "/industries-we-serve",
-    },
-    {
-      title: "FAQ",
-      href: "/faq",
-    },
-    {
-      title: "Contact us",
-      href: "/",
-    },
-  ],
 }
 
 export default placeholderData

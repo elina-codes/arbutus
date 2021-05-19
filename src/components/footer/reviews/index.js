@@ -1,13 +1,8 @@
 import React from "react"
-import { array } from "prop-types"
 import { Section } from "components"
 
-const Reviews = ({ data }) => {
-  return <Section>Reviews {data}</Section>
-}
-
-Reviews.propTypes = {
-  data: array,
+const Reviews = () => {
+  return <Section>Reviews will go here</Section>
 }
 
 export default Reviews

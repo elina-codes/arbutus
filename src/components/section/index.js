@@ -1,11 +1,8 @@
 import React from "react"
-import { bool, object, string, node } from "prop-types"
-import useStyles from "./styles"
 import classNames from "classnames"
-import { Button, Container } from "@material-ui/core"
-import Image from "components/image"
-import { Text } from "components"
-import ImagePlain from "components/image-plain"
+import { Container } from "@material-ui/core"
+import { Text, ImagePlain } from "components"
+import useStyles from "./styles"
 
 const SectionHeading = ({
   title,
@@ -30,7 +27,11 @@ const SectionHeading = ({
         </Text>
       )}
       {description && (
-        <Text variant="h4" component={hero ? "h3" : "h4"}>
+        <Text
+          className={classNames({ [classes.sectionHeadingDescription]: hero })}
+          variant="h4"
+          component={hero ? "h3" : "h4"}
+        >
           {description}
         </Text>
       )}
@@ -39,16 +40,6 @@ const SectionHeading = ({
       )}
     </div>
   )
-}
-
-SectionHeading.propTypes = {
-  align: string,
-  center: bool,
-  title: string,
-  subtitle: string,
-  description: string,
-  buttons: node,
-  hero: bool,
 }
 
 const Section = ({
@@ -64,6 +55,8 @@ const Section = ({
   headerButtons,
   hero,
   image,
+  imageFirst,
+  inner,
   light,
   subtitle,
   title,
@@ -71,9 +64,10 @@ const Section = ({
   ...props
 }) => {
   const classes = useStyles()
-  const centerSection = !hero && (!image || center)
+  const centerSection = center || (!hero && !inner && !image)
   const showHeading = title || subtitle || description
   const homeVariant = variant === "home"
+  const bgImg = bgImage && !homeVariant ? `url(${bgImage})` : ""
 
   return (
     <div
@@ -86,14 +80,15 @@ const Section = ({
           [classes.black]: black,
           [classes.hero]: hero,
           [classes.home]: homeVariant,
+          [classes.inner]: inner,
           [classes.center]: centerSection,
         },
         className
       )}
       {...props}
-      style={
-        bgImage && !homeVariant ? { backgroundImage: `url(${bgImage})` } : null
-      }
+      style={{
+        backgroundImage: bgImg,
+      }}
     >
       {homeVariant && (
         <div
@@ -106,10 +101,11 @@ const Section = ({
           className={classNames(classes.sectionInner, {
             imageLeft: image?.position === "left",
             imageRight: image?.position === "right",
+            imageFirst,
             [classes.homeBannerInner]: homeVariant,
           })}
         >
-          <div className={classes.sectionMain}>
+          <div className={classNames(classes.sectionMain, "stepTarget")}>
             {showHeading && (
               <SectionHeading
                 {...{
@@ -125,36 +121,13 @@ const Section = ({
             {children && (
               <div className={classes.sectionContent}>{children}</div>
             )}
-            {button && (
-              <div className={classes.buttonContainer}>
-                <Button variant="contained" color={button.color || "primary"}>
-                  {button.text}
-                </Button>
-              </div>
-            )}
+            {button && <div className={classes.buttonContainer}>{button}</div>}
           </div>
-          {image?.src && <ImagePlain src={image.src} alt={image?.alt} />}
+          {image?.src && <ImagePlain {...image} />}
         </div>
       </Container>
     </div>
   )
-}
-
-Section.propTypes = {
-  align: string,
-  bgImage: string,
-  black: bool,
-  button: object,
-  children: node,
-  dark: bool,
-  dense: bool,
-  description: string,
-  headerButtons: node,
-  hero: bool,
-  image: object,
-  light: bool,
-  subtitle: string,
-  title: string,
 }
 
 export default Section

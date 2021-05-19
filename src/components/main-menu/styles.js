@@ -22,6 +22,9 @@ const styles = makeStyles(theme => ({
   mainToolbar: {
     color: theme.palette.primary.main,
   },
+  navLogo: {
+    marginBottom: 0,
+  },
 }))
 
 export default styles
