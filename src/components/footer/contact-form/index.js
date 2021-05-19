@@ -2,14 +2,19 @@ import React from "react"
 import { node } from "prop-types"
 import useStyles from "./styles"
 import { Section } from "components"
-import images from "../images"
+import images from "../../../images"
 
 const ContactForm = ({ children }) => {
   const classes = useStyles()
 
   return (
-    <Section className={classes.root} bgImage={images.bg.contactForm}>
-      <Section dark title="Contact form" className={classes.contactForm}>
+    <Section className={classes.root}>
+      <Section
+        dark
+        title="Contact form"
+        className={classes.contactForm}
+        bgImage={images.bg.contactForm}
+      >
         Form Placeholder
       </Section>
     </Section>
