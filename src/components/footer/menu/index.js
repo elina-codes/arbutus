@@ -49,7 +49,7 @@ const FooterMenu = () => {
           buttonProps: {
             variant: "contained",
           },
-          title: placeholderData.button,
+          title: placeholderData.button.text,
         },
         {
           type: "button",
@@ -57,7 +57,7 @@ const FooterMenu = () => {
             variant: "contained",
             color: "secondary",
           },
-          title: placeholderData.button,
+          title: placeholderData.button.text,
         },
       ],
     },

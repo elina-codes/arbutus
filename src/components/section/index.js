@@ -5,6 +5,7 @@ import classNames from "classnames"
 import { Button, Container } from "@material-ui/core"
 import Image from "components/image"
 import { Text } from "components"
+import ImagePlain from "components/image-plain"
 
 const SectionHeading = ({
   title,
@@ -58,6 +59,7 @@ const Section = ({
   children,
   className,
   dark,
+  dense,
   description,
   headerButtons,
   hero,
@@ -65,11 +67,13 @@ const Section = ({
   light,
   subtitle,
   title,
+  variant,
   ...props
 }) => {
   const classes = useStyles()
   const centerSection = !hero && (!image || center)
   const showHeading = title || subtitle || description
+  const homeVariant = variant === "home"
 
   return (
     <div
@@ -78,20 +82,31 @@ const Section = ({
         {
           [classes.light]: light,
           [classes.dark]: dark || hero,
+          [classes.dense]: dense,
           [classes.black]: black,
           [classes.hero]: hero,
+          [classes.home]: homeVariant,
           [classes.center]: centerSection,
         },
         className
       )}
       {...props}
-      style={bgImage && { backgroundImage: `url(${bgImage})` }}
+      style={
+        bgImage && !homeVariant ? { backgroundImage: `url(${bgImage})` } : null
+      }
     >
+      {homeVariant && (
+        <div
+          className={classes.homeBannerImage}
+          style={{ backgroundImage: `url(${bgImage})` }}
+        ></div>
+      )}
       <Container>
         <div
           className={classNames(classes.sectionInner, {
             imageLeft: image?.position === "left",
             imageRight: image?.position === "right",
+            [classes.homeBannerInner]: homeVariant,
           })}
         >
           <div className={classes.sectionMain}>
@@ -112,17 +127,13 @@ const Section = ({
             )}
             {button && (
               <div className={classes.buttonContainer}>
-                <Button variant="contained" color="secondary">
-                  {button}
+                <Button variant="contained" color={button.color || "primary"}>
+                  {button.text}
                 </Button>
               </div>
             )}
           </div>
-          {image?.src && (
-            <div className={classes.sectionImage}>
-              <img src={image.src} alt={image?.alt} className={classes.image} />
-            </div>
-          )}
+          {image?.src && <ImagePlain src={image.src} alt={image?.alt} />}
         </div>
       </Container>
     </div>
@@ -133,9 +144,10 @@ Section.propTypes = {
   align: string,
   bgImage: string,
   black: bool,
-  button: string,
+  button: object,
   children: node,
   dark: bool,
+  dense: bool,
   description: string,
   headerButtons: node,
   hero: bool,

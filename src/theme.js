@@ -4,6 +4,7 @@ const config = {
   primary: "#01446f",
   secondary: "#ff5722",
   textPrimary: "#003354",
+  textLight: "#757575",
   backgroundLight: "#F7F8FA",
   borderRadius: 10,
   sectionPaddingX: {
@@ -11,6 +12,10 @@ const config = {
     paddingRight: "5%",
   },
   sectionPaddingY: {
+    paddingTop: 80,
+    paddingBottom: 80,
+  },
+  sectionPaddingDenseY: {
     paddingTop: 50,
     paddingBottom: 50,
   },
@@ -27,6 +32,9 @@ const typographyCommon = {
   "&:not(:last-child)": {
     marginBottom: "0.7em",
   },
+  "&.strong": {
+    fontWeight: "800",
+  },
 }
 
 const arbutusTheme = {
@@ -34,6 +42,7 @@ const arbutusTheme = {
   sectionPadding: { ...config.sectionPaddingX, ...config.sectionPaddingY },
   sectionPaddingX: config.sectionPaddingX,
   sectionPaddingY: config.sectionPaddingY,
+  sectionPaddingDense: config.sectionPaddingDenseY,
   palette: {
     primary: {
       main: config.primary,
@@ -43,6 +52,9 @@ const arbutusTheme = {
     },
     white: "#fff",
     black: "#000",
+    text: {
+      main: config.textPrimary,
+    },
     background: {
       light: config.backgroundLight,
     },
@@ -72,13 +84,21 @@ const arbutusTheme = {
     h4: {
       fontSize: 18,
       color: "inherit",
-      lineHeight: 1.3,
+      lineHeight: 1.4,
     },
     h5: {
       fontSize: 16,
+      fontWeight: 700,
       color: "inherit",
-      lineHeight: 1.3,
+      lineHeight: 1.5,
       fontWeight: 900,
+    },
+    body2: {
+      fontSize: 14,
+    },
+    caption: {
+      color: config.textLight,
+      fontSize: 12,
     },
   },
   overrides: {
@@ -99,10 +119,22 @@ const arbutusTheme = {
     },
     body: {
       color: config.textPrimary,
+      lineHeight: 1.5,
     },
     MuiTypography: {
       root: {
+        whiteSpace: "pre-line",
         ...typographyCommon,
+      },
+    },
+    MuiCardMedia: {
+      root: {
+        marginBottom: 0,
+      },
+    },
+    MuiCardActionArea: {
+      root: {
+        textAlign: "left",
       },
     },
   },

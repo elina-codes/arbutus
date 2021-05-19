@@ -1,8 +1,8 @@
 import React from "react"
-import { array, node } from "prop-types"
+import { array, node, object } from "prop-types"
 import useStyles from "./styles"
 import { Section, Text } from "components"
-import { Box } from "@material-ui/core"
+import * as MUI from "@material-ui/core"
 
 const Banner = ({ children, cta, data }) => {
   const classes = useStyles()
@@ -18,28 +18,34 @@ const Banner = ({ children, cta, data }) => {
     </ul>
   )
   return (
-    <Section dark className={classes.banner}>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
+    <Section dense dark className={classes.banner}>
+      <MUI.Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         {data ? (
           formatDataList(data)
         ) : (
           <>
             <div>
-              <Text variant="h5" component="span">
+              <Text variant="h4" strong component="span">
                 {children}
               </Text>
             </div>
-            {cta}
+            <MUI.Button color={cta.color || "secondary"} variant="contained">
+              {cta.text}
+            </MUI.Button>
           </>
         )}
-      </Box>
+      </MUI.Box>
     </Section>
   )
 }
 
 Banner.propTypes = {
   children: node,
-  cta: node,
+  cta: object,
   data: array,
 }
 

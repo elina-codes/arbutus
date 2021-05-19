@@ -1,5 +1,5 @@
 import React from "react"
-import { string, node } from "prop-types"
+import { string, node, object } from "prop-types"
 import {
   Card as MuiCard,
   CardActions as MuiCardActions,
@@ -13,13 +13,13 @@ const Card = ({ title, meta, image, actions, children }) => {
   return (
     <MuiCard>
       <MuiCardActionArea>
-        {image && (
+        {image.src && (
           <MuiCardMedia
             component="img"
-            alt="Contemplative Reptile"
+            alt={image.alt}
             height="140"
-            image={image}
-            title="Contemplative Reptile"
+            image={image.src}
+            title={image.alt}
           />
         )}
         <MuiCardContent>
@@ -44,7 +44,7 @@ const Card = ({ title, meta, image, actions, children }) => {
 Card.propTypes = {
   title: string,
   meta: string,
-  image: string,
+  image: object,
   actions: node,
   children: node,
 }

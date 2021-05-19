@@ -14,7 +14,7 @@ const topBannerData = {
   title: "Equipment leasing for any industry",
   description:
     "We serve British Columbia, Manitoba, Alberta, and Saskatchewan, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
-  cta: "Get a personalized plan",
+  cta: { text: "Get a personalized plan", color: "secondary" },
   bgImage: placeholderData.bannerImage,
 }
 

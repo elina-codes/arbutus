@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles"
+import images from "../../images"
 
 const styles = makeStyles(theme => ({
   section: {
@@ -6,6 +7,9 @@ const styles = makeStyles(theme => ({
     backgroundPosition: "center",
     padding: theme.spacing(3),
     ...theme.sectionPadding,
+  },
+  dense: {
+    ...theme.sectionPaddingDense,
   },
   hero: {
     minHeight: 500,
@@ -23,7 +27,7 @@ const styles = makeStyles(theme => ({
     maxWidth: 540,
   },
   buttonContainer: {
-    marginTop: theme.space.md,
+    marginTop: theme.space.xl,
   },
   center: {
     display: "flex",
@@ -36,6 +40,10 @@ const styles = makeStyles(theme => ({
   dark: {
     color: theme.palette.white,
     backgroundColor: theme.palette.primary.main,
+    backgroundImage: `url(${images.bg.logo})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center left",
   },
   black: {
     color: theme.palette.white,
@@ -44,7 +52,33 @@ const styles = makeStyles(theme => ({
   light: {
     backgroundColor: theme.palette.background.light,
   },
+  home: {
+    color: theme.palette.text.main,
+    backgroundColor: theme.palette.white,
+    position: "relative",
+    alignItems: "flex-start",
+    overflow: "hidden",
+    "&:after": {
+      content: `''`,
+      display: "block",
+      position: "absolute",
+      inset: "0 35% 0 auto",
+      backgroundColor: theme.palette.white,
+      height: "100%",
+      width: "100%",
+      transform: "skewX(-20deg)",
+    },
+    [theme.breakpoints.only("xs")]: {
+      paddingBottom: 300,
+      "&:after": {
+        transform: "skewY(-7deg)",
+        inset: "auto 0 240px 0",
+      },
+    },
+  },
   sectionInner: {
+    position: "relative",
+    zIndex: 1,
     display: "grid",
     gridTemplate: `
       "main"`,
@@ -68,12 +102,27 @@ const styles = makeStyles(theme => ({
       },
     },
   },
+  homeBannerInner: {
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: 0,
+      maxWidth: "50%",
+    },
+  },
+  homeBannerImage: {
+    position: "absolute",
+    inset: "auto 0 0 0",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    [theme.breakpoints.only("xs")]: {
+      height: 270,
+    },
+    [theme.breakpoints.up("sm")]: {
+      inset: "0 0 0 auto",
+      width: "50%",
+    },
+  },
   sectionMain: {
     gridArea: "main",
-  },
-  sectionImage: {
-    gridArea: "image",
-    display: "flex",
   },
   sectionContent: {
     "&:not(:first-child)": {
@@ -82,6 +131,10 @@ const styles = makeStyles(theme => ({
   },
   sectionButton: {
     marginTop: theme.space.md,
+  },
+  sectionImage: {
+    gridArea: "image",
+    display: "flex",
   },
   image: {
     boxShadow: "rgba(68,87,121,0.15)",

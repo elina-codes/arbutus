@@ -17,13 +17,14 @@ import { Header, Footer, Section } from "."
 import SEO from "./seo"
 import { CssBaseline } from "@material-ui/core"
 
-const Layout = ({ topBannerData, children, seo }) => {
+const Layout = ({ topBannerData, children, seo, variant }) => {
   const {
     title: bannerTitle,
     description: bannerDescription,
     cta: bannerButton,
     bgImage: bannerBg,
     headerButtons,
+    variant: bannerVariant,
   } = topBannerData
 
   const data = useStaticQuery(graphql`
@@ -49,6 +50,7 @@ const Layout = ({ topBannerData, children, seo }) => {
           button={bannerButton}
           bgImage={bannerBg}
           headerButtons={headerButtons}
+          variant={bannerVariant}
         />
         {children}
       </main>
