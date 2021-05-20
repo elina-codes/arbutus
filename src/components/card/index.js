@@ -15,6 +15,7 @@ const Card = ({ title, meta, image, actions, children }) => {
         {image.src && (
           <MuiCardMedia
             component="img"
+            loading="lazy"
             alt={image.alt}
             height="140"
             image={image.src}

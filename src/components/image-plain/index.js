@@ -1,6 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import useStyles from "./styles"
+// import { Fade } from "@material-ui/core"
 
 const ImagePlain = ({ src, alt, maxWidth = "none", alignTop, className }) => {
   const classes = useStyles()
@@ -14,7 +15,9 @@ const ImagePlain = ({ src, alt, maxWidth = "none", alignTop, className }) => {
       )}
       style={{ maxWidth }}
     >
-      <img {...{ src, alt }} className={classes.image} />
+      {/* <Fade> */}
+      <img loading="lazy" {...{ src, alt }} className={classes.image} />
+      {/* </Fade> */}
     </div>
   )
 }

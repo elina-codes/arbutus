@@ -89,6 +89,7 @@ const Section = ({
       style={{
         backgroundImage: bgImg,
       }}
+      loading="lazy"
     >
       {homeVariant && (
         <div
