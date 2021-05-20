@@ -37,6 +37,7 @@ const placeholderStories = (
     </MUI.Grid>
     <MUI.Grid item sm={6} md={4}>
       <Card
+        delay={100}
         meta="Alberta, Canada - Construction Equipment"
         image={{
           src: placeholderData.successStories.ss2,
@@ -54,6 +55,7 @@ const placeholderStories = (
     </MUI.Grid>
     <MUI.Grid item sm={6} md={4}>
       <Card
+        delay={200}
         meta="Alberta, Canada - Construction Equipment"
         image={{
           src: placeholderData.successStories.ss3,

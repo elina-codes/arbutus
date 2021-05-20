@@ -10,6 +10,7 @@ import {
 import images from "src/images"
 import * as MUI from "@material-ui/core"
 import pageSections from "src/content/home"
+import ScrollAnimation from "react-animate-on-scroll"
 
 const seo = {
   title: "Home",
@@ -41,6 +42,7 @@ const IndexPage = () => {
         <MUI.Grid container spacing={5}>
           <MUI.Grid container direction="column" item xs={12} sm>
             <ImagePlain
+              direction="Up"
               maxWidth={400}
               src={images.equipment.hospitalityIndustry}
               alt="Hospitality Equipment"
@@ -51,6 +53,8 @@ const IndexPage = () => {
           </MUI.Grid>
           <MUI.Grid container direction="column" item xs={12} sm>
             <ImagePlain
+              direction="Up"
+              delay={200}
               maxWidth={400}
               src={images.equipment.forestryIndustry}
               alt="Forestry Equipment"
@@ -61,6 +65,8 @@ const IndexPage = () => {
           </MUI.Grid>
           <MUI.Grid container direction="column" item xs={12} sm>
             <ImagePlain
+              direction="Up"
+              delay={400}
               maxWidth={400}
               src={images.equipment.constructionIndustry}
               alt="Construction Equipment"
@@ -84,10 +90,22 @@ const IndexPage = () => {
       <Section dark>
         <MUI.Grid container spacing={5}>
           <MUI.Grid item xs={12} md>
-            <Section {...startLeasing}></Section>
+            <ScrollAnimation
+              animateIn="animate__fadeInRight"
+              animateOnce
+              duration={0.7}
+            >
+              <Section {...startLeasing}></Section>
+            </ScrollAnimation>
           </MUI.Grid>
           <MUI.Grid item xs={12} md>
-            <Section {...areYouABroker}></Section>
+            <ScrollAnimation
+              animateIn="animate__fadeInLeft"
+              animateOnce
+              duration={0.7}
+            >
+              <Section {...areYouABroker}></Section>
+            </ScrollAnimation>
           </MUI.Grid>
         </MUI.Grid>
       </Section>

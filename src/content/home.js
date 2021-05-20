@@ -27,6 +27,7 @@ const pageSections = {
       src: images.about.family,
       position: "right",
       alt: "Placeholder",
+      direction: "Left",
     },
     button: (
       <Button to={routes.industries.path} color="primary">

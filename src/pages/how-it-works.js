@@ -29,11 +29,12 @@ const HowItWorksPage = () => {
         const { description, image, ...sectionProps } = section
         const alternate = i % 2
         const position = alternate ? "left" : "right"
+        const direction = alternate ? "Right" : "Left"
         return (
           <Section
             {...{
               key: `section-${section.title}-${i}`,
-              image: { position, ...image },
+              image: { position, direction, ...image },
               // ["data-step"]: i + 1,
               ...sectionProps,
             }}

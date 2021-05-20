@@ -1,7 +1,8 @@
 import React from "react"
 import classNames from "classnames"
-import { Container } from "@material-ui/core"
+import { Container, Fade } from "@material-ui/core"
 import { Text, ImagePlain } from "components"
+import ScrollAnimation from "react-animate-on-scroll"
 import useStyles from "./styles"
 
 const SectionHeading = ({
@@ -28,7 +29,9 @@ const SectionHeading = ({
       )}
       {description && (
         <Text
-          className={classNames({ [classes.sectionHeadingDescription]: hero })}
+          className={classNames({
+            [classes.sectionHeadingDescription]: hero,
+          })}
           variant="h4"
           component={hero ? "h3" : "h4"}
         >
@@ -68,6 +71,27 @@ const Section = ({
   const showHeading = title || subtitle || description
   const homeVariant = variant === "home"
   const bgImg = bgImage && !homeVariant ? `url(${bgImage})` : ""
+  const imageLeft = image?.position === "left"
+  const imageRight = image?.position === "right"
+
+  const headerContent = (
+    <>
+      {showHeading && (
+        <SectionHeading
+          {...{
+            title,
+            subtitle,
+            description,
+            hero,
+            center: centerSection,
+            buttons: headerButtons,
+          }}
+        />
+      )}
+      {children && <div className={classes.sectionContent}>{children}</div>}
+      {button && <div className={classes.buttonContainer}>{button}</div>}
+    </>
+  )
 
   return (
     <div
@@ -92,39 +116,32 @@ const Section = ({
       loading="lazy"
     >
       {homeVariant && (
-        <div
-          className={classes.homeBannerImage}
-          style={{ backgroundImage: `url(${bgImage})` }}
-        ></div>
+        <Fade in timeout={2000}>
+          <div
+            className={classes.homeBannerImage}
+            style={{ backgroundImage: `url(${bgImage})` }}
+          />
+        </Fade>
       )}
       <Container>
         <div
           className={classNames(classes.sectionInner, {
-            imageLeft: image?.position === "left",
-            imageRight: image?.position === "right",
+            imageLeft,
+            imageRight,
             imageFirst,
             [classes.homeBannerInner]: homeVariant,
           })}
         >
           <div className={classNames(classes.sectionMain, "stepTarget")}>
-            {showHeading && (
-              <SectionHeading
-                {...{
-                  title,
-                  subtitle,
-                  description,
-                  hero,
-                  center: centerSection,
-                  buttons: headerButtons,
-                }}
-              />
+            {hero ? (
+              <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
+                {headerContent}
+              </ScrollAnimation>
+            ) : (
+              <>{headerContent}</>
             )}
-            {children && (
-              <div className={classes.sectionContent}>{children}</div>
-            )}
-            {button && <div className={classes.buttonContainer}>{button}</div>}
           </div>
-          {image?.src && <ImagePlain {...image} />}
+          {image?.src && <ImagePlain direction={image?.direction} {...image} />}
         </div>
       </Container>
     </div>

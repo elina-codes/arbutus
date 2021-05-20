@@ -38,6 +38,7 @@ const FooterSuccessStories = () => {
         </MUI.Grid>
         <MUI.Grid item sm={6} md>
           <Card
+            delay={100}
             meta="Alberta, Canada - Construction Equipment"
             image={{
               src: placeholderData.successStories.ss2,
@@ -55,6 +56,7 @@ const FooterSuccessStories = () => {
         </MUI.Grid>
         <MUI.Grid item sm={6} md>
           <Card
+            delay={200}
             meta="Alberta, Canada - Construction Equipment"
             image={{
               src: placeholderData.successStories.ss3,

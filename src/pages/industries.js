@@ -27,13 +27,14 @@ const IndustriesWeServePage = () => {
         const { menuItem, altTitle, content, image, ...sectionProps } = section
         const alternate = i % 2
         const position = alternate ? "right" : "left"
+        const direction = alternate ? "Left" : "Right"
         const light = !!alternate
         return (
           <Section
             {...{
               key: section?.id,
               light,
-              image: { position, ...image },
+              image: { position, direction, ...image },
               ...sectionProps,
             }}
           >

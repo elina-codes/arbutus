@@ -3,6 +3,7 @@ import React from "react"
 const ArbutusMap = () => (
   <>
     <iframe
+      style={{ maxWidth: "100%" }}
       title="Arbutus Capital"
       width="480"
       height="400"

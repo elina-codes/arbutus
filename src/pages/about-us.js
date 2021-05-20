@@ -31,7 +31,7 @@ const AboutUsPage = () => {
       <Section {...ourStory}></Section>
       <Section {...ourLeadershipTeam}>
         <MUI.Grid container spacing={5}>
-          {staff.map(s => (
+          {staff.map((s, i) => (
             <MUI.Grid
               key={`staff-${s.name}`}
               container
@@ -41,7 +41,7 @@ const AboutUsPage = () => {
               sm={6}
               md
             >
-              <ImagePlain src={s.image} alt={s.name} />
+              <ImagePlain src={s.image} alt={s.name} delay={i * 100} />
               <Text variant="h4" strong>
                 {s.name}
                 <Text>{s.position}</Text>

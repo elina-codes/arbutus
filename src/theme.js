@@ -106,6 +106,74 @@ const arbutusTheme = {
   overrides: {
     MuiCssBaseline: {
       "@global": {
+        "@keyframes override_slideInUp": {
+          "0%": {
+            transform: "translateY(100%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+        "@keyframes override_fadeInUp": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(50px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        "@keyframes override_fadeInDown": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-50px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        "@keyframes override_fadeInLeft": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(50px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        "@keyframes override_fadeInRight": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-50px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        ".animate__slideInUp": {
+          animationName: "override_slideInUp",
+          animationDuration: 0.5,
+        },
+        ".animate__fadeInUp": {
+          animationName: "override_fadeInUp",
+          animationDuration: 0.5,
+        },
+        ".animate__fadeInDown": {
+          animationName: "override_fadeInDown",
+          animationDuration: 0.5,
+        },
+        ".animate__fadeInLeft": {
+          animationName: "override_fadeInLeft",
+          animationDuration: 0.5,
+        },
+        ".animate__fadeInRight": {
+          animationName: "override_fadeInRight",
+          animationDuration: 0.5,
+        },
         body: {
           color: config.textPrimary,
           lineHeight: 1.5,
