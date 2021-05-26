@@ -1,5 +1,14 @@
-import React from "react"
-import HomeBannerImage from "./images/home-banner.png"
+import BannerHome from "./images/home-banner.png"
+import BannerAboutUs from "./images/banner-aboutus.jpg"
+import BannerBlog from "./images/banner-blog.jpg"
+import BannerBroker from "./images/banner-broker.jpg"
+import BannerContactUs from "./images/banner-contactus.jpg"
+import BannerFaq from "./images/banner-faq.jpg"
+import BannerHowItWorks from "./images/banner-howitworks.jpg"
+import BannerIndustries from "./images/banner-industries.jpg"
+import BannerSuccess from "./images/banner-success.jpg"
+import BannerWhyLease from "./images/banner-whylease.jpg"
+
 import hospitalityEquipmentImage from "./images/hospitality-eq.png"
 import constructionEquipmentImage from "./images/construction-eq.png"
 import forestryEquipmentImage from "./images/forestry-eq.png"
@@ -23,6 +32,7 @@ import iconLogo from "./images/logo-icon.svg"
 import navLogo from "./images/logo-wide.svg"
 import bgLogo from "./images/bg-logo.svg"
 import bgForm from "./images/bg-form.png"
+import notFound from "./images/404.svg"
 
 const images = {
   bg: {
@@ -46,8 +56,19 @@ const images = {
     manufacturingIndustry: manufacturingEquipmentImage,
     truckIndustry: truckEquipmentImage,
   },
+  banners: {
+    home: BannerHome,
+    aboutUs: BannerAboutUs,
+    blog: BannerBlog,
+    broker: BannerBroker,
+    contactUs: BannerContactUs,
+    faq: BannerFaq,
+    howItWorks: BannerHowItWorks,
+    industries: BannerIndustries,
+    success: BannerSuccess,
+    whyLease: BannerWhyLease,
+  },
   home: {
-    mainBanner: HomeBannerImage,
     aboutUsFamily: aboutUsFamilyImage,
   },
   hiwSteps: {
@@ -57,6 +78,7 @@ const images = {
     step4: step4Image,
     step5: step5Image,
   },
+  notFound,
 }
 
 export default images

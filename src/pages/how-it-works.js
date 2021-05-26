@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "components/layout"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import pageSections from "src/content/how-it-works"
 import { OpenContactModalButton, Section, Text } from "components"
 
@@ -13,7 +13,7 @@ const topBannerData = {
   description:
     "Discover how to secure equipment financing with Arbutus Capital.",
   cta: <OpenContactModalButton>Start your lease</OpenContactModalButton>,
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.howItWorks,
 }
 
 const HowItWorksPage = () => {

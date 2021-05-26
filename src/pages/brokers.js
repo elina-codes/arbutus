@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "components/layout"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import pageSections from "src/content/brokers"
 import { OpenContactModalButton, Banner, Section } from "components"
 import * as MUI from "@material-ui/core"
@@ -13,7 +13,7 @@ const topBannerData = {
   description:
     "We always endeavour to find a way through, structuring deals that get your clients the equipment they need with the resources they have.",
   cta: <OpenContactModalButton>Start a partnership</OpenContactModalButton>,
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.brokers,
 }
 
 const BrokersPage = () => {

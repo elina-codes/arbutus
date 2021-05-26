@@ -1,24 +1,26 @@
 import { routes, phoneNumber } from "src/constants"
-import React from "react"
-import {
-  AppBar,
-  Toolbar,
-  // IconButton,
-  Grid,
-  useScrollTrigger,
-  Slide,
-  CssBaseline,
-} from "@material-ui/core"
-// import MenuIcon from "@material-ui/icons/Menu"
+import React, { useState } from "react"
+import * as MUI from "@material-ui/core"
+import MenuIcon from "@material-ui/icons/Menu"
 import { OpenContactModalButton, Link, Text } from "components"
 import useStyles from "./styles"
 import images from "src/images"
+import classNames from "classnames"
 
-const { howItWorks, aboutUs, industries, faq, contactUs } = routes
+const { whyLease, howItWorks, aboutUs, industries, faq, contactUs } = routes
 const mainBarLinks = [
   {
-    title: howItWorks.title,
-    href: howItWorks.path,
+    title: "Understand Leasing",
+    sublinks: [
+      {
+        title: whyLease.title,
+        href: whyLease.path,
+      },
+      {
+        title: howItWorks.title,
+        href: howItWorks.path,
+      },
+    ],
   },
   {
     title: aboutUs.title,
@@ -54,59 +56,120 @@ const topBarLinks = [
   },
 ]
 
-const HideOnScroll = ({ children, window }) => {
-  const trigger = useScrollTrigger({ target: window ? window() : undefined })
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  )
-}
-
-const NavLink = ({ title, href, external }) => (
-  <Grid item>
-    <Link {...{ href, external, color: "inherit" }}>{title}</Link>
-  </Grid>
-)
+const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
 
 const Header = ({ siteTitle, ...props }) => {
   const classes = useStyles()
+  const [mobileOpen, setMobileOpen] = useState(false)
+
+  const handleDrawerToggle = e => {
+    if (e && e.type === "keydown" && (e.key === "Tab" || e.key === "Shift")) {
+      return
+    }
+    setMobileOpen(!mobileOpen)
+  }
+
+  const HideOnScroll = ({ children, window }) => {
+    const trigger = MUI.useScrollTrigger({
+      target: window ? window() : undefined,
+    })
+
+    return (
+      <MUI.Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </MUI.Slide>
+    )
+  }
+
+  function NavLinkWithSubs({ title, sublinks }) {
+    const [anchorEl, setAnchorEl] = useState(null)
+
+    const handleSubMenuTriggerClick = e => {
+      setAnchorEl(e.currentTarget)
+    }
+
+    const handleSubMenuClose = () => {
+      setAnchorEl(null)
+    }
+
+    return (
+      <>
+        <MUI.Link
+          onClick={handleSubMenuTriggerClick}
+          className={classes.navLink}
+        >
+          {title} ▾
+        </MUI.Link>
+        <MUI.Menu
+          anchorEl={anchorEl}
+          getContentAnchorEl={null}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleSubMenuClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          {sublinks.map(sublink => (
+            <MUI.MenuItem key={sublink.title}>
+              <NavLink
+                {...sublink}
+                key={sublink.title}
+                style={{ marginLeft: 0 }}
+              />
+            </MUI.MenuItem>
+          ))}
+        </MUI.Menu>
+      </>
+    )
+  }
+
+  function NavLink({ title, sublinks, ...props }) {
+    return sublinks ? (
+      <NavLinkWithSubs {...{ ...props, title, sublinks }} />
+    ) : (
+      <Link {...{ ...props, color: "inherit", className: classes.navLink }}>
+        {title}
+      </Link>
+    )
+  }
+
+  const TopNav = () => (
+    <nav className={classNames(classes.mainMenuNav, classes.mainMenuTopNav)}>
+      {topBarLinks.map((item, i) => (
+        <NavLink {...item} key={`topBarLink-${item.title}`} />
+      ))}
+    </nav>
+  )
+
+  const MainNav = () => (
+    <nav className={classes.mainMenuNav}>
+      {mainBarLinks.map(item => (
+        <NavLink {...item} key={`mainBarLink-${item.title}`} />
+      ))}
+      <OpenContactModalButton className={classes.mainNavCta}>
+        Get started
+      </OpenContactModalButton>
+    </nav>
+  )
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <div className={classes.root} id="back-to-top-anchor">
+      <MUI.CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar color="inherit">
-          <Toolbar className={classes.topToolbar} variant="dense">
-            <nav>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justify="flex-end"
-              >
-                {topBarLinks.map(item => (
-                  <NavLink {...item} key={`topBarLink-${item.title}`} />
-                ))}
-              </Grid>
-            </nav>
-          </Toolbar>
-          <Toolbar className={classes.mainToolbar}>
-            {/* <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton> */}
-            <Text
-              variant="h6"
-              component="span"
-              className={classes.title}
-              style={{ marginBottom: 0 }}
-            >
+        <MUI.AppBar color="inherit">
+          <MUI.Hidden smDown>
+            <MUI.Toolbar className={classes.topToolbar} variant="dense">
+              <TopNav />
+            </MUI.Toolbar>
+          </MUI.Hidden>
+          <MUI.Toolbar className={classes.mainToolbar}>
+            <Text variant="h6" component="span" style={{ marginBottom: 0 }}>
               <Link to="/" style={{ display: "flex" }}>
                 <img
                   src={images.bg.navLogo}
@@ -115,21 +178,43 @@ const Header = ({ siteTitle, ...props }) => {
                 />
               </Link>
             </Text>
-            <nav>
-              <Grid container spacing={2} alignItems="center">
-                {mainBarLinks.map(item => (
-                  <NavLink {...item} key={`mainBarLink-${item.title}`} />
-                ))}
-                <Grid item>
-                  <OpenContactModalButton>Get started</OpenContactModalButton>
-                </Grid>
-              </Grid>
-            </nav>
-          </Toolbar>
-        </AppBar>
+            <MUI.Hidden mdUp>
+              <MUI.IconButton
+                aria-label="open menu"
+                edge="start"
+                onClick={handleDrawerToggle}
+                color="inherit"
+              >
+                <MenuIcon />
+              </MUI.IconButton>
+            </MUI.Hidden>
+            <MUI.Hidden smDown>
+              <MainNav />
+            </MUI.Hidden>
+            <MUI.Hidden mdUp>
+              <MUI.SwipeableDrawer
+                variant="temporary"
+                anchor="right"
+                open={mobileOpen}
+                disableBackdropTransition
+                onOpen={handleDrawerToggle}
+                onClose={handleDrawerToggle}
+                disableDiscovery={iOS}
+                classes={{
+                  paper: classes.drawerContainer,
+                }}
+              >
+                <MainNav />
+                <TopNav />
+              </MUI.SwipeableDrawer>
+            </MUI.Hidden>
+          </MUI.Toolbar>
+        </MUI.AppBar>
       </HideOnScroll>
-      <Toolbar variant="dense" />
-      <Toolbar />
+      <MUI.Hidden smDown>
+        <MUI.Toolbar variant="dense" />
+      </MUI.Hidden>
+      <MUI.Toolbar />
     </div>
   )
 }

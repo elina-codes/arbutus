@@ -2,6 +2,8 @@ import { routes } from "src/constants"
 import React from "react"
 import { Button, OpenContactModalButton } from "components"
 import images from "src/images"
+import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
+import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
 
 const pageSections = {
   industriesWeServe: {
@@ -44,10 +46,58 @@ const pageSections = {
         View more benefits
       </Button>
     ),
+    content: [
+      {
+        icon: FinancingIcon,
+        text: `Up to 100% financing`,
+      },
+      {
+        icon: FinancingIcon,
+        text: `Flexible payment terms`,
+      },
+      {
+        icon: FinancingIcon,
+        text: `Protect your cash flow`,
+      },
+      {
+        icon: FinancingIcon,
+        text: `Potential tax savings`,
+      },
+      {
+        icon: FinancingIcon,
+        text: `Get your equipment fast`,
+      },
+    ],
   },
   reasons: {
     dark: true,
     subtitle: `Reasons to partner with us`,
+    content: [
+      {
+        icon: CheckIcon,
+        title: "Challenged credit is not a problem",
+        text:
+          "We provide quick approvals for equipment leasing for those with challenged or bad credit.",
+      },
+      {
+        icon: CheckIcon,
+        title: "Fast and flexible",
+        text:
+          "Everyone’s situation is unique. We will listen and find a way to offer easy equipment financing in as little as 1 business day.",
+      },
+      {
+        icon: CheckIcon,
+        title: "Great customer service",
+        text:
+          "We work fast. Give us a call and Elizabeth, Mike, or Joey will speak with you directly.",
+      },
+      {
+        icon: CheckIcon,
+        title: "We don’t say no to any industry",
+        text:
+          "Whatever your industry, if you need equipment lease financing, we will make it work.",
+      },
+    ],
   },
   process: {
     title: "Our 5 step process",
@@ -58,6 +108,28 @@ const pageSections = {
         More details
       </Button>
     ),
+    content: [
+      {
+        icon: FinancingIcon,
+        text: "1. Define",
+      },
+      {
+        icon: FinancingIcon,
+        text: "2. Apply",
+      },
+      {
+        icon: FinancingIcon,
+        text: "3. Review",
+      },
+      {
+        icon: FinancingIcon,
+        text: "4. Approve",
+      },
+      {
+        icon: FinancingIcon,
+        text: "5. Acquire",
+      },
+    ],
   },
   startLeasing: {
     subtitle: "Start leasing equipment",

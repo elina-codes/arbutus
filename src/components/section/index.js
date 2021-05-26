@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-import { Container, Fade } from "@material-ui/core"
+import { Container } from "@material-ui/core"
 import { Text, ImagePlain } from "components"
 import ScrollAnimation from "react-animate-on-scroll"
 import useStyles from "./styles"
@@ -116,12 +116,10 @@ const Section = ({
       loading="lazy"
     >
       {homeVariant && (
-        <Fade in timeout={2000}>
-          <div
-            className={classes.homeBannerImage}
-            style={{ backgroundImage: `url(${bgImage})` }}
-          />
-        </Fade>
+        <div
+          className={classes.homeBannerImage}
+          style={{ backgroundImage: `url(${bgImage})` }}
+        />
       )}
       <Container>
         <div

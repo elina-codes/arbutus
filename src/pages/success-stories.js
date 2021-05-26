@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import pageSections from "src/content/success-stories"
 import { OpenContactModalButton, Card, Section, Text } from "components"
 import * as MUI from "@material-ui/core"
@@ -13,7 +14,7 @@ const topBannerData = {
   description:
     "We have been helping Western Canada lease heavy equipment for over 40 years. Here are some stories from our happy clients.",
   cta: <OpenContactModalButton>Schedule a chat</OpenContactModalButton>,
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.success,
 }
 
 const placeholderStories = (

@@ -1,5 +1,8 @@
 import React from "react"
 import Layout from "components/layout"
+import { Section, Button } from "components"
+import { routes } from "src/constants"
+import images from "images"
 
 const seo = {
   title: "Not Found",
@@ -7,8 +10,17 @@ const seo = {
 
 const NotFoundPage = () => (
   <Layout {...{ seo }}>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist.</p>
+    <Section
+      title="404: Not Found"
+      subtitle="This page does not exist."
+      button={
+        <Button color="primary" to={routes.home.path}>
+          Back to homepage
+        </Button>
+      }
+    >
+      <img src={images.notFound} alt="404: Not Found" width={300} />
+    </Section>
   </Layout>
 )
 

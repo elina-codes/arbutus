@@ -32,10 +32,10 @@ const pageSections = [
     If you have credit issues, we help you get there with alternate solutions.`,
   },
   {
-    subtitle: "Review",
+    subtitle: "Approve",
     image: {
       src: images.hiwSteps.step4,
-      alt: "How It Works: Step 4, Review",
+      alt: "How It Works: Step 4, Approve",
     },
     description: `We’ll then review your application and business situation and chat with you over the phone to work out the best route to an approval.
     

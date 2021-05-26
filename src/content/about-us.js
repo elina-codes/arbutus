@@ -1,4 +1,3 @@
-import React from "react"
 import { BsGem as AuthenticIcon } from "react-icons/bs"
 import { GiPodiumWinner as ExperiencedIcon } from "react-icons/gi"
 import {

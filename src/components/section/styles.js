@@ -30,6 +30,7 @@ const styles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "flex-start",
     textAlign: "left",
+    textShadow: `1px 1px 3px rgba(0,0,0,0.8)`,
   },
   sectionHeading: {
     textAlign: "left",
@@ -39,8 +40,9 @@ const styles = makeStyles(theme => ({
     lineHeight: 2,
   },
   buttonContainer: {
+    textShadow: "none",
     marginTop: theme.space.xl,
-    "& .MuiButton-root": {
+    "& .MuiButton-root:not(:last-child)": {
       marginRight: theme.space.sm,
     },
   },
@@ -63,32 +65,6 @@ const styles = makeStyles(theme => ({
   light: {
     backgroundColor: theme.palette.background.light,
     color: theme.palette.text.main,
-  },
-  home: {
-    color: theme.palette.text.main,
-    backgroundColor: theme.palette.white,
-    position: "relative",
-    alignItems: "flex-start",
-    overflow: "hidden",
-    minHeight: 600,
-    "&:after": {
-      content: `''`,
-      display: "block",
-      position: "absolute",
-      inset: "0 50% 0 auto",
-      backgroundColor: theme.palette.white,
-      height: "100%",
-      width: "100%",
-      transform: "skewX(-20deg)",
-      transformOrigin: "bottom",
-    },
-    [theme.breakpoints.only("xs")]: {
-      paddingBottom: 300,
-      "&:after": {
-        transform: "skewY(-7deg)",
-        inset: "auto 0 240px 0",
-      },
-    },
   },
   sectionInner: {
     position: "relative",
@@ -123,25 +99,6 @@ const styles = makeStyles(theme => ({
       },
     },
   },
-  homeBannerInner: {
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: 0,
-      maxWidth: "50%",
-    },
-  },
-  homeBannerImage: {
-    position: "absolute",
-    inset: "auto 0 0 0",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    [theme.breakpoints.only("xs")]: {
-      height: 270,
-    },
-    [theme.breakpoints.up("sm")]: {
-      inset: "0 0 0 auto",
-      width: "50%",
-    },
-  },
   sectionMain: {
     gridArea: "main",
   },
@@ -161,6 +118,54 @@ const styles = makeStyles(theme => ({
     borderRadius: theme.borderRadius,
     objectFit: "cover",
     boxShadow: theme.boxShadow,
+  },
+  // home banner
+  home: {
+    color: theme.palette.text.main,
+    backgroundColor: theme.palette.white,
+    position: "relative",
+    alignItems: "flex-start",
+    overflow: "hidden",
+    minHeight: 600,
+    textShadow: "none",
+    "&:after": {
+      content: `''`,
+      display: "block",
+      position: "absolute",
+      inset: "0 50% 0 auto",
+      backgroundColor: theme.palette.white,
+      height: "100%",
+      width: "100%",
+      transform: "skewX(-20deg)",
+      transformOrigin: "bottom",
+    },
+    [theme.breakpoints.only("xs")]: {
+      paddingBottom: 300,
+      "&:after": {
+        transform: "skewY(-7deg)",
+        inset: "auto 0 240px 0",
+      },
+    },
+  },
+  homeBannerInner: {
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: 0,
+      maxWidth: "50%",
+    },
+  },
+  homeBannerImage: {
+    backgroundColor: theme.palette.primary.main,
+    position: "absolute",
+    inset: "auto 0 0 0",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    [theme.breakpoints.only("xs")]: {
+      height: 270,
+    },
+    [theme.breakpoints.up("sm")]: {
+      inset: "0 0 0 auto",
+      width: "50%",
+    },
   },
 }))
 

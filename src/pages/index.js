@@ -2,10 +2,12 @@ import React from "react"
 import Layout from "components/layout"
 import {
   OpenContactModalButton,
+  CircleGridSection,
   Banner,
   ImagePlain,
   Section,
   Text,
+  IconList,
 } from "components"
 import images from "src/images"
 import * as MUI from "@material-ui/core"
@@ -21,7 +23,7 @@ const topBannerData = {
   description:
     "We provide flexible equipment financing solutions, no matter your credit.",
   cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
-  bgImage: images.home.mainBanner,
+  bgImage: images.banners.home,
   variant: "home",
 }
 
@@ -35,6 +37,10 @@ const IndexPage = () => {
     startLeasing,
     areYouABroker,
   } = pageSections || {}
+
+  const { content: benefitsContent, ...benefitsSection } = benefits
+  const { content: reasonsContent, ...reasonsSection } = reasons
+  const { content: processContent, ...processSection } = process
 
   return (
     <Layout {...{ seo, topBannerData, showSuccessStories: true }}>
@@ -84,9 +90,15 @@ const IndexPage = () => {
         today.
       </Banner>
       <Section {...aboutUs}></Section>
-      <Section {...benefits}></Section>
-      <Section {...reasons}></Section>
-      <Section {...process}></Section>
+      <Section {...benefitsSection}>
+        <CircleGridSection data={benefitsContent} dark />
+      </Section>
+      <Section {...reasonsSection}>
+        <IconList data={reasonsContent} outlined />
+      </Section>
+      <Section {...processSection}>
+        <CircleGridSection data={processContent} outlined />
+      </Section>
       <Section dark>
         <MUI.Grid container spacing={5}>
           <MUI.Grid item xs={12} md>

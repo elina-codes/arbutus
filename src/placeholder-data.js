@@ -1,4 +1,3 @@
-import React from "react"
 import PlaceholderBannerImage from "./images/placeholder-banner.png"
 import PlaceholderSSImage1 from "./images/ss1.png"
 import PlaceholderSSImage2 from "./images/ss2.png"

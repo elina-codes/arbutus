@@ -108,7 +108,7 @@ const arbutusTheme = {
       "@global": {
         "@keyframes override_slideInUp": {
           "0%": {
-            transform: "translateY(100%)",
+            transform: "translateY(50%)",
           },
           "100%": {
             transform: "translateY(0)",
@@ -173,6 +173,9 @@ const arbutusTheme = {
         ".animate__fadeInRight": {
           animationName: "override_fadeInRight",
           animationDuration: 0.5,
+        },
+        a: {
+          cursor: "pointer",
         },
         body: {
           color: config.textPrimary,

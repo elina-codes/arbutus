@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 import { Button, OpenContactModalButton, PageMenu, Section } from "components"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import faqContent from "src/content/faq"
 import { renderPageContentAndMenu } from "src/helpers"
 
@@ -26,7 +26,7 @@ const FAQPage = () => {
         <OpenContactModalButton>Chat directly with us</OpenContactModalButton>
       </>
     ),
-    bgImage: placeholderData.bannerImage,
+    bgImage: images.banners.faq,
   }
 
   return (

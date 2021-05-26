@@ -2,10 +2,6 @@ export const routes = {
   home: {
     path: "/",
   },
-  howItWorks: {
-    title: "Understand leasing",
-    path: "/how-it-works",
-  },
   aboutUs: {
     title: "About us",
     path: "/about-us",
@@ -33,6 +29,10 @@ export const routes = {
   whyLease: {
     title: "Why lease",
     path: "/why-lease",
+  },
+  howItWorks: {
+    title: "How it works",
+    path: "/how-it-works",
   },
   blog: {
     title: "Blog",

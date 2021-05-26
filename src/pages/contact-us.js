@@ -9,7 +9,7 @@ import {
   Text,
   Section,
 } from "components"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import * as MUI from "@material-ui/core"
 import pageSections from "src/content/contact-us"
 
@@ -29,7 +29,7 @@ const topBannerData = {
       <OpenContactModalButton>Apply Now</OpenContactModalButton>
     </>
   ),
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.contactUs,
 }
 
 const ContactUsPage = () => {

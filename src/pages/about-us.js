@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "components/layout"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import pageSections from "src/content/about-us"
 import * as MUI from "@material-ui/core"
 import {
@@ -20,7 +20,7 @@ const topBannerData = {
   description:
     "We value deep relationships and are well established to handle demands of any size.",
   cta: <OpenContactModalButton>Let's work together</OpenContactModalButton>,
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.aboutUs,
 }
 
 const AboutUsPage = () => {

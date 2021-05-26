@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 import { OpenContactModalButton, PageMenu, Section, Text } from "components"
-import placeholderData from "src/placeholder-data"
+import images from "src/images"
 import iwsContent from "src/content/industries"
 import { renderPageContentAndMenu } from "src/helpers"
 
@@ -14,7 +14,7 @@ const topBannerData = {
   description:
     "We serve British Columbia, Manitoba, Alberta, and Saskatchewan, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
   cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
-  bgImage: placeholderData.bannerImage,
+  bgImage: images.banners.industries,
 }
 
 const IndustriesWeServePage = () => {
