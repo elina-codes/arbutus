@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "components/layout"
 import placeholderData from "src/placeholder-data"
 import images from "src/images"
 import pageSections from "src/content/blog"
-import { Section, CardGrid } from "components"
+import { Button, Section, CardGrid } from "components"
 const seo = {
   title: "Blog",
 }
@@ -15,15 +15,27 @@ const topBannerData = {
   bgImage: images.banners.blog,
 }
 
-const placeholderBlogArticles = [].concat(
-  ...new Array(4).fill(placeholderData.blogArticles)
-)
-
 const SuccessStoriesPage = () => {
+  const [rowsToShow, setRowsToShow] = useState(4)
+
+  const fillRows = () => {
+    setRowsToShow(rowsToShow + 4)
+  }
+
+  const placeholderBlogArticles = [].concat(
+    ...new Array(rowsToShow).fill(placeholderData.blogArticles)
+  )
+
+  const LoadMoreButton = () => (
+    <Button color="default" fullWidth onClick={fillRows}>
+      Load more blog articles
+    </Button>
+  )
+
   const { recentArticles } = pageSections || {}
   return (
     <Layout {...{ seo, topBannerData }}>
-      <Section {...recentArticles}>
+      <Section {...{ button: <LoadMoreButton />, ...recentArticles }}>
         <CardGrid data={placeholderBlogArticles} />
       </Section>
     </Layout>

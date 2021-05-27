@@ -62,6 +62,17 @@ const placeholderData = {
       url: "#",
       text: `For the past ten years the Canadian Federation of Independent Business has studied and reported on the impact government red tape has on business. Red tape means lower incomes, less economic growth and hundreds of thousands`,
     },
+    {
+      title: "Lease finance for commerical boats & buses.",
+      meta: "4 minute read",
+      image: {
+        src: PlaceholderBlogImage1,
+        alt: "Offering customers more choice: how National Leasing end title.",
+      },
+      url: "#",
+      text: `We’re regularly asked if we finance boats and buses – assets few lenders are willing to finance due to liability concerns.
+        The concern with these assets is the lessor can`,
+    },
   ],
 }
 
