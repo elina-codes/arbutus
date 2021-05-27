@@ -173,7 +173,7 @@ const Header = ({ siteTitle, ...props }) => {
               <Link to="/" style={{ display: "flex" }}>
                 <img
                   src={images.bg.navLogo}
-                  alt="Arbutus Capital"
+                  alt="Arbutus Capital logo"
                   className={classes.navLogo}
                 />
               </Link>

@@ -94,7 +94,7 @@ const IndexPage = () => {
         <CircleGridSection data={benefitsContent} dark />
       </Section>
       <Section {...reasonsSection}>
-        <IconList data={reasonsContent} outlined />
+        <IconList data={reasonsContent} />
       </Section>
       <Section {...processSection}>
         <CircleGridSection data={processContent} outlined />

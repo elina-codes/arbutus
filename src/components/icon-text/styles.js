@@ -14,13 +14,19 @@ const styles = makeStyles(theme => ({
       alignItems: "center",
       marginBottom: theme.space.md,
       textAlign: "left",
+      "&.center": {
+        width: "auto",
+        textAlign: "center",
+      },
+    },
+    "&:not(:last-child)": {
+      marginBottom: theme.space.sm,
     },
   },
   iconContainer: {
     width: 60,
     height: 60,
     borderRadius: "100%",
-    padding: "5%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -34,13 +40,23 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       marginRight: theme.space.sm,
     },
+    "&.md": {
+      width: 40,
+      height: 40,
+      [theme.breakpoints.up("md")]: {
+        width: 60,
+        height: 60,
+      },
+    },
   },
   dark: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.white,
+    padding: "5%",
   },
   outlined: {
     border: `3px solid ${theme.palette.primary.main}`,
+    padding: "5%",
   },
 }))
 

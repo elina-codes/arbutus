@@ -1,10 +1,15 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState, useCallback } from "react"
 import { Dialog, IconButton } from "@material-ui/core"
 import { createPortal } from "react-dom"
-import { ContactForm, Section } from "src/components"
+import { Button, ContactForm, Section } from "src/components"
 import { ModalContext } from "src/context"
-import { GrClose as CloseIcon } from "react-icons/gr"
+import {
+  IoMdCheckmarkCircleOutline as CheckIcon,
+  IoMdClose as CloseIcon,
+} from "react-icons/io"
+
 import useStyles from "./styles"
+import { Text } from "components"
 
 const ContactModal = () => {
   const classes = useStyles()
@@ -13,35 +18,97 @@ const ContactModal = () => {
     renderModal,
     openModal,
   } = useContext(ModalContext)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [secondsRemaining, setSecondsRemaining] = useState(5)
+
+  const setSubmitSuccessToTrue = () => {
+    setSubmitSuccess(true)
+  }
+
+  const closeModal = useCallback(() => {
+    setSubmitSuccess(false)
+    renderModal()
+  }, [renderModal, setSubmitSuccess])
+
+  useEffect(() => {
+    if (submitSuccess) {
+      if (secondsRemaining) {
+        setTimeout(() => {
+          setSecondsRemaining(secondsRemaining - 1)
+        }, 1000)
+      } else {
+        closeModal()
+      }
+    } else {
+      setSecondsRemaining(5)
+    }
+  }, [secondsRemaining, submitSuccess, closeModal])
 
   const CloseButton = () => (
     <div className={classes.closeButtonContainer}>
       <IconButton
         {...{
           className: classes.closeButton,
-          size: "small",
-          onClick: renderModal,
+          color: "inherit",
+          onClick: closeModal,
         }}
       >
-        <CloseIcon />
+        <CloseIcon size={24} />
       </IconButton>
     </div>
   )
+
+  const SuccessView = () => {
+    return (
+      <>
+        <CheckIcon size={100} color="#7ED321" />
+        <Text variant="h3">Success!</Text>
+        <Text variant="h4">
+          We have received your message and will contact you within one business
+          day.
+        </Text>
+        <Text variant="h4" strong>
+          That’s our promise to you.
+        </Text>
+        <Button
+          color="primary"
+          onClick={closeModal}
+          className={classes.successCloseBtn}
+        >
+          Close
+        </Button>
+        <Text>
+          This will automatically close in{" "}
+          <strong>{secondsRemaining} seconds</strong>.
+        </Text>
+      </>
+    )
+  }
 
   if (openModal) {
     return createPortal(
       <Dialog
         {...{
           open: openModal,
-          onBackdropClick: renderModal,
-          onEscapeKeyDown: renderModal,
-          PaperProps: { className: "dark" },
+          onBackdropClick: closeModal,
+          onEscapeKeyDown: closeModal,
+          PaperProps: { className: submitSuccess ? "" : "dark" },
         }}
       >
         <CloseButton />
-        <Section dense dark>
-          <ContactForm showHeader showFooter />
-          {content}
+        <Section dense dark={!submitSuccess}>
+          {submitSuccess ? (
+            <SuccessView />
+          ) : (
+            <>
+              <ContactForm
+                showHeader
+                showFooter
+                submissionCallback={setSubmitSuccessToTrue}
+              />
+              {content}
+            </>
+          )}
         </Section>
       </Dialog>,
       document.getElementById("___gatsby")

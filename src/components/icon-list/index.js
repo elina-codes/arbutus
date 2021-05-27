@@ -3,26 +3,38 @@ import classNames from "classnames"
 import { Text } from "components"
 import useStyles from "./styles"
 
-const IconList = ({ data }) => {
+const IconList = ({ data = [], singleCol, outlined }) => {
   const classes = useStyles()
 
   return (
-    <ul className={classes.iconList}>
+    <ul
+      className={classNames(classes.iconList, {
+        [classes.singleCol]: singleCol,
+      })}
+    >
       {data.map((item, i) => {
         const { icon: Icon, prefix, title, text } = item
         return (
-          <li key={`iconList-item-${title}`} className={classes.iconListItem}>
+          <li
+            key={`iconList-item-${i}-${title}`}
+            className={classes.iconListItem}
+          >
             <div
               className={classNames(classes.iconListIconContainer, {
                 [classes.prefix]: !!prefix,
+                [classes.outlined]: outlined,
               })}
             >
-              {Icon && <Icon size={50} color="#fff" />}
+              {Icon && <Icon size={50} />}
               {prefix && <div className={classes.iconListPrefix}>{prefix}</div>}
             </div>
             <div className={classes.iconListContent}>
-              <Text variant="h5">{title}</Text>
-              <Text>{text}</Text>
+              {title && (
+                <Text variant="h5" className={classes.iconListTitle}>
+                  {title}
+                </Text>
+              )}
+              {text && <Text>{text}</Text>}
             </div>
           </li>
         )

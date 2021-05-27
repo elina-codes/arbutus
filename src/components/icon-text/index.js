@@ -5,18 +5,20 @@ import useStyles from "./styles"
 
 const IconText = ({
   className,
+  center,
   icon: Icon,
   text,
   dark,
   outlined,
+  size = "lg",
   ...props
 }) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.iconTitle}>
+    <div className={classNames(classes.iconTitle, { center })}>
       <div
-        className={classNames(classes.iconContainer, className, {
+        className={classNames(classes.iconContainer, className, size, {
           [classes.dark]: dark,
           [classes.outlined]: outlined,
         })}

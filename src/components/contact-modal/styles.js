@@ -14,11 +14,12 @@ const styles = makeStyles(theme => ({
   },
   closeButton: {
     position: "absolute",
-    top: theme.space.md,
-    right: theme.space.md,
-    "& path": {
-      stroke: theme.palette.white,
-    },
+    top: theme.space.xs,
+    right: theme.space.xs,
+  },
+  successCloseBtn: {
+    marginTop: theme.space.xl,
+    marginBottom: theme.space.sm,
   },
 }))
 

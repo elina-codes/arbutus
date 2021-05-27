@@ -5,8 +5,8 @@ import {
   AccordionSummary as MuiAccordionSummary,
 } from "@material-ui/core"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import useStyles from "./styles"
 import { Text } from "components"
+import useStyles from "./styles"
 
 const Accordion = ({ data = [], ...props }) => {
   const classes = useStyles()

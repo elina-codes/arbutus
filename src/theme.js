@@ -4,7 +4,6 @@ const config = {
   primary: "#01446f",
   secondary: "#ff5722",
   textPrimary: "#003354",
-  textLight: "#757575",
   white: "#fff",
   light: "#F7F8FA",
   borderRadius: 10,
@@ -99,7 +98,7 @@ const arbutusTheme = {
       fontSize: 14,
     },
     caption: {
-      color: config.textLight,
+      opacity: 0.7,
       fontSize: 12,
     },
   },
@@ -211,6 +210,7 @@ const arbutusTheme = {
     MuiButton: {
       contained: {
         boxShadow: config.boxShadow,
+        fontWeight: 600,
       },
     },
     // Card
@@ -218,6 +218,8 @@ const arbutusTheme = {
       root: {
         height: "100%",
         boxShadow: config.boxShadow,
+        display: "flex",
+        flexDirection: "column",
       },
     },
     MuiCardMedia: {
@@ -226,9 +228,21 @@ const arbutusTheme = {
         height: "auto",
       },
     },
-    MuiCardActionArea: {
+    MuiCardContent: {
       root: {
         textAlign: "left",
+        flex: 1,
+      },
+    },
+    MuiCardActions: {
+      root: {
+        justifyContent: "flex-end",
+        paddingLeft: config.spacing.sm,
+        paddingRight: config.spacing.sm,
+        paddingBottom: config.spacing.sm,
+        textTransform: "uppercase",
+        fontWeight: 600,
+        fontSize: 12,
       },
     },
     // Form

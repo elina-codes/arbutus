@@ -36,6 +36,9 @@ const styles = makeStyles(theme => ({
     textAlign: "left",
     maxWidth: 540,
   },
+  wideTitle: {
+    maxWidth: 750,
+  },
   sectionHeadingDescription: {
     lineHeight: 2,
   },

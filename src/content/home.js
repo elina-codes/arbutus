@@ -1,5 +1,5 @@
-import { routes } from "src/constants"
 import React from "react"
+import { routes } from "src/constants"
 import { Button, OpenContactModalButton } from "components"
 import images from "src/images"
 import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"

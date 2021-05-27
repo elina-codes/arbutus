@@ -12,6 +12,7 @@ const SectionHeading = ({
   headerButtons,
   hero,
   center,
+  wideTitle,
 }) => {
   const classes = useStyles()
 
@@ -19,6 +20,7 @@ const SectionHeading = ({
     <div
       className={classNames(classes.sectionHeading, {
         [classes.center]: center,
+        [classes.wideTitle]: wideTitle,
       })}
     >
       {title && <Text variant={hero ? "h1" : "h2"}>{title}</Text>}
@@ -64,6 +66,7 @@ const Section = ({
   subtitle,
   title,
   variant,
+  wideTitle,
   ...props
 }) => {
   const classes = useStyles()
@@ -85,6 +88,7 @@ const Section = ({
             hero,
             center: centerSection,
             buttons: headerButtons,
+            wideTitle,
           }}
         />
       )}

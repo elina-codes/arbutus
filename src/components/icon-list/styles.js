@@ -11,6 +11,11 @@ const styles = makeStyles(theme => ({
       justifyContent: "space-between",
     },
   },
+  singleCol: {
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
   iconListItem: {
     display: "flex",
     flex: "0 0 47%",
@@ -30,10 +35,13 @@ const styles = makeStyles(theme => ({
   },
   iconListContent: {
     flex: 1,
+  },
+  iconListTitle: {
     paddingTop: theme.space.xs,
   },
   prefix: {
     opacity: 1,
+    alignSelf: "flex-start",
   },
   iconListPrefix: {
     fontSize: 120,

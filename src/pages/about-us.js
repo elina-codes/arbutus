@@ -10,6 +10,7 @@ import {
   Section,
   Text,
 } from "src/components"
+import { Blockquote, IconText } from "components"
 
 const seo = {
   title: "About Us",
@@ -49,6 +50,11 @@ const AboutUsPage = () => {
             </MUI.Grid>
           ))}
         </MUI.Grid>
+        <Blockquote author="Elizabeth Benda, President &amp; Chief Executive Officer, Arbutus Capital">
+          We understand that juggling work and family while being an independent
+          business owner has its challenges. We are here to find solutions when
+          you need them most.”
+        </Blockquote>
       </Section>
       <Banner
         cta={<OpenContactModalButton>Get started</OpenContactModalButton>}
@@ -67,10 +73,7 @@ const AboutUsPage = () => {
               md={6}
               alignItems="center"
             >
-              {v.icon}
-              <Text variant="h4" strong>
-                {v.title}
-              </Text>
+              <IconText icon={v.icon} text={v.title} size="md" center />
               <Text>{v.text}</Text>
             </MUI.Grid>
           ))}
