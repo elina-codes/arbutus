@@ -19,6 +19,7 @@ const ImagePlain = ({
     <ScrollAnimation
       animateIn={`animate__fadeIn${direction}`}
       animateOnce
+      className={classes.animationContainer}
       {...{ delay }}
     >
       <div
