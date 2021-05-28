@@ -13,6 +13,7 @@ const FAQPage = () => {
   const { menuSections, pageSections = [] } = renderPageContentAndMenu(
     faqContent
   )
+
   const viewButtonTarget = pageSections.find(s => s.id)?.id
   const topBannerData = {
     title: "Frequently Asked Questions",
@@ -20,7 +21,14 @@ const FAQPage = () => {
       "Everything you need to know for you to make a great decision. Just click on one of the sections below to find the answer.",
     cta: (
       <>
-        <Button color="default" to={`#${viewButtonTarget}`}>
+        <Button
+          color="default"
+          onClick={() => {
+            document
+              .getElementById(viewButtonTarget)
+              .scrollIntoView({ behavior: "smooth" })
+          }}
+        >
           View FAQ
         </Button>
         <OpenContactModalButton>Chat directly with us</OpenContactModalButton>

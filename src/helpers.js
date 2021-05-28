@@ -13,7 +13,7 @@ export const renderPageContentAndMenu = contentObj => {
       sectionId = toKebab(section[section.menuItem])
       menuSections.push({
         title: section[section.menuItem],
-        target: `#${sectionId}`,
+        target: sectionId,
       })
     }
     pageSections.push({

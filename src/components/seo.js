@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -27,25 +28,23 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const defaultImage = site.siteMetadata?.image
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      style={[
-        {
-          cssText: `
-            html {scroll-behavior: smooth;}
-          `,
-        },
-      ]}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: `${defaultImage}`,
         },
         {
           property: `og:title`,
