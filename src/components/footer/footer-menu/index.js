@@ -1,6 +1,6 @@
 import React from "react"
 import { phoneNumber, routes } from "src/constants"
-import { Box, List, ListItem } from "@material-ui/core"
+import { List, ListItem } from "@material-ui/core"
 import useStyles from "./styles"
 import { Button, OpenContactModalButton, Link, Section, Text } from "components"
 import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
@@ -94,13 +94,11 @@ const FooterMenu = () => {
 
   return (
     <Section black className={classes.footerMenu}>
-      <Box display="flex">
+      <nav className={classes.footerNav}>
         {sections.map((section, i) => (
-          <Box
+          <div
             className={classes.footerMenuSection}
             key={`footerMenu-section-${i}`}
-            p={3}
-            flex={section.flex || 2}
           >
             <Text variant="h4">{section?.title}</Text>
             <List>
@@ -127,9 +125,9 @@ const FooterMenu = () => {
                 </ListItem>
               ))}
             </List>
-          </Box>
+          </div>
         ))}
-      </Box>
+      </nav>
     </Section>
   )
 }
