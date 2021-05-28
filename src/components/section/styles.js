@@ -156,12 +156,10 @@ const styles = makeStyles(theme => ({
       maxWidth: "50%",
     },
   },
-  homeBannerImage: {
+  homeBannerImageWrapper: {
     backgroundColor: theme.palette.primary.main,
     position: "absolute",
     inset: "auto 0 0 0",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     [theme.breakpoints.only("xs")]: {
       height: 270,
     },
@@ -169,6 +167,12 @@ const styles = makeStyles(theme => ({
       inset: "0 0 0 auto",
       width: "50%",
     },
+  },
+  homeBannerImage: {
+    height: "100%",
+    width: "100%",
+    objectFit: "cover",
+    objectPosition: "center top",
   },
 }))
 

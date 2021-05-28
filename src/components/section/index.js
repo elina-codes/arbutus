@@ -2,6 +2,7 @@ import React from "react"
 import classNames from "classnames"
 import { Container } from "@material-ui/core"
 import { Text, ImagePlain } from "components"
+import images from "src/images"
 import ScrollAnimation from "react-animate-on-scroll"
 import useStyles from "./styles"
 
@@ -63,6 +64,7 @@ const Section = ({
   imageFirst,
   inner,
   light,
+  logoBg,
   subtitle,
   title,
   variant,
@@ -73,9 +75,15 @@ const Section = ({
   const centerSection = center || (!hero && !inner && !image)
   const showHeading = title || subtitle || description
   const homeVariant = variant === "home"
-  const bgImg = bgImage && !homeVariant ? `url(${bgImage})` : ""
   const imageLeft = image?.position === "left"
   const imageRight = image?.position === "right"
+
+  let bgImg = ""
+  if (bgImage && !homeVariant) {
+    bgImg = `url(${bgImage})`
+  } else if (logoBg) {
+    bgImg = `url(${images.bg.logo})`
+  }
 
   const headerContent = (
     <>
@@ -120,10 +128,13 @@ const Section = ({
       loading="lazy"
     >
       {homeVariant && (
-        <div
-          className={classes.homeBannerImage}
-          style={{ backgroundImage: `url(${bgImage})` }}
-        />
+        <div className={classes.homeBannerImageWrapper}>
+          <img
+            src={bgImage}
+            alt="Collage of heavy machinery"
+            className={classes.homeBannerImage}
+          />
+        </div>
       )}
       <Container>
         <div
