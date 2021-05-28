@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "components/layout"
 import images from "src/images"
 import pageSections from "src/content/how-it-works"
-import { OpenContactModalButton, Section, Text } from "components"
+import { IconList, OpenContactModalButton, Section } from "components"
 
 const seo = {
   title: "How it works",
@@ -26,20 +26,28 @@ const HowItWorksPage = () => {
         Through these 5 easy steps, we’ll find a plan that works for you and your business.`}
       />
       {pageSections.map((section, i) => {
-        const { description, image, ...sectionProps } = section
+        const { subtitle, description, image } = section
         const alternate = i % 2
         const position = alternate ? "left" : "right"
         const direction = alternate ? "Right" : "Left"
         return (
           <Section
             {...{
-              key: `section-${section.title}-${i}`,
+              key: `section-${subtitle}-${i}`,
               image: { position, direction, ...image },
-              // ["data-step"]: i + 1,
-              ...sectionProps,
             }}
           >
-            <Text>{description}</Text>
+            <IconList
+              singleCol
+              data={[
+                {
+                  title: subtitle,
+                  titleVariant: "h3",
+                  text: description,
+                  prefix: `${i + 1}`,
+                },
+              ]}
+            />
           </Section>
         )
       })}

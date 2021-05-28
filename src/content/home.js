@@ -123,7 +123,7 @@ const pageSections = {
       },
       {
         icon: FinancingIcon,
-        text: "4. Approve",
+        text: "4. Approval",
       },
       {
         icon: FinancingIcon,

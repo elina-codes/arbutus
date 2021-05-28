@@ -32,14 +32,14 @@ const pageSections = [
     If you have credit issues, we help you get there with alternate solutions.`,
   },
   {
-    subtitle: "Approve",
+    subtitle: "Approval",
     image: {
       src: images.hiwSteps.step4,
-      alt: "How It Works: Step 4, Approve",
+      alt: "How It Works: Step 4, Approval",
     },
-    description: `We’ll then review your application and business situation and chat with you over the phone to work out the best route to an approval.
+    description: `You meet the credit conditions, and receive competitive rates and lease terms. If you have credit issues, we help you get there with alternate solutions. 
     
-    If you have credit issues, we help you get there with alternate solutions.`,
+    And if you are in a rush, we’ll put our foot on the gas too. `,
   },
   {
     subtitle: "Acquire",
@@ -49,8 +49,7 @@ const pageSections = [
     },
     description: `Congratulations - you’re done! Time to get to work with your newly acquired equipment. 
 
-    We look forward to a great partnership, and are rooting for you as you grow your business. 
-    If you have credit issues, we help you get there with alternate solutions.`,
+    We look forward to a great partnership, and are rooting for you as you grow your business.`,
   },
 ]
 

@@ -13,7 +13,7 @@ const IconList = ({ data = [], singleCol, outlined }) => {
       })}
     >
       {data.map((item, i) => {
-        const { icon: Icon, prefix, title, text } = item
+        const { icon: Icon, prefix, title, text, titleVariant = "h5" } = item
         return (
           <li
             key={`iconList-item-${i}-${title}`}
@@ -30,7 +30,7 @@ const IconList = ({ data = [], singleCol, outlined }) => {
             </div>
             <div className={classes.iconListContent}>
               {title && (
-                <Text variant="h5" className={classes.iconListTitle}>
+                <Text variant={titleVariant} className={classes.iconListTitle}>
                   {title}
                 </Text>
               )}

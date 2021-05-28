@@ -42,11 +42,15 @@ const styles = makeStyles(theme => ({
   prefix: {
     opacity: 1,
     alignSelf: "flex-start",
+    width: "auto",
   },
   iconListPrefix: {
-    fontSize: 120,
     fontWeight: 900,
-    lineHeight: 0.9,
+    lineHeight: 1,
+    fontSize: 80,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 120,
+    },
   },
 }))
 
