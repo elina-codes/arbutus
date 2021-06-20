@@ -14,7 +14,7 @@ import { ModalProvider } from "src/context"
 import "./layout.css"
 import theme from "../theme.js"
 import { Header, Footer, Section } from "."
-import SEO from "./seo"
+import Seo from "./seo"
 import { CssBaseline, Fab, Zoom, useScrollTrigger } from "@material-ui/core"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 import { makeStyles } from "@material-ui/core/styles"
@@ -83,7 +83,7 @@ const Layout = ({
     <ThemeProvider theme={theme}>
       <ModalProvider>
         <CssBaseline />
-        <SEO {...seo} />
+        <Seo {...seo} />
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>
           {topBannerData && (

@@ -31,7 +31,7 @@ const config = {
 
 const typographyCommon = {
   "&:not(:last-child)": {
-    marginBottom: "0.7em",
+    marginBottom: "1em",
   },
   "&.strong": {
     fontWeight: "800",
@@ -178,8 +178,11 @@ const arbutusTheme = {
         },
         body: {
           color: config.textPrimary,
-          lineHeight: 1.5,
+          lineHeight: 1.7,
           backgroundColor: "#fff",
+        },
+        p: {
+          lineHeight: 1.7,
         },
         ".prewrap": {
           whiteSpace: "pre-wrap",
@@ -187,11 +190,17 @@ const arbutusTheme = {
         ".preline": {
           whiteSpace: "pre-line",
         },
+        blockquote: {
+          position: "relative",
+          fontStyle: "italic",
+          maxWidth: 700,
+          paddingLeft: 70,
+          paddingRight: 70,
+          marginLeft: "auto",
+          marginRight: "auto",
+          textAlign: "justify",
+        },
       },
-    },
-    body: {
-      color: config.textPrimary,
-      lineHeight: 1.5,
     },
     MuiTypography: {
       root: {

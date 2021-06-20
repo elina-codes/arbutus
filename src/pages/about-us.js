@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "components/layout"
 import images from "src/images"
-import pageSections from "src/content/about-us"
-import * as MUI from "@material-ui/core"
+import pageSections from "src/page-content/about-us"
+import * as Mui from "@material-ui/core"
 import {
   OpenContactModalButton,
   Banner,
@@ -31,9 +31,9 @@ const AboutUsPage = () => {
     <Layout {...{ seo, topBannerData, showSuccessStories: true }}>
       <Section {...ourStory}></Section>
       <Section {...ourLeadershipTeam}>
-        <MUI.Grid container spacing={5}>
+        <Mui.Grid container spacing={5}>
           {staff.map((s, i) => (
-            <MUI.Grid
+            <Mui.Grid
               key={`staff-${s.name}`}
               container
               direction="column"
@@ -47,9 +47,9 @@ const AboutUsPage = () => {
                 {s.name}
                 <Text>{s.position}</Text>
               </Text>
-            </MUI.Grid>
+            </Mui.Grid>
           ))}
-        </MUI.Grid>
+        </Mui.Grid>
         <Blockquote author="Elizabeth Benda, President &amp; Chief Executive Officer, Arbutus Capital">
           We understand that juggling work and family while being an independent
           business owner has its challenges. We are here to find solutions when
@@ -62,9 +62,9 @@ const AboutUsPage = () => {
         Contact us and you can chat directly with one of the owners today.
       </Banner>
       <Section {...ourValues}>
-        <MUI.Grid container spacing={5}>
+        <Mui.Grid container spacing={5}>
           {values.map(v => (
-            <MUI.Grid
+            <Mui.Grid
               key={`values-${v.title}`}
               container
               direction="column"
@@ -75,9 +75,9 @@ const AboutUsPage = () => {
             >
               <IconText icon={v.icon} text={v.title} size="md" center />
               <Text>{v.text}</Text>
-            </MUI.Grid>
+            </Mui.Grid>
           ))}
-        </MUI.Grid>
+        </Mui.Grid>
       </Section>
     </Layout>
   )

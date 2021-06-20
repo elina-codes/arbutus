@@ -10,8 +10,8 @@ import {
   IconList,
 } from "components"
 import images from "src/images"
-import * as MUI from "@material-ui/core"
-import pageSections from "src/content/home"
+import * as Mui from "@material-ui/core"
+import pageSections from "src/page-content/home"
 import ScrollAnimation from "react-animate-on-scroll"
 
 const seo = {
@@ -45,8 +45,8 @@ const IndexPage = () => {
   return (
     <Layout {...{ seo, topBannerData, showSuccessStories: true }}>
       <Section {...industriesWeServe}>
-        <MUI.Grid container spacing={5}>
-          <MUI.Grid container direction="column" item xs={12} sm>
+        <Mui.Grid container spacing={5}>
+          <Mui.Grid container direction="column" item xs={12} sm>
             <ImagePlain
               direction="Up"
               maxWidth={400}
@@ -56,8 +56,8 @@ const IndexPage = () => {
             <Text variant="h4" strong>
               Hospitality Equipment
             </Text>
-          </MUI.Grid>
-          <MUI.Grid container direction="column" item xs={12} sm>
+          </Mui.Grid>
+          <Mui.Grid container direction="column" item xs={12} sm>
             <ImagePlain
               direction="Up"
               delay={200}
@@ -68,8 +68,8 @@ const IndexPage = () => {
             <Text variant="h4" strong>
               Forestry Equipment
             </Text>
-          </MUI.Grid>
-          <MUI.Grid container direction="column" item xs={12} sm>
+          </Mui.Grid>
+          <Mui.Grid container direction="column" item xs={12} sm>
             <ImagePlain
               direction="Up"
               delay={400}
@@ -80,8 +80,8 @@ const IndexPage = () => {
             <Text variant="h4" strong>
               Construction Equipment
             </Text>
-          </MUI.Grid>
-        </MUI.Grid>
+          </Mui.Grid>
+        </Mui.Grid>
       </Section>
       <Banner
         cta={<OpenContactModalButton>Get started</OpenContactModalButton>}
@@ -100,8 +100,8 @@ const IndexPage = () => {
         <CircleGridSection data={processContent} outlined />
       </Section>
       <Section dark>
-        <MUI.Grid container spacing={5}>
-          <MUI.Grid item xs={12} md>
+        <Mui.Grid container spacing={5}>
+          <Mui.Grid item xs={12} md>
             <ScrollAnimation
               animateIn="animate__fadeInRight"
               animateOnce
@@ -109,8 +109,8 @@ const IndexPage = () => {
             >
               <Section {...startLeasing}></Section>
             </ScrollAnimation>
-          </MUI.Grid>
-          <MUI.Grid item xs={12} md>
+          </Mui.Grid>
+          <Mui.Grid item xs={12} md>
             <ScrollAnimation
               animateIn="animate__fadeInLeft"
               animateOnce
@@ -118,8 +118,8 @@ const IndexPage = () => {
             >
               <Section {...areYouABroker}></Section>
             </ScrollAnimation>
-          </MUI.Grid>
-        </MUI.Grid>
+          </Mui.Grid>
+        </Mui.Grid>
       </Section>
     </Layout>
   )

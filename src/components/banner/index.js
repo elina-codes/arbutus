@@ -1,7 +1,7 @@
 import React from "react"
 import useStyles from "./styles"
 import { Section, Text } from "components"
-import * as MUI from "@material-ui/core"
+import * as Mui from "@material-ui/core"
 
 const Banner = ({ children, cta, data }) => {
   const classes = useStyles()
@@ -18,7 +18,7 @@ const Banner = ({ children, cta, data }) => {
   )
   return (
     <Section dense dark className={classes.banner}>
-      <MUI.Box
+      <Mui.Box
         display="flex"
         justifyContent="space-between"
         alignItems="center"
@@ -35,7 +35,7 @@ const Banner = ({ children, cta, data }) => {
             {cta}
           </>
         )}
-      </MUI.Box>
+      </Mui.Box>
     </Section>
   )
 }

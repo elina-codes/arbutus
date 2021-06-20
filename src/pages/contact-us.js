@@ -10,8 +10,8 @@ import {
   Section,
 } from "components"
 import images from "src/images"
-import * as MUI from "@material-ui/core"
-import pageSections from "src/content/contact-us"
+import * as Mui from "@material-ui/core"
+import pageSections from "src/page-content/contact-us"
 
 const seo = {
   title: "Contact Us",
@@ -37,14 +37,14 @@ const ContactUsPage = () => {
   return (
     <Layout {...{ seo, topBannerData }}>
       <Section>
-        <MUI.Grid container spacing={5}>
-          <MUI.Grid container direction="column" spacing={3} item sm={12} md>
-            <MUI.Grid item>
+        <Mui.Grid container spacing={5}>
+          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
+            <Mui.Grid item>
               <Section {...location}>
                 <ArbutusMap />
               </Section>
-            </MUI.Grid>
-            <MUI.Grid item>
+            </Mui.Grid>
+            <Mui.Grid item>
               <Section {...locationDetails}>
                 <Text variant="h5">Our Office</Text>
                 <Text>
@@ -56,7 +56,7 @@ const ContactUsPage = () => {
                 </Text>
                 <Text variant="h5">Call Us</Text>
                 <Text>
-                  Tel: <MUI.Link href="tel:6046627717">604.662.7717</MUI.Link>
+                  Tel: <Mui.Link href="tel:6046627717">604.662.7717</Mui.Link>
                   <br />
                   Fax: 604.662.3999
                   <br />
@@ -64,24 +64,24 @@ const ContactUsPage = () => {
                 </Text>
                 <Text variant="h5">Email Us</Text>
                 <Text>
-                  <MUI.Link href="mailto:lease@arbutuscapital.com">
+                  <Mui.Link href="mailto:lease@arbutuscapital.com">
                     lease@arbutuscapital.com
-                  </MUI.Link>
+                  </Mui.Link>
                 </Text>
               </Section>
-            </MUI.Grid>
-          </MUI.Grid>
-          <MUI.Grid container direction="column" spacing={3} item sm={12} md>
-            <MUI.Grid item>
+            </Mui.Grid>
+          </Mui.Grid>
+          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
+            <Mui.Grid item>
               <Section {...sendMessage}>
                 <ContactForm />
               </Section>
-            </MUI.Grid>
-            <MUI.Grid item>
+            </Mui.Grid>
+            <Mui.Grid item>
               <Section {...faq} />
-            </MUI.Grid>
-          </MUI.Grid>
-        </MUI.Grid>
+            </Mui.Grid>
+          </Mui.Grid>
+        </Mui.Grid>
       </Section>
     </Layout>
   )

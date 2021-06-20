@@ -122,6 +122,26 @@ const styles = makeStyles(theme => ({
     objectFit: "cover",
     boxShadow: theme.boxShadow,
   },
+  blog: {
+    position: "relative",
+    "&:after": {
+      content: `''`,
+      position: "absolute",
+      inset: "0 0 0 0",
+      backgroundColor: theme.palette.secondary.main,
+      opacity: 0.7,
+    },
+  },
+  successStory: {
+    position: "relative",
+    "&:after": {
+      content: `''`,
+      position: "absolute",
+      inset: "0 0 0 0",
+      backgroundColor: theme.palette.primary.main,
+      opacity: 0.7,
+    },
+  },
   // home banner
   home: {
     color: theme.palette.text.main,

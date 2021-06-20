@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-import * as MUI from "@material-ui/core"
+import * as Mui from "@material-ui/core"
 import { Link, Text } from "components"
 import ScrollAnimation from "react-animate-on-scroll"
 import useStyles from "./styles"
@@ -26,9 +26,9 @@ const Card = ({ dark, delay, title, meta, image, url, children }) => {
       style={{ height: "100%" }}
       {...{ delay }}
     >
-      <MUI.Card className={classNames({ [classes.dark]: dark })}>
+      <Mui.Card className={classNames({ [classes.dark]: dark })}>
         {image.src && (
-          <MUI.CardMedia
+          <Mui.CardMedia
             component="img"
             loading="lazy"
             alt={image.alt}
@@ -37,7 +37,7 @@ const Card = ({ dark, delay, title, meta, image, url, children }) => {
             title={image.alt}
           />
         )}
-        <MUI.CardContent>
+        <Mui.CardContent>
           {meta && (
             <Text gutterBottom variant="caption">
               {meta}
@@ -49,9 +49,9 @@ const Card = ({ dark, delay, title, meta, image, url, children }) => {
             </Text>
           )}
           {children}
-        </MUI.CardContent>
-        {actions && <MUI.CardActions>{actions}</MUI.CardActions>}
-      </MUI.Card>
+        </Mui.CardContent>
+        {actions && <Mui.CardActions>{actions}</Mui.CardActions>}
+      </Mui.Card>
     </ScrollAnimation>
   )
 }

@@ -2,7 +2,7 @@ import React from "react"
 import { useForm, Controller } from "react-hook-form"
 import Layout from "components/layout"
 import images from "src/images"
-import pageSections from "src/content/brokers"
+import pageSections from "src/page-content/brokers"
 import {
   Button,
   OpenContactModalButton,
@@ -11,7 +11,7 @@ import {
   Section,
   IconList,
 } from "components"
-import * as MUI from "@material-ui/core"
+import * as Mui from "@material-ui/core"
 const seo = {
   title: "Brokers",
 }
@@ -36,16 +36,16 @@ const BrokersPage = () => {
   return (
     <Layout {...{ seo, topBannerData }}>
       <Section>
-        <MUI.Grid container spacing={5}>
-          <MUI.Grid container direction="column" spacing={3} item sm={12} md>
-            <MUI.Grid item>
+        <Mui.Grid container spacing={5}>
+          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
+            <Mui.Grid item>
               <Section {...whySection}>
                 <IconList data={whyContent} singleCol outlined />
               </Section>
-            </MUI.Grid>
-          </MUI.Grid>
-          <MUI.Grid container direction="column" spacing={3} item sm={12} md>
-            <MUI.Grid item>
+            </Mui.Grid>
+          </Mui.Grid>
+          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
+            <Mui.Grid item>
               <Section {...truePartnership}>
                 <form
                   name="Brokers Contact Form"
@@ -58,14 +58,14 @@ const BrokersPage = () => {
                     value="Brokers Contact Form"
                   />
 
-                  <MUI.Grid container spacing={3}>
-                    <MUI.Grid item xs={12} sm>
+                  <Mui.Grid container spacing={3}>
+                    <Mui.Grid item xs={12} sm>
                       <Controller
                         name="fullName"
                         control={control}
                         defaultValue=""
                         render={({ field }) => (
-                          <MUI.TextField
+                          <Mui.TextField
                             label="Full Name"
                             margin="dense"
                             fullWidth
@@ -74,14 +74,14 @@ const BrokersPage = () => {
                           />
                         )}
                       />
-                    </MUI.Grid>
-                    <MUI.Grid item xs={12} sm>
+                    </Mui.Grid>
+                    <Mui.Grid item xs={12} sm>
                       <Controller
                         name="phone"
                         control={control}
                         defaultValue=""
                         render={({ field }) => (
-                          <MUI.TextField
+                          <Mui.TextField
                             label="Phone number"
                             margin="dense"
                             fullWidth
@@ -90,14 +90,14 @@ const BrokersPage = () => {
                           />
                         )}
                       />
-                    </MUI.Grid>
-                  </MUI.Grid>
+                    </Mui.Grid>
+                  </Mui.Grid>
                   <Button type="submit">Let's talk</Button>
                 </form>
               </Section>
-            </MUI.Grid>
-          </MUI.Grid>
-        </MUI.Grid>
+            </Mui.Grid>
+          </Mui.Grid>
+        </Mui.Grid>
       </Section>
       <Banner>
         <em>

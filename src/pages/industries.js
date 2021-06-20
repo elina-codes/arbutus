@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "components/layout"
 import { OpenContactModalButton, PageMenu, Section, Text } from "components"
 import images from "src/images"
-import iwsContent from "src/content/industries"
+import iwsContent from "src/page-content/industries"
 import { renderPageContentAndMenu } from "src/helpers"
 
 const seo = {

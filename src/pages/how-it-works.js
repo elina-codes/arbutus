@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 import images from "src/images"
-import pageSections from "src/content/how-it-works"
+import pageSections from "src/page-content/how-it-works"
 import { IconList, OpenContactModalButton, Section } from "components"
 
 const seo = {

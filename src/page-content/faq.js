@@ -90,7 +90,7 @@ const capitalFaq = [
   },
 ]
 
-export default {
+const pageSections = {
   sections: [
     {
       description:
@@ -116,3 +116,5 @@ export default {
     },
   ],
 }
+
+export default pageSections

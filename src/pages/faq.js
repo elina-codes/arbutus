@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "components/layout"
 import { Button, OpenContactModalButton, PageMenu, Section } from "components"
 import images from "src/images"
-import faqContent from "src/content/faq"
+import faqContent from "src/page-content/faq"
 import { renderPageContentAndMenu } from "src/helpers"
 
 const seo = {

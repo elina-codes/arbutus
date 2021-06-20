@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+# local_backend: true
+
+publish_mode: editorial_workflow
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+logo_url: https://upbeat-fermi-f90733.netlify.app/icons/icon-512x512.png
+
+collections:
+  - name: 'blog'
+    label: 'Blog Posts'
+    label_singular: 'Blog Post'
+    folder: 'src/pages/blog'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: "Cover Image", name: "featuredimage", widget: image }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  
+  - name: 'success-stories'
+    label: 'Success Stories'
+    label_singular: 'Success Story'
+    folder: 'src/pages/success-stories'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "success-story" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Location', name: 'location', widget: 'string' }
+      - { label: "Tags", name: "tags", widget: "list"}
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: "Cover Image", name: "featuredimage", widget: image }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

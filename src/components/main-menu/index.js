@@ -1,6 +1,6 @@
 import { routes, phoneNumber } from "src/constants"
 import React, { useState } from "react"
-import * as MUI from "@material-ui/core"
+import * as Mui from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import { OpenContactModalButton, Link, Text } from "components"
 import useStyles from "./styles"
@@ -56,8 +56,6 @@ const topBarLinks = [
   },
 ]
 
-const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
-
 const Header = ({ siteTitle, ...props }) => {
   const classes = useStyles()
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -70,14 +68,14 @@ const Header = ({ siteTitle, ...props }) => {
   }
 
   const HideOnScroll = ({ children, window }) => {
-    const trigger = MUI.useScrollTrigger({
+    const trigger = Mui.useScrollTrigger({
       target: window ? window() : undefined,
     })
 
     return (
-      <MUI.Slide appear={false} direction="down" in={!trigger}>
+      <Mui.Slide appear={false} direction="down" in={!trigger}>
         {children}
-      </MUI.Slide>
+      </Mui.Slide>
     )
   }
 
@@ -94,13 +92,13 @@ const Header = ({ siteTitle, ...props }) => {
 
     return (
       <>
-        <MUI.Link
+        <Mui.Link
           onClick={handleSubMenuTriggerClick}
           className={classes.navLink}
         >
           {title} ▾
-        </MUI.Link>
-        <MUI.Menu
+        </Mui.Link>
+        <Mui.Menu
           anchorEl={anchorEl}
           getContentAnchorEl={null}
           keepMounted
@@ -116,15 +114,15 @@ const Header = ({ siteTitle, ...props }) => {
           }}
         >
           {sublinks.map(sublink => (
-            <MUI.MenuItem key={sublink.title}>
+            <Mui.MenuItem key={sublink.title}>
               <NavLink
                 {...sublink}
                 key={sublink.title}
                 style={{ marginLeft: 0 }}
               />
-            </MUI.MenuItem>
+            </Mui.MenuItem>
           ))}
-        </MUI.Menu>
+        </Mui.Menu>
       </>
     )
   }
@@ -160,15 +158,15 @@ const Header = ({ siteTitle, ...props }) => {
 
   return (
     <div className={classes.root} id="back-to-top-anchor">
-      <MUI.CssBaseline />
+      <Mui.CssBaseline />
       <HideOnScroll {...props}>
-        <MUI.AppBar color="inherit">
-          <MUI.Hidden smDown>
-            <MUI.Toolbar className={classes.topToolbar} variant="dense">
+        <Mui.AppBar color="inherit">
+          <Mui.Hidden smDown>
+            <Mui.Toolbar className={classes.topToolbar} variant="dense">
               <TopNav />
-            </MUI.Toolbar>
-          </MUI.Hidden>
-          <MUI.Toolbar className={classes.mainToolbar}>
+            </Mui.Toolbar>
+          </Mui.Hidden>
+          <Mui.Toolbar className={classes.mainToolbar}>
             <Text variant="h6" component="span" style={{ marginBottom: 0 }}>
               <Link to="/" style={{ display: "flex" }}>
                 <img
@@ -178,43 +176,42 @@ const Header = ({ siteTitle, ...props }) => {
                 />
               </Link>
             </Text>
-            <MUI.Hidden mdUp>
-              <MUI.IconButton
+            <Mui.Hidden mdUp>
+              <Mui.IconButton
                 aria-label="open menu"
                 edge="start"
                 onClick={handleDrawerToggle}
                 color="inherit"
               >
                 <MenuIcon />
-              </MUI.IconButton>
-            </MUI.Hidden>
-            <MUI.Hidden smDown>
+              </Mui.IconButton>
+            </Mui.Hidden>
+            <Mui.Hidden smDown>
               <MainNav />
-            </MUI.Hidden>
-            <MUI.Hidden mdUp>
-              <MUI.SwipeableDrawer
+            </Mui.Hidden>
+            <Mui.Hidden mdUp>
+              <Mui.SwipeableDrawer
                 variant="temporary"
                 anchor="right"
                 open={mobileOpen}
                 disableBackdropTransition
                 onOpen={handleDrawerToggle}
                 onClose={handleDrawerToggle}
-                disableDiscovery={iOS}
                 classes={{
                   paper: classes.drawerContainer,
                 }}
               >
                 <MainNav />
                 <TopNav />
-              </MUI.SwipeableDrawer>
-            </MUI.Hidden>
-          </MUI.Toolbar>
-        </MUI.AppBar>
+              </Mui.SwipeableDrawer>
+            </Mui.Hidden>
+          </Mui.Toolbar>
+        </Mui.AppBar>
       </HideOnScroll>
-      <MUI.Hidden smDown>
-        <MUI.Toolbar variant="dense" />
-      </MUI.Hidden>
-      <MUI.Toolbar />
+      <Mui.Hidden smDown>
+        <Mui.Toolbar variant="dense" />
+      </Mui.Hidden>
+      <Mui.Toolbar />
     </div>
   )
 }

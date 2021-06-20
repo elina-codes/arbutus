@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "components/layout"
 import { Accordion, OpenContactModalButton, Banner, Section } from "components"
 import images from "src/images"
-import pageSections from "src/content/why-lease"
+import pageSections from "src/page-content/why-lease"
 
 const seo = {
   title: "Why Lease",
