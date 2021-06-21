@@ -15,7 +15,7 @@ publish_mode: editorial_workflow
 media_folder: static/images/uploads
 public_folder: /images/uploads
 
-logo_url: https://upbeat-fermi-f90733.netlify.app/icons/icon-512x512.png
+logo_url: https://media-exp3.licdn.com/dms/image/C560BAQGxYjdjgVIQvA/company-logo_200_200/0/1527713527810?e=2159024400&v=beta&t=xIFY8U_gnHIv4_gThQS2F1pWVudyhh2Ry_ru7PuvJyM
 
 collections:
   - name: 'blog'
