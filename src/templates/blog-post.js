@@ -1,15 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 import ArticleLayout from "../components/article-layout"
 import Content, { HTMLContent } from "../components/Content"
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data || {}
+  const { markdownRemark: post } = data
   const PostContent = HTMLContent || Content
   const bgImage =
-    post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData?.images
-      ?.fallback?.src || ""
+    post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images
+      .fallback.src || ""
   return (
     <ArticleLayout
       bgImage={bgImage}
@@ -31,25 +31,25 @@ BlogPost.propTypes = {
 
 export default BlogPost
 
-// export const pageQuery = graphql`
-//   query BlogPostByID($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         title
-//         featuredimage {
-//           childImageSharp {
-//             gatsbyImageData(layout: FIXED)
-//           }
-//         }
-//       }
-//       fields {
-//         readingTime {
-//           text
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED)
+          }
+        }
+      }
+      fields {
+        readingTime {
+          text
+        }
+      }
+    }
+  }
+`

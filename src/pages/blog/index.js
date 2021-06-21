@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "components/layout"
-// import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import images from "src/images"
 import pageSections from "src/page-content/blog"
 import { Section, CardGrid } from "components"
@@ -15,10 +15,10 @@ const topBannerData = {
   bgImage: images.banners.blog,
 }
 
-const BlogPage = ({ data = {} }) => {
-  const { edges: posts } = data?.allMarkdownRemark || {}
+const BlogPage = ({ data }) => {
+  const { edges: posts } = data.allMarkdownRemark
 
-  const blogPosts = posts?.map(({ node: post }) => ({
+  const blogPosts = posts.map(({ node: post }) => ({
     meta: post?.fields.readingTime.text,
     title: post?.frontmatter.title,
     text: post?.excerpt,
@@ -40,43 +40,41 @@ const BlogPage = ({ data = {} }) => {
   )
 }
 
-export default BlogPage
+const blogQuery = () => (
+  <StaticQuery
+    query={graphql`
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 100)
+              id
+              fields {
+                slug
+                readingTime {
+                  text
+                }
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                featuredimage {
+                  childImageSharp {
+                    gatsbyImageData(layout: FIXED)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <BlogPage data={data} count={count} />}
+  />
+)
 
-// const blogQuery = () => (
-//   <StaticQuery
-//     query={graphql`
-//       query BlogRollQuery {
-//         allMarkdownRemark(
-//           sort: { order: DESC, fields: [frontmatter___date] }
-//           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-//         ) {
-//           edges {
-//             node {
-//               excerpt(pruneLength: 100)
-//               id
-//               fields {
-//                 slug
-//                 readingTime {
-//                   text
-//                 }
-//               }
-//               frontmatter {
-//                 title
-//                 templateKey
-//                 date(formatString: "MMMM DD, YYYY")
-//                 featuredimage {
-//                   childImageSharp {
-//                     gatsbyImageData(layout: FIXED)
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `}
-//     render={(data, count) => <BlogPage data={data} count={count} />}
-//   />
-// )
-
-// export default blogQuery
+export default blogQuery
