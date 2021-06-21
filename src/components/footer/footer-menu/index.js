@@ -129,7 +129,7 @@ const FooterMenu = ({ data }) => {
 const footerMenuWithBlog = () => (
   <StaticQuery
     query={graphql`
-      query FeaturedBlogQuery {
+      query FooterMenuBlogQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 3
