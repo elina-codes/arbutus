@@ -101,7 +101,7 @@ const ArticleLayout = ({
           <Section>
             {showShareButtons && (
               <div className={classes.shareButtons}>
-                <ShareButtons url={window.location.href} title={title} />
+                <ShareButtons url="https://placeholder.com" title={title} />
                 {/* <Mui.IconButton>
                   <LinkedInIcon color="inherit" />
                 </Mui.IconButton>

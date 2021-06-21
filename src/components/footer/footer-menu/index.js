@@ -4,10 +4,18 @@ import { List, ListItem } from "@material-ui/core"
 import useStyles from "./styles"
 import { Button, OpenContactModalButton, Link, Section, Text } from "components"
 import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
+import { graphql, StaticQuery } from "gatsby"
 
-const FooterMenu = () => {
+const FooterMenu = ({ data }) => {
   const classes = useStyles()
   const { brokers, aboutUs, blog, contactUs } = routes
+  const { edges: posts } = data.allMarkdownRemark
+
+  const blogPosts =
+    posts?.map(({ node: post }) => ({
+      title: post?.frontmatter.title,
+      href: post?.fields.slug,
+    })) || []
 
   const sections = [
     {
@@ -57,21 +65,7 @@ const FooterMenu = () => {
     {
       title: "Blog",
       flex: 3,
-      items: [
-        {
-          title:
-            "Morbi condimentum elit sed odio facilisis, vel venenatis tortor fermentum.",
-          href: "/",
-        },
-        {
-          title: "Donec aliquet felis sed nulla consequat tempus.",
-          href: "/",
-        },
-        {
-          title: "Integer sed erat vehicula, malesuada erat id, finibus erat.",
-          href: "/",
-        },
-      ],
+      items: blogPosts,
     },
     {
       title: "Contact Us",
@@ -132,4 +126,36 @@ const FooterMenu = () => {
   )
 }
 
-export default FooterMenu
+const footerMenuWithBlog = () => (
+  <StaticQuery
+    query={graphql`
+      query FeaturedBlogQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 3
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "blog-post" }
+              featuredpost: { eq: true }
+            }
+          }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <FooterMenu data={data} count={count} />}
+  />
+)
+
+export default footerMenuWithBlog
