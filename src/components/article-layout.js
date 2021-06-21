@@ -26,6 +26,18 @@ const useStyles = makeStyles(theme => ({
     textAlign: "left",
     marginLeft: "auto",
     marginRight: "auto",
+    "& img": {
+      marginLeft: "auto",
+      marginRight: "auto",
+      display: "block",
+    },
+    "& h2:not(:first-child), & h3:not(:first-child), & h4:not(:first-child)": {
+      marginTop: "1.5em",
+    },
+    "& a": {
+      color: "#4A90E2",
+      textDecoration: "none",
+    },
   },
 }))
 
@@ -102,18 +114,6 @@ const ArticleLayout = ({
             {showShareButtons && (
               <div className={classes.shareButtons}>
                 <ShareButtons url="https://placeholder.com" title={title} />
-                {/* <Mui.IconButton>
-                  <LinkedInIcon color="inherit" />
-                </Mui.IconButton>
-                <Mui.IconButton>
-                  <TwitterIcon color="inherit" />
-                </Mui.IconButton>
-                <Mui.IconButton>
-                  <FacebookIcon color="inherit" />
-                </Mui.IconButton>
-                <Mui.IconButton>
-                  <EmailIcon color="inherit" />
-                </Mui.IconButton> */}
               </div>
             )}
             <div className={classes.articleContent}>{children}</div>

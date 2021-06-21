@@ -6,6 +6,7 @@ module.exports = {
     image: "src/images/arbutus-icon.png",
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
