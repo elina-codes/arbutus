@@ -66,13 +66,16 @@ const ArticleLayout = ({
 }) => {
   const classes = useStyles()
   let articleType = {}
+  let footerPostType = {}
 
   switch (variant) {
     case "successStory":
       articleType = { successStory: true }
+      footerPostType = { showSuccessStories: true }
       break
     case "blog":
       articleType = { blog: true }
+      footerPostType = { showBlogPosts: true }
       break
 
     default:
@@ -116,7 +119,7 @@ const ArticleLayout = ({
             <div className={classes.articleContent}>{children}</div>
           </Section>
         </main>
-        <Footer />
+        <Footer {...footerPostType} showDoubleCta />
         <ScrollTop {...props}>
           <Mui.Fab
             color="secondary"

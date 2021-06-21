@@ -3,12 +3,12 @@ import { routes } from "src/constants"
 import { Button, CardGrid, Section } from "components"
 import { graphql, StaticQuery } from "gatsby"
 
-const FooterSuccessStories = ({ data }) => {
+const FooterBlog = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
-  const successStories =
+  const blogPosts =
     posts?.map(({ node: post }) => ({
-      meta: post?.frontmatter?.location,
+      meta: post?.fields.readingTime.text,
       title: post?.frontmatter.title,
       text: post?.excerpt,
       image: {
@@ -22,31 +22,30 @@ const FooterSuccessStories = ({ data }) => {
   return (
     <Section
       {...{
-        title: `How we've helped people`,
-        subtitle: `People first.
-        Something about us caring.`,
+        title: `More blog articles`,
+        subtitle: `Featured posts`,
         button: (
-          <Button to={routes.successStories.path} color="primary">
-            More success stories
+          <Button to={routes.blog.path} color="primary">
+            More blog posts
           </Button>
         ),
       }}
     >
-      <CardGrid data={successStories} />
+      <CardGrid data={blogPosts} />
     </Section>
   )
 }
 
-const featuredSuccessStoriesQuery = () => (
+const featuredBlogQuery = () => (
   <StaticQuery
     query={graphql`
-      query FeaturedSuccessStoriesQuery {
+      query FeaturedBlogQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 3
           filter: {
             frontmatter: {
-              templateKey: { eq: "success-story" }
+              templateKey: { eq: "blog-post" }
               featuredpost: { eq: true }
             }
           }
@@ -57,9 +56,11 @@ const featuredSuccessStoriesQuery = () => (
               id
               fields {
                 slug
+                readingTime {
+                  text
+                }
               }
               frontmatter {
-                location
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
@@ -75,8 +76,8 @@ const featuredSuccessStoriesQuery = () => (
         }
       }
     `}
-    render={(data, count) => <FooterSuccessStories data={data} count={count} />}
+    render={(data, count) => <FooterBlog data={data} count={count} />}
   />
 )
 
-export default featuredSuccessStoriesQuery
+export default featuredBlogQuery

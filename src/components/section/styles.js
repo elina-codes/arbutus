@@ -57,6 +57,10 @@ const styles = makeStyles(theme => ({
     marginRight: "auto",
     textAlign: "center",
   },
+  leftAlign: {
+    textAlign: "left",
+    alignItems: "flex-start",
+  },
   dark: {
     color: theme.palette.white,
     backgroundColor: theme.palette.primary.main,

@@ -234,7 +234,7 @@ const arbutusTheme = {
     MuiCardMedia: {
       root: {
         marginBottom: 0,
-        height: "auto",
+        height: "50%",
       },
     },
     MuiCardContent: {

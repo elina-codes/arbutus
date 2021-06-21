@@ -58,6 +58,7 @@ const Layout = ({
   children,
   seo,
   showSuccessStories,
+  showDoubleCta,
   ...props
 }) => {
   const {
@@ -99,7 +100,10 @@ const Layout = ({
           )}
           {children}
         </main>
-        <Footer showSuccessStories={showSuccessStories} />
+        <Footer
+          showSuccessStories={showSuccessStories}
+          showDoubleCta={showDoubleCta}
+        />
         <ScrollTop {...props}>
           <Fab color="secondary" size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />

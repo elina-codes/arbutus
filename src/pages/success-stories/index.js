@@ -36,7 +36,7 @@ const SuccessStoriesPage = ({ data }) => {
   return (
     <Layout {...{ seo, topBannerData }}>
       <Section {...howWeveHelped}>
-        <CardGrid data={successStories} />
+        <CardGrid data={successStories} leftAlign />
       </Section>
     </Layout>
   )

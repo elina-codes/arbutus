@@ -12,7 +12,6 @@ import {
 import images from "src/images"
 import * as Mui from "@material-ui/core"
 import pageSections from "src/page-content/home"
-import ScrollAnimation from "react-animate-on-scroll"
 
 const seo = {
   title: "Home",
@@ -28,22 +27,17 @@ const topBannerData = {
 }
 
 const IndexPage = () => {
-  const {
-    industriesWeServe,
-    aboutUs,
-    benefits,
-    reasons,
-    process,
-    startLeasing,
-    areYouABroker,
-  } = pageSections || {}
+  const { industriesWeServe, aboutUs, benefits, reasons, process } =
+    pageSections || {}
 
   const { content: benefitsContent, ...benefitsSection } = benefits
   const { content: reasonsContent, ...reasonsSection } = reasons
   const { content: processContent, ...processSection } = process
 
   return (
-    <Layout {...{ seo, topBannerData, showSuccessStories: true }}>
+    <Layout
+      {...{ seo, topBannerData, showSuccessStories: true, showDoubleCta: true }}
+    >
       <Section {...industriesWeServe}>
         <Mui.Grid container spacing={5}>
           <Mui.Grid container direction="column" item xs={12} sm>
@@ -98,28 +92,6 @@ const IndexPage = () => {
       </Section>
       <Section {...processSection}>
         <CircleGridSection data={processContent} outlined />
-      </Section>
-      <Section dark>
-        <Mui.Grid container spacing={5}>
-          <Mui.Grid item xs={12} md>
-            <ScrollAnimation
-              animateIn="animate__fadeInRight"
-              animateOnce
-              duration={0.7}
-            >
-              <Section {...startLeasing}></Section>
-            </ScrollAnimation>
-          </Mui.Grid>
-          <Mui.Grid item xs={12} md>
-            <ScrollAnimation
-              animateIn="animate__fadeInLeft"
-              animateOnce
-              duration={0.7}
-            >
-              <Section {...areYouABroker}></Section>
-            </ScrollAnimation>
-          </Mui.Grid>
-        </Mui.Grid>
       </Section>
     </Layout>
   )

@@ -34,7 +34,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout {...{ seo, topBannerData }}>
       <Section {...recentArticles}>
-        <CardGrid data={blogPosts} />
+        <CardGrid data={blogPosts} leftAlign />
       </Section>
     </Layout>
   )

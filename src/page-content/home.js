@@ -131,26 +131,6 @@ const pageSections = {
       },
     ],
   },
-  startLeasing: {
-    subtitle: "Start leasing equipment",
-    description: `The first step takes less than a minute and we’ll get back to you within 1 business day..`,
-    button: <OpenContactModalButton>Get started</OpenContactModalButton>,
-    inner: true,
-    light: true,
-    center: true,
-  },
-  areYouABroker: {
-    subtitle: "Are you a broker?",
-    description: `We have great relationships with our brokers and offer quick approvals for capital leasing..`,
-    button: (
-      <Button to={routes.brokers.path} color="primary">
-        Learn more
-      </Button>
-    ),
-    inner: true,
-    light: true,
-    center: true,
-  },
 }
 
 export default pageSections

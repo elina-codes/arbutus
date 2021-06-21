@@ -2,10 +2,14 @@ import React from "react"
 import * as Mui from "@material-ui/core"
 import { Card, Text } from "components"
 
-const CardGrid = ({ data = [], ...cardProps }) => {
+const CardGrid = ({ data = [], leftAlign, ...cardProps }) => {
   let count = 0
   return (
-    <Mui.Grid container spacing={5} justify="center">
+    <Mui.Grid
+      container
+      spacing={5}
+      justify={leftAlign ? "flex-start" : "center"}
+    >
       {data?.map((item, i) => {
         const { meta, title, text, image, url } = item || {}
         const delay = count * 100
