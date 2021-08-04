@@ -6,6 +6,9 @@ const styles = makeStyles(() => ({
       marginBottom: 0,
     },
   },
+  center: {
+    textAlign: "center",
+  },
 }))
 
 export default styles

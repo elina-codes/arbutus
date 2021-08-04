@@ -16,6 +16,7 @@ import gymEquipmentImage from "./images/gym-eq.png"
 import healthEquipmentImage from "./images/health-eq.png"
 import manufacturingEquipmentImage from "./images/manufacturing-eq.png"
 import truckEquipmentImage from "./images/truck-eq.png"
+import anythingElseImage from "./images/drum.png"
 
 import aboutUsFamilyImage from "./images/about-us-family.png"
 import elizabethBendaImage from "./images/benda-elizabeth.png"
@@ -55,6 +56,7 @@ const images = {
     healthIndustry: healthEquipmentImage,
     manufacturingIndustry: manufacturingEquipmentImage,
     truckIndustry: truckEquipmentImage,
+    anythingElse: anythingElseImage,
   },
   banners: {
     home: BannerHome,

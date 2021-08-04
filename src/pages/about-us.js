@@ -73,7 +73,13 @@ const AboutUsPage = () => {
               md={6}
               alignItems="center"
             >
-              <IconText icon={v.icon} text={v.title} size="md" center />
+              <IconText
+                icon={v.icon}
+                color={v.iconColor || "inherit"}
+                text={v.title}
+                size="md"
+                center
+              />
               <Text>{v.text}</Text>
             </Mui.Grid>
           ))}

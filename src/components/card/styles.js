@@ -1,12 +1,15 @@
 import { makeStyles } from "@material-ui/core/styles"
 
 const styles = makeStyles(theme => ({
+  card: {
+    color: theme.palette.text.main,
+  },
   dark: {
     color: theme.palette.white,
     backgroundColor: theme.palette.primary.main,
   },
-  readMoreIcon: {
-    verticalAlign: -1,
+  iconText: {
+    paddingTop: theme.space.md,
   },
 }))
 

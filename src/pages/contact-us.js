@@ -1,8 +1,7 @@
-import { phoneNumber } from "src/constants"
 import React from "react"
 import Layout from "components/layout"
 import {
-  Button,
+  PhoneLink,
   OpenContactModalButton,
   ArbutusMap,
   ContactForm,
@@ -12,6 +11,7 @@ import {
 import images from "src/images"
 import * as Mui from "@material-ui/core"
 import pageSections from "src/page-content/contact-us"
+import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
 
 const seo = {
   title: "Contact Us",
@@ -23,9 +23,7 @@ const topBannerData = {
     "We make all of our decisions in-house. That means we can get you the equipment financing you need, today.",
   cta: (
     <>
-      <Button color="default" href={phoneNumber.href}>
-        {phoneNumber.text}
-      </Button>
+      <PhoneLink color="default" button />
       <OpenContactModalButton>Apply Now</OpenContactModalButton>
     </>
   ),
@@ -66,6 +64,18 @@ const ContactUsPage = () => {
                 <Text>
                   <Mui.Link href="mailto:lease@arbutuscapital.com">
                     lease@arbutuscapital.com
+                  </Mui.Link>
+                  <br />
+                  <br />
+                </Text>
+                <Text variant="h5">Connect With Us</Text>
+                <Text>
+                  <Mui.Link
+                    href="https://ca.linkedin.com/company/arbutus-capital"
+                    external
+                    title="LinkedIn"
+                  >
+                    <LinkedInIcon size={26} />
                   </Mui.Link>
                 </Text>
               </Section>

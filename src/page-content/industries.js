@@ -170,6 +170,16 @@ const iwsContent = {
         "And more",
       ],
     },
+    {
+      title: "Anything else?",
+      subtitle:
+        "We lease so much more, so contact us and we will get you sorted.",
+      image: {
+        src: images.equipment.anythingElse,
+        alt: "Anything else?",
+      },
+      button: <OpenContactModalButton>Get started</OpenContactModalButton>,
+    },
   ],
 }
 

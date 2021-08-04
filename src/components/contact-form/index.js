@@ -1,7 +1,8 @@
+import { phoneNumber } from "src/constants"
 import React, { useEffect, useState } from "react"
 import { useForm, Controller } from "react-hook-form"
 import { TextField } from "@material-ui/core"
-import { Button, Text } from "components"
+import { Button, PhoneLink, Text } from "components"
 import useStyles from "./styles"
 import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
 
@@ -66,6 +67,7 @@ const ContactForm = ({
           defaultValue=""
           render={({ field }) => (
             <TextField
+              required
               label="Full Name"
               margin="dense"
               fullWidth
@@ -80,9 +82,26 @@ const ContactForm = ({
           defaultValue=""
           render={({ field }) => (
             <TextField
+              required
               label="Phone number"
               margin="dense"
               fullWidth
+              type="tel"
+              variant="outlined"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <TextField
+              label="Email"
+              margin="dense"
+              fullWidth
+              type="email"
               variant="outlined"
               {...field}
             />
@@ -94,6 +113,7 @@ const ContactForm = ({
           defaultValue=""
           render={({ field }) => (
             <TextField
+              required
               label="Tell us what you’re looking for"
               placeholder="ie. What equipment do you need? How much money do you need?"
               fullWidth
@@ -110,7 +130,9 @@ const ContactForm = ({
       {showFooter && (
         <div className={classes.contactFormFooter}>
           <Text>
-            or call us directly at <strong>1-800-510-8040</strong>
+            <PhoneLink color="inherit">
+              or call us directly at <strong>{phoneNumber.text}</strong>
+            </PhoneLink>
           </Text>
         </div>
       )}

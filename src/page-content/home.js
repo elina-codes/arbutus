@@ -1,6 +1,6 @@
 import React from "react"
 import { routes } from "src/constants"
-import { Button, OpenContactModalButton } from "components"
+import { Button } from "components"
 import images from "src/images"
 import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
 import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
@@ -30,10 +30,11 @@ const pageSections = {
       position: "right",
       alt: "Placeholder",
       direction: "Left",
+      alignTop: true,
     },
     button: (
-      <Button to={routes.industries.path} color="primary">
-        View more industries
+      <Button to={routes.aboutUs.path} color="primary">
+        More about us
       </Button>
     ),
   },

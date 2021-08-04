@@ -96,6 +96,7 @@ const arbutusTheme = {
     },
     body2: {
       fontSize: 14,
+      color: "inherit",
     },
     caption: {
       opacity: 0.7,
@@ -222,25 +223,29 @@ const arbutusTheme = {
         fontWeight: 600,
       },
     },
+    MuiAccordionSummary: {
+      expandIcon: {
+        transform: "rotate(90deg)",
+        "&.Mui-expanded": {
+          transform: "none",
+        },
+      },
+    },
     // Card
     MuiCard: {
       root: {
         height: "100%",
         boxShadow: config.boxShadow,
-        display: "flex",
-        flexDirection: "column",
       },
     },
     MuiCardMedia: {
       root: {
         marginBottom: 0,
-        height: "50%",
       },
     },
     MuiCardContent: {
       root: {
         textAlign: "left",
-        flex: 1,
       },
     },
     MuiCardActions: {
@@ -259,6 +264,7 @@ const arbutusTheme = {
       input: {
         "&::placeholder": {
           color: config.textPrimary,
+          opacity: "0.5 !important",
         },
       },
       root: {

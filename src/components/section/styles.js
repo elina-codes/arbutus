@@ -198,6 +198,11 @@ const styles = makeStyles(theme => ({
     objectFit: "cover",
     objectPosition: "center top",
   },
+  verticalCenter: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
 }))
 
 export default styles

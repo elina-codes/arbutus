@@ -2,7 +2,7 @@ import { BsGem as AuthenticIcon } from "react-icons/bs"
 import { GiPodiumWinner as ExperiencedIcon } from "react-icons/gi"
 import {
   TiArrowShuffle as FlexibleIcon,
-  TiHeartOutline as EmpatheticIcon,
+  TiHeartFullOutline as EmpatheticIcon,
 } from "react-icons/ti"
 import images from "src/images"
 
@@ -64,6 +64,7 @@ const pageSections = {
     },
     {
       icon: EmpatheticIcon,
+      iconColor: "#D75A4A",
       title: "Empathetic",
       text: `At Arbutus Capital, we never forget the importance of being real and authentic. We find this openness allows us a deeper understanding of small businesses and helps us turn leasing approvals into outcomes that you need.`,
     },

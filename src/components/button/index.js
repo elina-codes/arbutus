@@ -10,11 +10,22 @@ const Button = ({
   ...props
 }) => {
   return to ? (
-    <MuiButton {...{ component: GatsbyLink, to, variant, color, ...props }}>
+    <MuiButton
+      {...{
+        component: GatsbyLink,
+        to,
+        variant,
+        color,
+        size: "large",
+        ...props,
+      }}
+    >
       {children}
     </MuiButton>
   ) : (
-    <MuiButton {...{ variant, color, ...props }}>{children}</MuiButton>
+    <MuiButton {...{ variant, color, size: "large", ...props }}>
+      {children}
+    </MuiButton>
   )
 }
 

@@ -8,14 +8,22 @@ const styles = makeStyles(theme => ({
   topToolbar: {
     color: theme.palette.white,
     background: theme.palette.primary.main,
-    fontSize: "small",
+    fontSize: 14,
     "& nav": {
       flex: 1,
+    },
+    [theme.breakpoints.down("lg")]: {
+      paddingLeft: "calc(5% + 24px)",
+      paddingRight: "calc(5% + 24px)",
     },
   },
   mainToolbar: {
     color: theme.palette.primary.main,
     justifyContent: "space-between",
+    [theme.breakpoints.down("lg")]: {
+      paddingLeft: "calc(5% + 24px)",
+      paddingRight: "calc(5% + 24px)",
+    },
   },
   mainMenuNav: {
     display: "flex",
@@ -42,6 +50,7 @@ const styles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     fontSize: 16,
+    fontWeight: 500,
     "&:not(:last-child)": {
       marginBottom: 0,
     },
@@ -53,6 +62,9 @@ const styles = makeStyles(theme => ({
       marginLeft: theme.space.md,
     },
   },
+  topNavLink: {
+    fontSize: "inherit",
+  },
   mainNavCta: {
     [theme.breakpoints.up("md")]: {
       marginLeft: theme.space.sm,
@@ -61,6 +73,9 @@ const styles = makeStyles(theme => ({
       order: -1,
       marginBottom: theme.space.sm,
     },
+  },
+  subMenu: {
+    width: "100%",
   },
   //mobileMenu
   drawerContainer: {

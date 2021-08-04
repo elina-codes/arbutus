@@ -35,23 +35,26 @@ const IndustriesWeServePage = () => {
               key: section?.id,
               light,
               image: { position, direction, ...image },
+              verticalCenter: !content,
               ...sectionProps,
             }}
           >
-            <ul
-              style={{
-                columnCount: 2,
-                marginBottom: 0,
-                marginLeft: 0,
-                listStyle: "none",
-              }}
-            >
-              {content.map(item => (
-                <li key={item} style={{ marginBottom: "0.5em" }}>
-                  <Text>{item}</Text>
-                </li>
-              ))}
-            </ul>
+            {content && (
+              <ul
+                style={{
+                  columnCount: 2,
+                  marginBottom: 0,
+                  marginLeft: 0,
+                  listStyle: "none",
+                }}
+              >
+                {content?.map(item => (
+                  <li key={item} style={{ marginBottom: "0.5em" }}>
+                    <Text>{item}</Text>
+                  </li>
+                ))}
+              </ul>
+            )}
           </Section>
         )
       })}

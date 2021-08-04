@@ -1,8 +1,14 @@
 import React from "react"
-import { phoneNumber, routes } from "src/constants"
+import { routes } from "src/constants"
 import { List, ListItem } from "@material-ui/core"
 import useStyles from "./styles"
-import { Button, OpenContactModalButton, Link, Section, Text } from "components"
+import {
+  PhoneLink,
+  OpenContactModalButton,
+  Link,
+  Section,
+  Text,
+} from "components"
 import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
 import { graphql, StaticQuery } from "gatsby"
 
@@ -25,10 +31,10 @@ const FooterMenu = ({ data }) => {
           title: aboutUs.title,
           href: aboutUs.path,
         },
-        {
-          title: "News & Press",
-          href: "#",
-        },
+        // {
+        //   title: "News & Press",
+        //   href: newsPress.path,
+        // },
         {
           title: contactUs.title,
           href: contactUs.path,
@@ -72,11 +78,7 @@ const FooterMenu = ({ data }) => {
       items: [
         {
           type: "button",
-          button: (
-            <Button color="default" href={phoneNumber.href}>
-              {phoneNumber.text}
-            </Button>
-          ),
+          button: <PhoneLink color="default" button />,
         },
         {
           type: "button",

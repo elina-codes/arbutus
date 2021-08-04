@@ -6,6 +6,7 @@ import useStyles from "./styles"
 const IconText = ({
   className,
   center,
+  color,
   icon: Icon,
   text,
   dark,
@@ -24,7 +25,7 @@ const IconText = ({
         })}
         {...props}
       >
-        <Icon size={80} color={dark ? "#fff" : "inherit"} />
+        <Icon size={80} color={color || (dark ? "#fff" : "inherit")} />
       </div>
       <Text variant="h5">{text}</Text>
     </div>

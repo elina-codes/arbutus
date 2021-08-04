@@ -59,7 +59,8 @@ const FAQPage = () => {
               key: `section-${title}-${i}`,
             }}
           >
-            {Component ? <Component data={content} /> : <>{content}</>}
+            {content &&
+              (Component ? <Component data={content} /> : <>{content}</>)}
           </Section>
         )
       })}

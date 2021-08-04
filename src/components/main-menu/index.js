@@ -104,6 +104,7 @@ const Header = ({ siteTitle, ...props }) => {
           keepMounted
           open={Boolean(anchorEl)}
           onClose={handleSubMenuClose}
+          TransitionComponent={Mui.Collapse}
           anchorOrigin={{
             vertical: "bottom",
             horizontal: "center",
@@ -127,11 +128,17 @@ const Header = ({ siteTitle, ...props }) => {
     )
   }
 
-  function NavLink({ title, sublinks, ...props }) {
+  function NavLink({ title, sublinks, className, ...props }) {
     return sublinks ? (
       <NavLinkWithSubs {...{ ...props, title, sublinks }} />
     ) : (
-      <Link {...{ ...props, color: "inherit", className: classes.navLink }}>
+      <Link
+        {...{
+          ...props,
+          color: "inherit",
+          className: classNames(classes.navLink, className),
+        }}
+      >
         {title}
       </Link>
     )
@@ -140,7 +147,11 @@ const Header = ({ siteTitle, ...props }) => {
   const TopNav = () => (
     <nav className={classNames(classes.mainMenuNav, classes.mainMenuTopNav)}>
       {topBarLinks.map((item, i) => (
-        <NavLink {...item} key={`topBarLink-${item.title}`} />
+        <NavLink
+          className={classes.topNavLink}
+          {...item}
+          key={`topBarLink-${item.title}`}
+        />
       ))}
     </nav>
   )
@@ -161,7 +172,7 @@ const Header = ({ siteTitle, ...props }) => {
       <Mui.CssBaseline />
       <HideOnScroll {...props}>
         <Mui.AppBar color="inherit">
-          <Mui.Hidden smDown>
+          <Mui.Hidden mdDown>
             <Mui.Toolbar className={classes.topToolbar} variant="dense">
               <TopNav />
             </Mui.Toolbar>
@@ -176,7 +187,7 @@ const Header = ({ siteTitle, ...props }) => {
                 />
               </Link>
             </Text>
-            <Mui.Hidden mdUp>
+            <Mui.Hidden lgUp>
               <Mui.IconButton
                 aria-label="open menu"
                 edge="start"
@@ -186,10 +197,10 @@ const Header = ({ siteTitle, ...props }) => {
                 <MenuIcon />
               </Mui.IconButton>
             </Mui.Hidden>
-            <Mui.Hidden smDown>
+            <Mui.Hidden mdDown>
               <MainNav />
             </Mui.Hidden>
-            <Mui.Hidden mdUp>
+            <Mui.Hidden lgUp>
               <Mui.SwipeableDrawer
                 variant="temporary"
                 anchor="right"
@@ -208,7 +219,7 @@ const Header = ({ siteTitle, ...props }) => {
           </Mui.Toolbar>
         </Mui.AppBar>
       </HideOnScroll>
-      <Mui.Hidden smDown>
+      <Mui.Hidden mdDown>
         <Mui.Toolbar variant="dense" />
       </Mui.Hidden>
       <Mui.Toolbar />

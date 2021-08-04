@@ -70,6 +70,7 @@ const Section = ({
   successStory,
   title,
   variant,
+  verticalCenter,
   wideTitle,
   ...props
 }) => {
@@ -149,7 +150,15 @@ const Section = ({
             [classes.homeBannerInner]: homeVariant,
           })}
         >
-          <div className={classNames(classes.sectionMain, "stepTarget")}>
+          <div
+            className={classNames(
+              classes.sectionMain,
+              {
+                [classes.verticalCenter]: verticalCenter,
+              },
+              "stepTarget"
+            )}
+          >
             {hero ? (
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
                 {headerContent}

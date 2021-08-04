@@ -1,15 +1,54 @@
 import React from "react"
 import { Button } from "components"
 import { routes } from "src/constants"
+import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
 
 const pageSections = {
   benefits: {
     title: "Benefits of equipment leasing",
     subtitle: `Title about explaining benefits`,
     description: `Leasing equipment offers business owners flexibility, lower risk and expense-side predictability and is a popular way to finance small business growth.`,
+    content: [
+      {
+        icon: FinancingIcon,
+        title: `Up to 100% financing`,
+        text:
+          "In most instances, we only ask for the first rental payment in advance, which is uncommon in our industry.",
+      },
+      {
+        icon: FinancingIcon,
+        title: `Tailored payment terms`,
+        text:
+          "We work with you to design a payment plan that suits you and your business.",
+      },
+      {
+        icon: FinancingIcon,
+        title: `Potential tax savings`,
+        text:
+          "Our leases are written as rental agreements, and in many instances, 100% of the monthly rental can be written off. Talk to your accountant about the tax benefits you may be entitled to.",
+      },
+      {
+        icon: FinancingIcon,
+        title: `Improve your balance sheet`,
+        text:
+          "Leasing keeps your financials healthy and your business growth on track. ",
+      },
+      {
+        icon: FinancingIcon,
+        title: `Protect your cash flow`,
+        text:
+          "We work with you to design a payment plan that suits you and your business.",
+      },
+      {
+        icon: FinancingIcon,
+        title: `Get your equipment fast`,
+        text:
+          "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone in the business. (else?)",
+      },
+    ],
   },
   leasingFaq: {
-    title: "Equipment leasing FAQs",
+    title: "Equipment leasing FAQ",
     subtitle: "Personable title goes here",
     button: (
       <Button color="primary" to={routes.faq.path}>

@@ -36,66 +36,62 @@ const BrokersPage = () => {
   return (
     <Layout {...{ seo, topBannerData }}>
       <Section>
-        <Mui.Grid container spacing={5}>
-          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
-            <Mui.Grid item>
-              <Section {...whySection}>
-                <IconList data={whyContent} singleCol outlined />
-              </Section>
-            </Mui.Grid>
+        <Mui.Grid container spacing={3}>
+          <Mui.Grid item xs={12} md={6}>
+            <Section {...whySection}>
+              <IconList data={whyContent} singleCol outlined />
+            </Section>
           </Mui.Grid>
-          <Mui.Grid container direction="column" spacing={3} item sm={12} md>
-            <Mui.Grid item>
-              <Section {...truePartnership}>
-                <form
-                  name="Brokers Contact Form"
-                  onSubmit={handleSubmit(onSubmit)}
-                  // data-netlify="true"
-                >
-                  <input
-                    type="hidden"
-                    name="form-name"
-                    value="Brokers Contact Form"
-                  />
+          <Mui.Grid item xs={12} md={6}>
+            <Section {...truePartnership}>
+              <form
+                name="Brokers Contact Form"
+                onSubmit={handleSubmit(onSubmit)}
+                // data-netlify="true"
+              >
+                <input
+                  type="hidden"
+                  name="form-name"
+                  value="Brokers Contact Form"
+                />
 
-                  <Mui.Grid container spacing={3}>
-                    <Mui.Grid item xs={12} sm>
-                      <Controller
-                        name="fullName"
-                        control={control}
-                        defaultValue=""
-                        render={({ field }) => (
-                          <Mui.TextField
-                            label="Full Name"
-                            margin="dense"
-                            fullWidth
-                            variant="outlined"
-                            {...field}
-                          />
-                        )}
-                      />
-                    </Mui.Grid>
-                    <Mui.Grid item xs={12} sm>
-                      <Controller
-                        name="phone"
-                        control={control}
-                        defaultValue=""
-                        render={({ field }) => (
-                          <Mui.TextField
-                            label="Phone number"
-                            margin="dense"
-                            fullWidth
-                            variant="outlined"
-                            {...field}
-                          />
-                        )}
-                      />
-                    </Mui.Grid>
+                <Mui.Grid container spacing={3}>
+                  <Mui.Grid item xs={12} sm>
+                    <Controller
+                      name="fullName"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <Mui.TextField
+                          label="Full Name"
+                          margin="dense"
+                          fullWidth
+                          variant="outlined"
+                          {...field}
+                        />
+                      )}
+                    />
                   </Mui.Grid>
-                  <Button type="submit">Let's talk</Button>
-                </form>
-              </Section>
-            </Mui.Grid>
+                  <Mui.Grid item xs={12} sm>
+                    <Controller
+                      name="phone"
+                      control={control}
+                      defaultValue=""
+                      render={({ field }) => (
+                        <Mui.TextField
+                          label="Phone number"
+                          margin="dense"
+                          fullWidth
+                          variant="outlined"
+                          {...field}
+                        />
+                      )}
+                    />
+                  </Mui.Grid>
+                </Mui.Grid>
+                <Button type="submit">Let's talk</Button>
+              </form>
+            </Section>
           </Mui.Grid>
         </Mui.Grid>
       </Section>
