@@ -9,7 +9,7 @@ const Banner = ({ children, cta, data }) => {
     <ul className={classes.bannerList}>
       {data.map((item, i) => (
         <li key={`item-${i}-${item}`} className={classes.bannerListItem}>
-          <Text variant="h5" strong component="span">
+          <Text variant="h5" component="span">
             {item}
           </Text>
         </li>
@@ -28,7 +28,7 @@ const Banner = ({ children, cta, data }) => {
         ) : (
           <>
             <div className={classes.bannerContent}>
-              <Text variant="h5" strong component="span">
+              <Text variant="h5" component="span">
                 {children}
               </Text>
             </div>

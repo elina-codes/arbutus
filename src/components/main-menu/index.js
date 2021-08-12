@@ -102,16 +102,17 @@ const Header = ({ siteTitle, ...props }) => {
           anchorEl={anchorEl}
           getContentAnchorEl={null}
           keepMounted
+          disablePortal
           open={Boolean(anchorEl)}
           onClose={handleSubMenuClose}
           TransitionComponent={Mui.Collapse}
           anchorOrigin={{
             vertical: "bottom",
-            horizontal: "center",
+            horizontal: "left",
           }}
           transformOrigin={{
             vertical: "top",
-            horizontal: "center",
+            horizontal: "left",
           }}
         >
           {sublinks.map(sublink => (

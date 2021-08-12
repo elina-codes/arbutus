@@ -48,6 +48,7 @@ const FAQPage = () => {
           description,
           content,
           component: Component,
+          ...sectionProps
         } = section
         return (
           <Section
@@ -57,6 +58,7 @@ const FAQPage = () => {
               subtitle,
               description,
               key: `section-${title}-${i}`,
+              ...sectionProps,
             }}
           >
             {content &&

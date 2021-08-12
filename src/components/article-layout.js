@@ -1,5 +1,6 @@
 import React from "react"
-import "fontsource-roboto"
+import "fontsource-roboto-slab"
+import "fontsource-montserrat"
 import { ThemeProvider } from "@material-ui/core/styles"
 import { ModalProvider } from "src/context"
 import * as Mui from "@material-ui/core"

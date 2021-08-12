@@ -66,6 +66,7 @@ const Section = ({
   inner,
   light,
   logoBg,
+  noPaddingBottom,
   subtitle,
   successStory,
   title,
@@ -123,6 +124,7 @@ const Section = ({
           [classes.home]: homeVariant,
           [classes.inner]: inner,
           [classes.center]: centerSection,
+          [classes.noPaddingBottom]: noPaddingBottom,
         },
         className
       )}

@@ -95,6 +95,7 @@ const pageSections = {
     {
       description:
         "If you still can’t find an answer to your question, please give us a call at 1-800-123-4567 or send us an email at email@address.com",
+      noPaddingBottom: true,
     },
     {
       menuItem: "subtitle",

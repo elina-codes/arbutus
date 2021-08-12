@@ -12,7 +12,7 @@ const Link = ({ external, href, children, ...props }) => {
       component={GatsbyLink}
       to={href}
       activeClassName="active"
-      activeStyle={{ fontWeight: 900 }}
+      activeStyle={{ color: "#ff5722" }}
       {...props}
     >
       {children}

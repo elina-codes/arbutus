@@ -30,6 +30,7 @@ const IndexPage = () => {
   const { industriesWeServe, aboutUs, benefits, reasons, process } =
     pageSections || {}
 
+  const { content: aboutUsContent, ...aboutUsSection } = aboutUs
   const { content: benefitsContent, ...benefitsSection } = benefits
   const { content: reasonsContent, ...reasonsSection } = reasons
   const { content: processContent, ...processSection } = process
@@ -39,8 +40,8 @@ const IndexPage = () => {
       {...{ seo, topBannerData, showSuccessStories: true, showDoubleCta: true }}
     >
       <Section {...industriesWeServe}>
-        <Mui.Grid container spacing={5}>
-          <Mui.Grid container direction="column" item xs={12} sm>
+        <Mui.Grid container justify="center" spacing={5}>
+          <Mui.Grid container direction="column" item xs={12} sm={6} md>
             <ImagePlain
               direction="Up"
               maxWidth={400}
@@ -51,7 +52,7 @@ const IndexPage = () => {
               Hospitality Equipment
             </Text>
           </Mui.Grid>
-          <Mui.Grid container direction="column" item xs={12} sm>
+          <Mui.Grid container direction="column" item xs={12} sm={6} md>
             <ImagePlain
               direction="Up"
               delay={200}
@@ -63,7 +64,7 @@ const IndexPage = () => {
               Forestry Equipment
             </Text>
           </Mui.Grid>
-          <Mui.Grid container direction="column" item xs={12} sm>
+          <Mui.Grid container direction="column" item xs={12} sm={6} md>
             <ImagePlain
               direction="Up"
               delay={400}
@@ -83,7 +84,9 @@ const IndexPage = () => {
         We listen when the banks won't. Chat directly with the decision makers
         today.
       </Banner>
-      <Section {...aboutUs}></Section>
+      <Section {...aboutUsSection}>
+        <Text preLine>{aboutUsContent}</Text>
+      </Section>
       <Section {...benefitsSection}>
         <CircleGridSection data={benefitsContent} dark />
       </Section>

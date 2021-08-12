@@ -4,7 +4,6 @@ import {
   NumberCircleThree as ThreeIcon,
 } from "phosphor-react"
 import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
-import PlaceholderSSImage1 from "src/images/ss1.png"
 
 const pageSections = {
   why: {
@@ -80,42 +79,6 @@ const pageSections = {
         title: "We won’t cancel",
         text:
           "When we say yes - we do it. We don’t reject a deal 3/4s of the way through, and we keep you in the loop at every step.",
-      },
-    ],
-  },
-  recentDeals: {
-    title: "Recent deals",
-    subtitle: "Personable title goes here",
-    content: [
-      {
-        meta: "Some other piece of equipment",
-        image: {
-          src: PlaceholderSSImage1,
-          alt: "Some other piece of equipment",
-        },
-        title: "$12,000,000",
-        text:
-          "A growing company ordered new dozers, rock trucks and excavator to be delivered over a 12-month timeframe. We provided a capital lease facility with 72-month terms that would allow the customer to draw funds as needed to faciliate the random delivery of the equipment.",
-      },
-      {
-        meta: "Some other piece of equipment",
-        image: {
-          src: PlaceholderSSImage1,
-          alt: "Some other piece of equipment",
-        },
-        title: "$12,000,000",
-        text:
-          "A growing company ordered new dozers, rock trucks and excavator to be delivered over a 12-month timeframe. We provided a capital lease facility with 72-month terms that would allow the customer to draw funds as needed to faciliate the random delivery of the equipment.",
-      },
-      {
-        meta: "Some other piece of equipment",
-        image: {
-          src: PlaceholderSSImage1,
-          alt: "Some other piece of equipment",
-        },
-        title: "$12,000,000",
-        text:
-          "A growing company ordered new dozers, rock trucks and excavator to be delivered over a 12-month timeframe. We provided a capital lease facility with 72-month terms that would allow the customer to draw funds as needed to faciliate the random delivery of the equipment.",
       },
     ],
   },

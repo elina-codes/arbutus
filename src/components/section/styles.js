@@ -6,14 +6,6 @@ const styles = makeStyles(theme => ({
     backgroundPosition: "center",
     padding: theme.spacing(3),
     ...theme.sectionPadding,
-    // "&[data-step]": {
-    //   "&:before": {
-    //     content: "attr(data-step)",
-    //     fontSize: 120,
-    //     fontWeight: 900,
-    //     lineHeight: 0.9,
-    //   },
-    // },
   },
   dense: {
     ...theme.sectionPaddingDense,
@@ -202,6 +194,9 @@ const styles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+  },
+  noPaddingBottom: {
+    paddingBottom: 0,
   },
 }))
 

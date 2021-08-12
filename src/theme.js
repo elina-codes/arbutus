@@ -1,4 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles"
+import "fontsource-roboto-slab"
 
 const config = {
   primary: "#01446f",
@@ -66,6 +67,7 @@ const arbutusTheme = {
   },
   typography: {
     h1: {
+      fontFamily: "Roboto Slab",
       fontSize: 48,
       fontWeight: 700,
       color: "inherit",
@@ -78,6 +80,7 @@ const arbutusTheme = {
       color: config.secondary,
     },
     h3: {
+      fontFamily: "Roboto Slab",
       fontSize: 36,
       fontWeight: 700,
       color: "inherit",
@@ -87,12 +90,13 @@ const arbutusTheme = {
       fontSize: 18,
       color: "inherit",
       lineHeight: 1.5,
+      fontWeight: 500,
     },
     h5: {
       fontSize: 21,
       color: "inherit",
       lineHeight: 1.5,
-      fontWeight: 900,
+      fontWeight: 700,
     },
     body2: {
       fontSize: 14,
@@ -257,6 +261,14 @@ const arbutusTheme = {
         textTransform: "uppercase",
         fontWeight: 600,
         fontSize: 12,
+      },
+    },
+    // Menu
+    MuiMenu: {
+      paper: {
+        color: config.primary,
+        minWidth: 160,
+        boxShadow: "none",
       },
     },
     // Form

@@ -7,9 +7,9 @@ import {
   Button,
   OpenContactModalButton,
   Banner,
-  CardGrid,
   Section,
   IconList,
+  RecentDeals,
 } from "components"
 import * as Mui from "@material-ui/core"
 const seo = {
@@ -25,10 +25,9 @@ const topBannerData = {
 }
 
 const BrokersPage = () => {
-  const { why, truePartnership, moreReasons, recentDeals } = pageSections || {}
+  const { why, truePartnership, moreReasons } = pageSections || {}
   const { content: moreReasonsContent, ...moreReasonsSection } = moreReasons
   const { content: whyContent, ...whySection } = why
-  const { content: recentDealsContent, ...recentDealsSection } = recentDeals
 
   const { control, handleSubmit } = useForm()
   const onSubmit = data => console.log(data)
@@ -104,9 +103,7 @@ const BrokersPage = () => {
       <Section {...moreReasonsSection}>
         <IconList data={moreReasonsContent} />
       </Section>
-      <Section {...recentDealsSection}>
-        <CardGrid data={recentDealsContent} dark />
-      </Section>
+      <RecentDeals />
     </Layout>
   )
 }

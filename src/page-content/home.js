@@ -20,7 +20,7 @@ const pageSections = {
   aboutUs: {
     title: "About us",
     subtitle: "40 years of heavy equipment leasing",
-    description: `From construction equipment to used restaurant equipment, we customize equipment leases to fit your unique needs. We find the most competitive and flexible capital leasing solutions, and find them fast. 
+    content: `From construction equipment to used restaurant equipment, we customize equipment leases to fit your unique needs. We find the most competitive and flexible capital leasing solutions, and find them fast. 
 
     Arbutus Capital is one of the top equipment leasing companies serving British-Columbia, Alberta, Saskatchewan and Manitoba. That’s because even if you find yourself with imperfect credit, we work with you to find the best solution. 
     

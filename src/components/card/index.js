@@ -35,17 +35,21 @@ const Card = ({
       animateIn="animate__fadeInUp"
       animateOnce
       duration={0.5}
-      style={{ height: "100%" }}
+      style={{ height: "100%", maxWidth: "100%" }}
       {...{ delay }}
     >
-      <Mui.Card className={classNames(classes.card, { [classes.dark]: dark })}>
+      <Mui.Card
+        className={classNames(classes.card, {
+          [classes.dark]: dark,
+        })}
+      >
         <CardWrapper>
           {image?.src && (
             <Mui.CardMedia
               component="img"
               loading="lazy"
               alt={image.alt}
-              height="140"
+              height="255"
               image={image.src}
               title={image.alt}
             />

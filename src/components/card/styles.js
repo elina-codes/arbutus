@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles"
 const styles = makeStyles(theme => ({
   card: {
     color: theme.palette.text.main,
+    display: "inline-block",
+    width: 360,
+    maxWidth: "100%",
   },
   dark: {
     color: theme.palette.white,
