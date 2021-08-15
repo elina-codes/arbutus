@@ -8,6 +8,7 @@ const styles = makeStyles(theme => ({
   topToolbar: {
     color: theme.palette.white,
     background: theme.palette.primary.main,
+    minHeight: 40,
     fontSize: 14,
     "& nav": {
       flex: 1,
@@ -20,6 +21,10 @@ const styles = makeStyles(theme => ({
   mainToolbar: {
     color: theme.palette.primary.main,
     justifyContent: "space-between",
+    [theme.breakpoints.up("md")]: {
+      alignItems: "stretch",
+      minHeight: 80,
+    },
     [theme.breakpoints.down("lg")]: {
       paddingLeft: "calc(5% + 24px)",
       paddingRight: "calc(5% + 24px)",
@@ -68,6 +73,8 @@ const styles = makeStyles(theme => ({
   mainNavCta: {
     [theme.breakpoints.up("md")]: {
       marginLeft: theme.space.sm,
+      marginRight: 0,
+      alignSelf: "center",
     },
     [theme.breakpoints.down("sm")]: {
       order: -1,

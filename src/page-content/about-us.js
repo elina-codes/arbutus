@@ -1,9 +1,6 @@
-import { BsGem as AuthenticIcon } from "react-icons/bs"
-import { GiPodiumWinner as ExperiencedIcon } from "react-icons/gi"
-import {
-  TiArrowShuffle as FlexibleIcon,
-  TiHeartFullOutline as EmpatheticIcon,
-} from "react-icons/ti"
+import { BsGem as QualityIcon } from "react-icons/bs"
+import { FaHandshake as TrustIcon } from "react-icons/fa"
+import { GiThreeFriends as PeopleIcon } from "react-icons/gi"
 import images from "src/images"
 
 const pageSections = {
@@ -23,11 +20,11 @@ const pageSections = {
   },
   ourLeadershipTeam: {
     title: "Our Leadership Team",
-    subtitle: "Personable title goes here",
+    subtitle: "Behind every small business is a family",
   },
   ourValues: {
     title: "Our Values",
-    subtitle: `Personable title goes here.`,
+    subtitle: `Ideals That Guide Us.`,
   },
   staff: [
     {
@@ -48,25 +45,19 @@ const pageSections = {
   ],
   values: [
     {
-      icon: AuthenticIcon,
-      title: "Authentic",
-      text: `At Arbutus Capital, we never forget the importance of being real and authentic. We find this openness allows us a deeper understanding of small businesses and helps us turn leasing approvals into outcomes that you need.`,
+      icon: TrustIcon,
+      title: "Trust",
+      text: `We understand the importance of integrity and communication; and we hold ourselves to the highest standards in order to build trusting and long-lasting relationships with our brokers and clients`,
     },
     {
-      icon: ExperiencedIcon,
-      title: "Experienced",
-      text: `At Arbutus Capital, we never forget the importance of being real and authentic. We find this openness allows us a deeper understanding of small businesses and helps us turn leasing approvals into outcomes that you need.`,
+      icon: PeopleIcon,
+      title: "People",
+      text: `By adopting a people-first mindset, we encourage our team-members to grow personally and professionally, enabling each other to manage the customer’s experience better than anybody else in the leasing industry.`,
     },
     {
-      icon: FlexibleIcon,
-      title: "Flexible",
-      text: `At Arbutus Capital, we never forget the importance of being real and authentic. We find this openness allows us a deeper understanding of small businesses and helps us turn leasing approvals into outcomes that you need.`,
-    },
-    {
-      icon: EmpatheticIcon,
-      iconColor: "#D75A4A",
-      title: "Empathetic",
-      text: `At Arbutus Capital, we never forget the importance of being real and authentic. We find this openness allows us a deeper understanding of small businesses and helps us turn leasing approvals into outcomes that you need.`,
+      icon: QualityIcon,
+      title: "Quality",
+      text: `Needs description`,
     },
   ],
 }

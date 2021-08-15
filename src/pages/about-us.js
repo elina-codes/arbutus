@@ -62,7 +62,7 @@ const AboutUsPage = () => {
         Contact us and you can chat directly with one of the owners today.
       </Banner>
       <Section {...ourValues}>
-        <Mui.Grid container spacing={5}>
+        <Mui.Grid container spacing={5} justify="center">
           {values.map(v => (
             <Mui.Grid
               key={`values-${v.title}`}
@@ -71,6 +71,7 @@ const AboutUsPage = () => {
               item
               xs={12}
               md={6}
+              lg={4}
               alignItems="center"
             >
               <IconText

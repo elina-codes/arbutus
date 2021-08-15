@@ -6,7 +6,6 @@ const styles = makeStyles(theme => ({
       textAlign: "center",
       paddingLeft: theme.space.sm,
       paddingRight: theme.space.sm,
-      flex: 1,
     },
     [theme.breakpoints.down("sm")]: {
       width: 260,

@@ -2,7 +2,7 @@ import { routes, phoneNumber } from "src/constants"
 import React, { useState } from "react"
 import * as Mui from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
-import { OpenContactModalButton, Link, Text } from "components"
+import { OpenContactModalButton, Link } from "components"
 import useStyles from "./styles"
 import images from "src/images"
 import classNames from "classnames"
@@ -179,15 +179,13 @@ const Header = ({ siteTitle, ...props }) => {
             </Mui.Toolbar>
           </Mui.Hidden>
           <Mui.Toolbar className={classes.mainToolbar}>
-            <Text variant="h6" component="span" style={{ marginBottom: 0 }}>
-              <Link to="/" style={{ display: "flex" }}>
-                <img
-                  src={images.bg.navLogo}
-                  alt="Arbutus Capital logo"
-                  className={classes.navLogo}
-                />
-              </Link>
-            </Text>
+            <Link to="/" style={{ display: "flex", marginBottom: 0 }}>
+              <img
+                src={images.bg.navLogo}
+                alt="Arbutus Capital logo"
+                className={classes.navLogo}
+              />
+            </Link>
             <Mui.Hidden lgUp>
               <Mui.IconButton
                 aria-label="open menu"
@@ -221,9 +219,9 @@ const Header = ({ siteTitle, ...props }) => {
         </Mui.AppBar>
       </HideOnScroll>
       <Mui.Hidden mdDown>
-        <Mui.Toolbar variant="dense" />
+        <Mui.Toolbar variant="dense" className={classes.topToolbar} />
       </Mui.Hidden>
-      <Mui.Toolbar />
+      <Mui.Toolbar className={classes.mainToolbar} />
     </div>
   )
 }

@@ -42,7 +42,7 @@ const pageSections = {
   },
   moreReasons: {
     title: "More reasons to partner with us",
-    subtitle: "Personable title goes here",
+    subtitle: "You will feel the customer service difference with Arbutus",
     content: [
       {
         icon: CheckIcon,

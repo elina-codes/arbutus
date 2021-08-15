@@ -27,7 +27,7 @@ const RecentDeals = ({ data }) => {
     <Section
       {...{
         title: `Recent Deals`,
-        subtitle: `Personable title goes here`,
+        subtitle: `Successful Partnerships`,
       }}
     >
       <CardGrid data={recentDeals} dark />

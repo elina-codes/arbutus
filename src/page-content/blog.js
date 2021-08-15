@@ -1,6 +1,6 @@
 const pageSections = {
   recentArticles: {
-    title: "Recent blog articles",
+    title: "Arbutus Capital News",
     subtitle: `Keeping you informed on the latest in equipment leasing or something.`,
     wideTitle: true,
   },

@@ -1,8 +1,7 @@
 const pageSections = {
   howWeveHelped: {
-    title: "How we’ve helped people",
-    subtitle: `Different title. 
-    Can be two lines if we want!`,
+    title: "Successful Partnerships",
+    subtitle: `We want to see our clients succeed!`,
   },
 }
 

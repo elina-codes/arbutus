@@ -268,7 +268,9 @@ const arbutusTheme = {
       paper: {
         color: config.primary,
         minWidth: 160,
-        boxShadow: "none",
+        borderRadius: 0,
+        boxShadow:
+          "0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px -10px rgb(0 0 0 / 12%)",
       },
     },
     // Form

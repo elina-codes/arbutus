@@ -5,7 +5,7 @@ import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
 
 const pageSections = {
   benefits: {
-    title: "Benefits of equipment leasing",
+    title: "Keep your financials healthy and your business on track",
     subtitle: `Title about explaining benefits`,
     description: `Leasing equipment offers business owners flexibility, lower risk and expense-side predictability and is a popular way to finance small business growth.`,
     content: [
@@ -49,7 +49,8 @@ const pageSections = {
   },
   leasingFaq: {
     title: "Equipment leasing FAQ",
-    subtitle: "Personable title goes here",
+    subtitle:
+      "Lease financing shouldn’t be complicated.  Give us a call to learn more.",
     button: (
       <Button color="primary" to={routes.faq.path}>
         Full FAQ page

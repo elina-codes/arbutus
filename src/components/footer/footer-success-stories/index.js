@@ -23,8 +23,7 @@ const FooterSuccessStories = ({ data }) => {
     <Section
       {...{
         title: `How we've helped people`,
-        subtitle: `People first.
-        Something about us caring.`,
+        subtitle: `Helping Business Owners Succeed`,
         button: (
           <Button to={routes.successStories.path} color="primary">
             More success stories
