@@ -32,16 +32,16 @@ const styles = makeStyles(theme => ({
   },
   mainMenuNav: {
     display: "flex",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       padding: theme.space.md,
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       justifyContent: "flex-end",
     },
   },
   mainMenuTopNav: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       backgroundColor: theme.palette.primary.main,
       color: theme.palette.white,
       flex: 1,
@@ -59,11 +59,11 @@ const styles = makeStyles(theme => ({
     "&:not(:last-child)": {
       marginBottom: 0,
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       paddingTop: theme.space.xs,
       paddingBottom: theme.space.xs,
     },
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       marginLeft: theme.space.md,
     },
   },
@@ -71,12 +71,12 @@ const styles = makeStyles(theme => ({
     fontSize: "inherit",
   },
   mainNavCta: {
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       marginLeft: theme.space.sm,
       marginRight: 0,
       alignSelf: "center",
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       order: -1,
       marginBottom: theme.space.sm,
     },

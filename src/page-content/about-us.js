@@ -24,7 +24,7 @@ const pageSections = {
   },
   ourValues: {
     title: "Our Values",
-    subtitle: `Ideals That Guide Us.`,
+    subtitle: `Ideals That Guide Us`,
   },
   staff: [
     {
@@ -47,7 +47,7 @@ const pageSections = {
     {
       icon: TrustIcon,
       title: "Trust",
-      text: `We understand the importance of integrity and communication; and we hold ourselves to the highest standards in order to build trusting and long-lasting relationships with our brokers and clients`,
+      text: `We understand the importance of integrity and communication; and we hold ourselves to the highest standards in order to build trusting and long-lasting relationships with our brokers and clients.`,
     },
     {
       icon: PeopleIcon,

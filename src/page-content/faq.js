@@ -1,4 +1,5 @@
-import { Accordion } from "components"
+import React from "react"
+import { Accordion, Link, PhoneLink } from "components"
 
 const generalFAQ = [
   {
@@ -93,8 +94,15 @@ const capitalFaq = [
 const pageSections = {
   sections: [
     {
-      description:
-        "If you still can’t find an answer to your question, please give us a call at 1-800-123-4567 or send us an email at email@address.com",
+      description: (
+        <>
+          If you still can’t find an answer to your question, please give us a
+          call at <PhoneLink /> or send us an email at{" "}
+          <Link external href="mailto:lease@arbutuscapital.com">
+            lease@arbutuscapital.com
+          </Link>
+        </>
+      ),
       noPaddingBottom: true,
     },
     {
