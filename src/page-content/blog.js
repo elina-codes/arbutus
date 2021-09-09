@@ -1,7 +1,7 @@
 const pageSections = {
   recentArticles: {
     title: "Arbutus Capital News",
-    subtitle: `Keeping you informed on the latest in equipment leasing or something.`,
+    subtitle: `Keeping you informed on the latest in equipment leasing`,
     wideTitle: true,
   },
 }
