@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: No one likes red tape
 date: 2019-02-14T03:55:00.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /images/uploads/paperwork.jpeg
 ---
 ### Red tape slows business down.
