@@ -49,7 +49,8 @@ const FooterMenu = ({ data }) => {
         },
         {
           title: "Full application form",
-          href: "#",
+          href: "/arbutus-credit-application.pdf",
+          download: true,
         },
       ],
     },
@@ -112,6 +113,7 @@ const FooterMenu = ({ data }) => {
                       {...{
                         href: item?.href,
                         external: item?.external,
+                        download: item?.download,
                         color: "inherit",
                       }}
                     >

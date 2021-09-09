@@ -7,13 +7,12 @@ const ArbutusMap = () => (
       title="Arbutus Capital"
       width="480"
       height="400"
-      frameBorder="0"
+      frameborder="0"
       scrolling="no"
-      marginHeight="0"
-      marginWidth="0"
+      marginheight="0"
+      marginwidth="0"
       id="gmap_canvas"
-      loading="lazy"
-      src="https://maps.google.com/maps?width=480&amp;height=400&amp;hl=en&amp;q=1530-355%20Burrard%20St%20Vancouver+(Arbutus%20Capital)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      src="https://maps.google.com/maps?width=480&height=400&hl=en&q=1530-355%20Burrard%20St%20Vancouver+(Arbutus%20Capital)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
     ></iframe>
     <script
       type="text/javascript"

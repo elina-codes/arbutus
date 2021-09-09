@@ -58,7 +58,7 @@ const ContactForm = ({
       <form
         name="Contact Form"
         onSubmit={handleSubmit(onSubmit)}
-        // data-netlify="true"
+        data-netlify="true"
       >
         <input type="hidden" name="form-name" value="Contact Form" />
         <Controller

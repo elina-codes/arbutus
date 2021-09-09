@@ -48,6 +48,9 @@ const styles = makeStyles(theme => ({
       },
     },
   },
+  iconTextImage: {
+    marginBottom: 0,
+  },
   dark: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.white,

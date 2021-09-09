@@ -7,11 +7,12 @@ const CircleGridSection = ({ data = [], ...props }) => {
   return (
     <div className={classes.circleGrid}>
       {data.map((item, i) => {
-        const { icon: Icon, text } = item
+        const { icon: Icon, image, text } = item
         return (
           <IconText
             {...{
               icon: Icon,
+              image,
               text,
               ...props,
               className: classes.circleGridIcon,

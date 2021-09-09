@@ -46,7 +46,7 @@ const BrokersPage = () => {
               <form
                 name="Brokers Contact Form"
                 onSubmit={handleSubmit(onSubmit)}
-                // data-netlify="true"
+                data-netlify="true"
               >
                 <input
                   type="hidden"

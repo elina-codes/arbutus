@@ -2,7 +2,7 @@ import React from "react"
 import { routes } from "src/constants"
 import { Button } from "components"
 import images from "src/images"
-import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
+import icons from "src/icons"
 import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
 
 const pageSections = {
@@ -49,23 +49,28 @@ const pageSections = {
     ),
     content: [
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.financing,
+        svg: true,
         text: `Up to 100% financing`,
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.flexible,
+        svg: true,
         text: `Flexible payment terms`,
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.cashflow,
+        svg: true,
         text: `Protect your cash flow`,
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.tax,
+        svg: true,
         text: `Potential tax savings`,
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.fast,
+        svg: true,
         text: `Get your equipment fast`,
       },
     ],
@@ -111,23 +116,28 @@ const pageSections = {
     ),
     content: [
       {
-        icon: FinancingIcon,
+        icon: icons.hiwSteps.define,
+        svg: true,
         text: "1. Define",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.hiwSteps.apply,
+        svg: true,
         text: "2. Apply",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.hiwSteps.review,
+        svg: true,
         text: "3. Review",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.hiwSteps.approval,
+        svg: true,
         text: "4. Approval",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.hiwSteps.acquire,
+        svg: true,
         text: "5. Acquire",
       },
     ],

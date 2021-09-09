@@ -88,13 +88,13 @@ const IndexPage = () => {
         <Text preLine>{aboutUsContent}</Text>
       </Section>
       <Section {...benefitsSection}>
-        <CircleGridSection data={benefitsContent} dark />
+        <CircleGridSection data={benefitsContent} svg />
       </Section>
       <Section {...reasonsSection}>
         <IconList data={reasonsContent} />
       </Section>
       <Section {...processSection}>
-        <CircleGridSection data={processContent} outlined />
+        <CircleGridSection data={processContent} svg />
       </Section>
     </Layout>
   )
