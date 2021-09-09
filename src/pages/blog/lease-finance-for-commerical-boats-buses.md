@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Lease finance for commerical boats & buses
+title: Temp - Lease finance for commerical boats & buses
 date: 2021-06-21T06:36:16.714Z
 featuredpost: true
 featuredimage: /images/uploads/sid-verma-qgxnwngjpp4-unsplash.png
