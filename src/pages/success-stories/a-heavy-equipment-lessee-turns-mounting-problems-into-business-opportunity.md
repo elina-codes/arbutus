@@ -4,7 +4,7 @@ title: A heavy equipment lessee turns mounting problems into business opportunit
 location: Alberta, Canada
 tags:
   - Construction
-date: 2021-06-21T06:33:19.539Z
+date: 2018-11-27T07:33:19.539Z
 featuredpost: true
 featuredimage: /images/uploads/deuces.png
 ---
