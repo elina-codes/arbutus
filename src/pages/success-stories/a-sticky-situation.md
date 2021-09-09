@@ -7,7 +7,7 @@ tags:
   - repairs
 date: 2021-09-09T04:17:10.024Z
 featuredpost: true
-featuredimage: /images/uploads/arbutus_-big-a-peterbuilt_cropped.jpeg
+featuredimage: /images/uploads/arbutus-capital_jim-williams-truck.jpeg
 ---
 When the operator of a leased truck is on the road with a breakdown, and there is insufficient cash or credit to cover expensive repairs, it’s a problem for everyone involved. Financing equipment repairs through sale-leasebacks or lease amendments are two ways Arbutus can help our trucking clients get the repair they need to keep their equipment rolling. Read on for Jim's story.
 
