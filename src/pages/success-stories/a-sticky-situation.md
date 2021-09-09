@@ -5,7 +5,7 @@ location: Wyoming, USA
 tags:
   - financing
   - repairs
-date: 2021-09-09T04:17:10.024Z
+date: 2018-09-07T04:17:10.024Z
 featuredpost: true
 featuredimage: /images/uploads/arbutus-capital_jim-williams-truck.jpeg
 ---
