@@ -59,6 +59,7 @@ const ContactForm = ({
         name="Contact Form"
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
+        data-netlify-recaptcha="true"
       >
         <input type="hidden" name="form-name" value="Contact Form" />
         <Controller
@@ -125,6 +126,7 @@ const ContactForm = ({
             />
           )}
         />
+        <div data-netlify-recaptcha="true" />
         <Button type="submit">Submit</Button>
       </form>
       {showFooter && (
