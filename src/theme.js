@@ -1,6 +1,9 @@
 import { createMuiTheme } from "@material-ui/core/styles"
 import "fontsource-roboto-slab"
 
+const defaultTheme = createMuiTheme({})
+const { breakpoints } = defaultTheme
+
 const config = {
   primary: "#01446f",
   secondary: "#ff5722",
@@ -65,48 +68,7 @@ const arbutusTheme = {
   space: {
     ...config.spacing,
   },
-  typography: {
-    h1: {
-      fontFamily: "Roboto Slab",
-      fontSize: 48,
-      fontWeight: 700,
-      color: "inherit",
-    },
-    h2: {
-      textTransform: "uppercase",
-      fontSize: 14,
-      fontWeight: 900,
-      letterSpacing: 1,
-      color: config.secondary,
-    },
-    h3: {
-      fontFamily: "Roboto Slab",
-      fontSize: 36,
-      fontWeight: 700,
-      color: "inherit",
-      lineHeight: 1.3,
-    },
-    h4: {
-      fontSize: 18,
-      color: "inherit",
-      lineHeight: 1.5,
-      fontWeight: 500,
-    },
-    h5: {
-      fontSize: 21,
-      color: "inherit",
-      lineHeight: 1.5,
-      fontWeight: 700,
-    },
-    body2: {
-      fontSize: 14,
-      color: "inherit",
-    },
-    caption: {
-      opacity: 0.7,
-      fontSize: 12,
-    },
-  },
+  typography: {},
   overrides: {
     MuiCssBaseline: {
       "@global": {
@@ -211,6 +173,55 @@ const arbutusTheme = {
       root: {
         whiteSpace: "pre-line",
         ...typographyCommon,
+      },
+      h1: {
+        fontFamily: "Roboto Slab",
+        fontSize: 48,
+        fontWeight: 700,
+        color: "inherit",
+        [breakpoints.down("md")]: {
+          fontSize: 40,
+        },
+        [breakpoints.down("xs")]: {
+          fontSize: 30,
+        },
+      },
+      h2: {
+        textTransform: "uppercase",
+        fontSize: 14,
+        fontWeight: 900,
+        letterSpacing: 1,
+        color: config.secondary,
+      },
+      h3: {
+        fontFamily: "Roboto Slab",
+        fontSize: 36,
+        fontWeight: 700,
+        color: "inherit",
+        lineHeight: 1.3,
+        [breakpoints.down("md")]: {
+          fontSize: 30,
+        },
+      },
+      h4: {
+        fontSize: 18,
+        color: "inherit",
+        lineHeight: 1.5,
+        fontWeight: 500,
+      },
+      h5: {
+        fontSize: 21,
+        color: "inherit",
+        lineHeight: 1.5,
+        fontWeight: 700,
+      },
+      body2: {
+        fontSize: 14,
+        color: "inherit",
+      },
+      caption: {
+        opacity: 0.7,
+        fontSize: 12,
       },
     },
     MuiPaper: {

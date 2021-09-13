@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const styles = makeStyles(theme => ({
   circleGrid: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       alignItems: "center",

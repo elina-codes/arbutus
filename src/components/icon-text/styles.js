@@ -23,7 +23,7 @@ const styles = makeStyles(theme => ({
     "&:not(:last-child)": {
       marginBottom: theme.space.sm,
     },
-    "& svg": {
+    "& > svg": {
       [theme.breakpoints.down("sm")]: {
         marginRight: theme.space.sm,
       },
@@ -48,8 +48,8 @@ const styles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
     [theme.breakpoints.up("md")]: {
-      width: 120,
-      height: 120,
+      width: 90,
+      height: 90,
       marginLeft: "auto",
       marginRight: "auto",
       marginBottom: theme.space.sm,
@@ -79,9 +79,9 @@ const styles = makeStyles(theme => ({
   },
   outlined: {
     border: `3px solid ${theme.palette.primary.main}`,
-    padding: "3%",
+    padding: "5%",
     [theme.breakpoints.up("md")]: {
-      padding: "18%",
+      padding: "20%",
     },
   },
 }))

@@ -18,11 +18,7 @@ const Banner = ({ children, cta, data }) => {
   )
   return (
     <Section dense dark className={classes.banner}>
-      <Mui.Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <div className={classes.bannerInner}>
         {data ? (
           formatDataList(data)
         ) : (
@@ -35,7 +31,7 @@ const Banner = ({ children, cta, data }) => {
             {cta}
           </>
         )}
-      </Mui.Box>
+      </div>
     </Section>
   )
 }
