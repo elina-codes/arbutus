@@ -57,7 +57,7 @@ const pageSections = {
     {
       icon: QualityIcon,
       title: "Quality",
-      text: `Needs description`,
+      text: `Quality is at the heart of everything we do. We stand by our secured and leased equipment and believe in building lasting relationships with our clients and brokers.`,
     },
   ],
 }
