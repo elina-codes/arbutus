@@ -4,6 +4,13 @@ import { Button } from "components"
 import images from "src/images"
 import icons from "src/icons"
 import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
+import {
+  GiFarmTractor as DefineIcon,
+  GiPartyPopper as AcquireIcon,
+} from "react-icons/gi"
+import { TiClipboard as ApplyIcon } from "react-icons/ti"
+import { BsClockHistory as ReviewIcon } from "react-icons/bs"
+import { AiOutlineLike as ApprovalIcon } from "react-icons/ai"
 
 const pageSections = {
   industriesWeServe: {
@@ -116,28 +123,23 @@ const pageSections = {
     ),
     content: [
       {
-        icon: icons.hiwSteps.define,
-        svg: true,
+        icon: DefineIcon,
         text: "1. Define",
       },
       {
-        icon: icons.hiwSteps.apply,
-        svg: true,
+        icon: ApplyIcon,
         text: "2. Apply",
       },
       {
-        icon: icons.hiwSteps.review,
-        svg: true,
+        icon: ReviewIcon,
         text: "3. Review",
       },
       {
-        icon: icons.hiwSteps.approval,
-        svg: true,
+        icon: ApprovalIcon,
         text: "4. Approval",
       },
       {
-        icon: icons.hiwSteps.acquire,
-        svg: true,
+        icon: AcquireIcon,
         text: "5. Acquire",
       },
     ],

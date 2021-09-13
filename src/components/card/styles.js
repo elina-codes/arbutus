@@ -6,6 +6,9 @@ const styles = makeStyles(theme => ({
     display: "inline-block",
     width: 360,
     maxWidth: "100%",
+    "& .MuiCardActionArea-root": {
+      height: "100%",
+    },
   },
   dark: {
     color: theme.palette.white,

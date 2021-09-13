@@ -24,8 +24,8 @@ const BlogPage = ({ data }) => {
     text: post?.excerpt,
     image: {
       src:
-        post?.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images
-          .fallback.src,
+        post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
+          ?.images?.fallback?.src || images.bg.logo,
     },
     url: post?.fields.slug,
   }))

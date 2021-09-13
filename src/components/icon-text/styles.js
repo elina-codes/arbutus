@@ -12,6 +12,8 @@ const styles = makeStyles(theme => ({
       display: "flex",
       alignItems: "center",
       marginBottom: theme.space.md,
+      paddingLeft: theme.space.sm,
+      paddingRight: theme.space.sm,
       textAlign: "left",
       "&.center": {
         width: "auto",
@@ -20,6 +22,22 @@ const styles = makeStyles(theme => ({
     },
     "&:not(:last-child)": {
       marginBottom: theme.space.sm,
+    },
+    "& svg": {
+      [theme.breakpoints.down("sm")]: {
+        marginRight: theme.space.sm,
+      },
+      [theme.breakpoints.down("md")]: {
+        marginBottom: theme.space.sm,
+      },
+      "&.md": {
+        width: 60,
+        height: 60,
+        [theme.breakpoints.up("md")]: {
+          width: 80,
+          height: 80,
+        },
+      },
     },
   },
   iconContainer: {
@@ -42,6 +60,9 @@ const styles = makeStyles(theme => ({
     "&.md": {
       width: 40,
       height: 40,
+      [theme.breakpoints.down("sm")]: {
+        marginRight: theme.space.sm,
+      },
       [theme.breakpoints.up("md")]: {
         width: 60,
         height: 60,
@@ -58,7 +79,10 @@ const styles = makeStyles(theme => ({
   },
   outlined: {
     border: `3px solid ${theme.palette.primary.main}`,
-    padding: "5%",
+    padding: "3%",
+    [theme.breakpoints.up("md")]: {
+      padding: "18%",
+    },
   },
 }))
 

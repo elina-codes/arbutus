@@ -94,7 +94,7 @@ const IndexPage = () => {
         <IconList data={reasonsContent} />
       </Section>
       <Section {...processSection}>
-        <CircleGridSection data={processContent} svg />
+        <CircleGridSection data={processContent} outlined />
       </Section>
     </Layout>
   )

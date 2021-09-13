@@ -30,7 +30,7 @@ const IconText = ({
           <Icon size={80} color={color || (dark ? "#fff" : "inherit")} />
         </div>
       )}
-      {svg && <Icon />}
+      {svg && <Icon className={size} />}
       <Text variant="h5">{text}</Text>
     </div>
   )

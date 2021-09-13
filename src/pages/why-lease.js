@@ -56,8 +56,7 @@ const WhyLeasePage = () => {
                     color={b.iconColor || "inherit"}
                     text={b.title}
                     size="md"
-                    center
-                    dark
+                    svg
                   />
                 }
               >

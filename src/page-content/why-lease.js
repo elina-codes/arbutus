@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "components"
 import { routes } from "src/constants"
-import { GiReceiveMoney as FinancingIcon } from "react-icons/gi"
+import icons from "src/icons"
 
 const pageSections = {
   benefits: {
@@ -10,37 +10,43 @@ const pageSections = {
     description: `Leasing equipment offers business owners flexibility, lower risk and expense-side predictability and is a popular way to finance small business growth.`,
     content: [
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.financing,
+        svg: true,
         title: `Up to 100% financing`,
         text:
           "In most instances, we only ask for the first rental payment in advance, which is uncommon in our industry.",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.flexible,
+        svg: true,
         title: `Tailored payment terms`,
         text:
           "We work with you to design a payment plan that suits you and your business.",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.tax,
+        svg: true,
         title: `Potential tax savings`,
         text:
           "Our leases are written as rental agreements, and in many instances, 100% of the monthly rental can be written off. Talk to your accountant about the tax benefits you may be entitled to.",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.balance,
+        svg: true,
         title: `Improve your balance sheet`,
         text:
           "Leasing keeps your financials healthy and your business growth on track. ",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.cashflow,
+        svg: true,
         title: `Protect your cash flow`,
         text:
           "We work with you to design a payment plan that suits you and your business.",
       },
       {
-        icon: FinancingIcon,
+        icon: icons.benefits.fast,
+        svg: true,
         title: `Get your equipment fast`,
         text:
           "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone in the business. (else?)",

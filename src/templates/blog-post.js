@@ -8,8 +8,8 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   const PostContent = HTMLContent || Content
   const bgImage =
-    post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images
-      .fallback.src || ""
+    post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData?.images
+      ?.fallback?.src || images.bg.logo
   return (
     <ArticleLayout
       bgImage={bgImage}
