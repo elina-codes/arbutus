@@ -83,6 +83,7 @@ const BrokersPage = () => {
                           label="Full Name"
                           margin="dense"
                           fullWidth
+                          required
                           variant="outlined"
                           {...field}
                         />
@@ -99,6 +100,7 @@ const BrokersPage = () => {
                           label="Phone number"
                           margin="dense"
                           fullWidth
+                          required
                           variant="outlined"
                           {...field}
                         />
