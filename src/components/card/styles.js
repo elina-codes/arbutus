@@ -4,8 +4,8 @@ const styles = makeStyles(theme => ({
   card: {
     color: theme.palette.text.main,
     display: "inline-block",
-    width: 360,
-    maxWidth: "100%",
+    maxWidth: 360,
+    width: "100%",
     "& .MuiCardActionArea-root": {
       height: "100%",
     },
