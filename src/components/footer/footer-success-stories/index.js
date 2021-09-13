@@ -1,5 +1,6 @@
 import React from "react"
 import { routes } from "src/constants"
+import images from "src/images"
 import { Button, CardGrid, Section } from "components"
 import { graphql, StaticQuery } from "gatsby"
 
@@ -13,8 +14,8 @@ const FooterSuccessStories = ({ data }) => {
       text: post?.excerpt,
       image: {
         src:
-          post?.frontmatter.featuredimage.childImageSharp.gatsbyImageData.images
-            .fallback.src,
+          post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
+            ?.images?.fallback?.src || images.bg.logo,
       },
       url: post?.fields.slug,
     })) || []

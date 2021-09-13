@@ -56,12 +56,12 @@ const ContactForm = ({
         </div>
       )}
       <form
-        name="Contact Form"
+        name="contact"
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
         data-netlify-recaptcha="true"
       >
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="contact" />
         <Controller
           name="fullName"
           control={control}

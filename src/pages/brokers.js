@@ -44,15 +44,11 @@ const BrokersPage = () => {
           <Mui.Grid item xs={12} md={6}>
             <Section {...truePartnership}>
               <form
-                name="Brokers Contact Form"
+                name="brokers"
                 onSubmit={handleSubmit(onSubmit)}
                 data-netlify="true"
               >
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="Brokers Contact Form"
-                />
+                <input type="hidden" name="form-name" value="brokers" />
 
                 <Mui.Grid container spacing={3}>
                   <Mui.Grid item xs={12} sm>
