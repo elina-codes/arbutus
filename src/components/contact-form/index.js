@@ -13,7 +13,8 @@ const ContactForm = ({
 }) => {
   const classes = useStyles()
   const [showSuccessView, setShowSuccessView] = useState(false)
-  const { control, handleSubmit } = useForm()
+  const { control } = useForm()
+  // const { control, handleSubmit } = useForm()
   const onSubmit = data => {
     console.log(data)
     setShowSuccessView(true)
@@ -56,12 +57,14 @@ const ContactForm = ({
         </div>
       )}
       <form
-        name="contact"
-        onSubmit={handleSubmit(onSubmit)}
+        name="Contact Form"
+        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={onSubmit}
         data-netlify="true"
-        data-netlify-recaptcha="true"
+        data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="Contact Form" />
         <Controller
           name="fullName"
           control={control}

@@ -29,8 +29,25 @@ const BrokersPage = () => {
   const { content: moreReasonsContent, ...moreReasonsSection } = moreReasons
   const { content: whyContent, ...whySection } = why
 
-  const { control, handleSubmit } = useForm()
-  const onSubmit = data => console.log(data)
+  const { control } = useForm()
+  // const { control, handleSubmit } = useForm()
+  // const onSubmit = data => console.log(data)
+  // function encode(data) {
+  //   return Object.keys(data)
+  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //       .join("&")
+  // }
+
+  // const onSubmit = (event) => {
+  //   event.preventDefault()
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({
+  //       ...name
+  //     })
+  //   }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+  // }
 
   return (
     <Layout {...{ seo, topBannerData }}>
@@ -44,11 +61,18 @@ const BrokersPage = () => {
           <Mui.Grid item xs={12} md={6}>
             <Section {...truePartnership}>
               <form
-                name="brokers"
-                onSubmit={handleSubmit(onSubmit)}
+                name="Brokers Contact Form"
+                // onSubmit={handleSubmit(onSubmit)}
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                method="POST"
               >
-                <input type="hidden" name="form-name" value="brokers" />
+                <input type="hidden" name="bot-field" />
+                <input
+                  type="hidden"
+                  name="form-name"
+                  value="Brokers Contact Form"
+                />
 
                 <Mui.Grid container spacing={3}>
                   <Mui.Grid item xs={12} sm>
