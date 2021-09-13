@@ -3,24 +3,22 @@ import { useForm, Controller } from "react-hook-form"
 import Layout from "components/layout"
 import images from "src/images"
 import pageSections from "src/page-content/brokers"
-import {
-  Button,
-  OpenContactModalButton,
-  Banner,
-  Section,
-  IconList,
-  RecentDeals,
-} from "components"
+import { Button, Banner, Section, IconList, RecentDeals } from "components"
 import * as Mui from "@material-ui/core"
 const seo = {
   title: "Brokers",
+}
+
+const scrollToForm = e => {
+  e.preventDefault()
+  document.getElementById("brokers-form").scrollIntoView({ behavior: "smooth" })
 }
 
 const topBannerData = {
   title: "We work hard for you and your clients",
   description:
     "We always endeavour to find a way through, structuring deals that get your clients the equipment they need with the resources they have.",
-  cta: <OpenContactModalButton>Start a partnership</OpenContactModalButton>,
+  cta: <Button onClick={scrollToForm}>Start a partnership</Button>,
   bgImage: images.banners.broker,
 }
 
@@ -58,16 +56,16 @@ const BrokersPage = () => {
               <IconList data={whyContent} singleCol outlined />
             </Section>
           </Mui.Grid>
-          <Mui.Grid item xs={12} md={6}>
+          <Mui.Grid item xs={12} md={6} id="brokers-form">
             <Section {...truePartnership}>
               <form
                 name="Brokers Contact Form"
                 // onSubmit={handleSubmit(onSubmit)}
                 data-netlify="true"
-                data-netlify-honeypot="bot-field"
+                data-netlify-honeypot="totallyRealField"
                 method="POST"
               >
-                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="totallyRealField" />
                 <input
                   type="hidden"
                   name="form-name"

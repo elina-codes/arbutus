@@ -61,9 +61,9 @@ const ContactForm = ({
         // onSubmit={handleSubmit(onSubmit)}
         onSubmit={onSubmit}
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        data-netlify-honeypot="totallyRealField"
       >
-        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="totallyRealField" />
         <input type="hidden" name="form-name" value="Contact Form" />
         <Controller
           name="fullName"

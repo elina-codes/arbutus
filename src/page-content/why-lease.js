@@ -64,32 +64,24 @@ const pageSections = {
     ),
     accordionContent: [
       {
-        header: "What is equipment leasing?",
-        content: `NEED INFO`,
-      },
-      {
         header: "How does an equipment lease work?",
-        content: `NEED INFO`,
+        content: `Start by filling out an application and providing us with a background of your business and the equipment you want or need. Once your credit application is approved and a lease agreement is in place, we finalize the purchase and you to get to put your newly acquired equipment to work.`,
       },
       {
-        header: "Why is leasing better than buying equipment?",
-        content: `NEED INFO`,
-      },
-      {
-        header: "Are equipment lease payments tax deductible?",
-        content: `If you lease equipment from us, you are allowed to return the equipment to Arbutus if you wish. However, most business owners take advantage of the end-of-term Purchase Option on their lease as it rarely makes sense to return the equipment.  They'll find it will either disrupt their workflow or because the equipment is worth more than the Purchase Option amount. If they need to upgrade they often buy out their equipment using the Purchase Option, then trade their existing equipment in at a dealer for newer or different equipment. `,
+        header: "Are equipment lease payments tax deductible? ",
+        content: `Equipment lease payments do often have tax advantages for business owners. Check with your accountant regarding your eligibility for deductions.`,
       },
       {
         header: "Which is better, leasing or buying?",
-        content: `NEED INFO`,
+        content: `Leasing keeps your financials healthy and your business on track, by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
       },
       {
         header: "What is an equipment lease agreement?",
-        content: `NEED INFO`,
+        content: `An equipment lease agreement is a contractual document that defines the agreed upon terms of our deal: term, payment, conditions, end-of-term purchase option etc.`,
       },
       {
         header: "Which is better, leasing or financing?",
-        content: `NEED INFO`,
+        content: `A lease has more potential tax benefits than financing because it is written as a rental agreement, and in many cases, 100% of the monthly rental can be written off as a rental expense. When financing equipment, only the interest amount is tax deductible. Check with your accountant for details on your specific situation and for current tax information.`,
       },
     ],
   },
