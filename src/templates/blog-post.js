@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import images from "src/images"
 import ArticleLayout from "../components/article-layout"
 import Content, { HTMLContent } from "../components/Content"
 
