@@ -4,7 +4,7 @@ import { useForm, Controller } from "react-hook-form"
 import { TextField } from "@material-ui/core"
 import { Button, PhoneLink, Text } from "components"
 import useStyles from "./styles"
-import { IoMdCheckmarkCircleOutline as CheckIcon } from "react-icons/io"
+import SuccessView from "components/success-view"
 
 const ContactForm = ({
   showHeader,
@@ -12,35 +12,54 @@ const ContactForm = ({
   submissionCallback = () => {},
 }) => {
   const classes = useStyles()
+  const [submitting, setSubmitting] = useState(false)
   const [showSuccessView, setShowSuccessView] = useState(false)
+  const [errorText, setErrorText] = useState(null)
   const { control } = useForm()
-  // const { control, handleSubmit } = useForm()
-  const onSubmit = data => {
-    console.log(data)
-    setShowSuccessView(true)
-    submissionCallback()
-  }
 
   useEffect(() => {
     setShowSuccessView(false)
   }, [])
 
-  const SuccessView = () => {
-    return (
-      <>
-        <CheckIcon size={60} color="#7ED321" />
-        <Text variant="h5" component="h3">
-          Success!
-        </Text>
-        <Text variant="h4">
-          We have received your message and will contact you within one business
-          day.
-        </Text>
-        <Text variant="h4" strong>
-          That’s our promise to you.
-        </Text>
-      </>
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setSubmitting(true)
+    const formElements = [...e.currentTarget.elements]
+    const honeypotField = formElements.find(
+      elem => elem.name === "totallyRealField"
     )
+    const isValid = honeypotField.value === ""
+
+    const validFormElements = isValid ? formElements : []
+
+    if (validFormElements.length >= 1) {
+      const filledOutElements = validFormElements
+        .filter(elem => !!elem.value)
+        .map(
+          element =>
+            encodeURIComponent(element.name) +
+            "=" +
+            encodeURIComponent(element.value)
+        )
+        .join("&")
+
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: filledOutElements,
+        })
+        setSubmitting(false)
+        setShowSuccessView(true)
+        submissionCallback()
+      } catch (err) {
+        setSubmitting(false)
+        setErrorText(
+          "There was an error with your submission, please try again later."
+        )
+        console.error(err)
+      }
+    }
   }
 
   return showSuccessView ? (
@@ -58,13 +77,17 @@ const ContactForm = ({
       )}
       <form
         name="Contact Form"
-        // onSubmit={handleSubmit(onSubmit)}
-        onSubmit={onSubmit}
+        onSubmit={handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="totallyRealField"
       >
         <input type="hidden" name="totallyRealField" />
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="Contact Form"
+          readOnly={true}
+        />
         <Controller
           name="fullName"
           control={control}
@@ -129,8 +152,10 @@ const ContactForm = ({
             />
           )}
         />
-        <div data-netlify-recaptcha="true" />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={submitting}>
+          Submit
+        </Button>
+        {errorText && <Text>{errorText}</Text>}
       </form>
       {showFooter && (
         <div className={classes.contactFormFooter}>

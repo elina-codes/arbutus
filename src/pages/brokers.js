@@ -1,10 +1,18 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm, Controller } from "react-hook-form"
 import Layout from "components/layout"
 import images from "src/images"
 import pageSections from "src/page-content/brokers"
-import { Button, Banner, Section, IconList, RecentDeals } from "components"
+import {
+  Button,
+  Banner,
+  Section,
+  IconList,
+  RecentDeals,
+  Text,
+} from "components"
 import * as Mui from "@material-ui/core"
+import SuccessView from "components/success-view"
 const seo = {
   title: "Brokers",
 }
@@ -23,29 +31,54 @@ const topBannerData = {
 }
 
 const BrokersPage = () => {
+  const [errorText, setErrorText] = useState(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [showSuccessView, setShowSuccessView] = useState(false)
   const { why, truePartnership, moreReasons } = pageSections || {}
   const { content: moreReasonsContent, ...moreReasonsSection } = moreReasons
   const { content: whyContent, ...whySection } = why
-
   const { control } = useForm()
-  // const { control, handleSubmit } = useForm()
-  // const onSubmit = data => console.log(data)
-  // function encode(data) {
-  //   return Object.keys(data)
-  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  //       .join("&")
-  // }
 
-  // const onSubmit = (event) => {
-  //   event.preventDefault()
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({
-  //       ...name
-  //     })
-  //   }).then(() => navigate("/thank-you/")).catch(error => alert(error))
-  // }
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setErrorText("Submitting...")
+    const formElements = [...e.currentTarget.elements]
+    const honeypotField = formElements.find(
+      elem => elem.name === "totallyRealField"
+    )
+    const isValid = honeypotField.value === ""
+
+    const validFormElements = isValid ? formElements : []
+
+    if (validFormElements.length < 1) {
+      setErrorText("It looks like you filled out too many fields!")
+    } else {
+      const filledOutElements = validFormElements
+        .filter(elem => !!elem.value)
+        .map(
+          element =>
+            encodeURIComponent(element.name) +
+            "=" +
+            encodeURIComponent(element.value)
+        )
+        .join("&")
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: filledOutElements,
+      })
+        .then(() => {
+          setShowSuccessView(true)
+        })
+        .catch(_ => {
+          setSubmitting(false)
+          setErrorText(
+            "There was an error with your submission, please try again later."
+          )
+        })
+    }
+  }
 
   return (
     <Layout {...{ seo, topBannerData }}>
@@ -57,59 +90,73 @@ const BrokersPage = () => {
             </Section>
           </Mui.Grid>
           <Mui.Grid item xs={12} md={6} id="brokers-form">
-            <Section {...truePartnership}>
-              <form
-                name="Brokers Contact Form"
-                // onSubmit={handleSubmit(onSubmit)}
-                data-netlify="true"
-                data-netlify-honeypot="totallyRealField"
-                method="POST"
-              >
-                <input type="hidden" name="totallyRealField" />
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="Brokers Contact Form"
-                />
+            <Section
+              {...{
+                ...truePartnership,
+                description: showSuccessView
+                  ? null
+                  : truePartnership.description,
+              }}
+            >
+              {showSuccessView ? (
+                <SuccessView />
+              ) : (
+                <form
+                  name="Brokers Contact Form"
+                  onSubmit={handleSubmit}
+                  data-netlify="true"
+                  data-netlify-honeypot="totallyRealField"
+                >
+                  <input type="hidden" name="totallyRealField" />
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="Brokers Contact Form"
+                    readOnly={true}
+                  />
 
-                <Mui.Grid container spacing={3}>
-                  <Mui.Grid item xs={12} sm>
-                    <Controller
-                      name="fullName"
-                      control={control}
-                      defaultValue=""
-                      render={({ field }) => (
-                        <Mui.TextField
-                          label="Full Name"
-                          margin="dense"
-                          fullWidth
-                          required
-                          variant="outlined"
-                          {...field}
-                        />
-                      )}
-                    />
+                  <Mui.Grid container spacing={3}>
+                    <Mui.Grid item xs={12} sm>
+                      <Controller
+                        name="fullName"
+                        control={control}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <Mui.TextField
+                            label="Full Name"
+                            margin="dense"
+                            fullWidth
+                            required
+                            variant="outlined"
+                            {...field}
+                          />
+                        )}
+                      />
+                    </Mui.Grid>
+                    <Mui.Grid item xs={12} sm>
+                      <Controller
+                        name="phone"
+                        control={control}
+                        defaultValue=""
+                        render={({ field }) => (
+                          <Mui.TextField
+                            label="Phone number"
+                            margin="dense"
+                            fullWidth
+                            required
+                            variant="outlined"
+                            {...field}
+                          />
+                        )}
+                      />
+                    </Mui.Grid>
                   </Mui.Grid>
-                  <Mui.Grid item xs={12} sm>
-                    <Controller
-                      name="phone"
-                      control={control}
-                      defaultValue=""
-                      render={({ field }) => (
-                        <Mui.TextField
-                          label="Phone number"
-                          margin="dense"
-                          fullWidth
-                          required
-                          variant="outlined"
-                          {...field}
-                        />
-                      )}
-                    />
-                  </Mui.Grid>
-                </Mui.Grid>
-                <Button type="submit">Let's talk</Button>
-              </form>
+                  <Button type="submit" disabled={submitting}>
+                    Let's talk
+                  </Button>
+                  {errorText && <Text>{errorText}</Text>}
+                </form>
+              )}
             </Section>
           </Mui.Grid>
         </Mui.Grid>
