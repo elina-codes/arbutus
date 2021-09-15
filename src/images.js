@@ -1,4 +1,4 @@
-import BannerHome from "./images/home-banner.png"
+import BannerHome from "./images/banner-home.jpg"
 import BannerAboutUs from "./images/banner-aboutus.jpg"
 import BannerBlog from "./images/banner-blog.jpg"
 import BannerBroker from "./images/banner-broker.jpg"
