@@ -57,7 +57,7 @@ const pageSections = {
     {
       icon: QualityIcon,
       title: "Quality",
-      text: `Quality is at the heart of everything we do. We stand by our secured and leased equipment and believe in building lasting relationships with our clients and brokers.`,
+      text: `Our years of experience dealing with owner operators and small businesses, combined with personalized customer service and understanding throughout the lease process is why so many of our brokers and customers continue to work with us. We consider our clients and brokers to be part of the Arbutus family.`,
     },
   ],
 }

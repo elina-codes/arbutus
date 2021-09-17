@@ -12,7 +12,7 @@ const seo = {
 const topBannerData = {
   title: "Equipment leasing for any industry",
   description:
-    "We serve British Columbia, Manitoba, Alberta, and Saskatchewan, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
+    "We serve British Columbia, Alberta, Saskatchewan, and Manitoba, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
   cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
   bgImage: images.banners.industries,
 }

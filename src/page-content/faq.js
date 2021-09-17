@@ -31,6 +31,11 @@ const generalFAQ = [
     header: "How long will it take to approve my equipment lease application?",
     content: `We aim to make the lease financing process as simple and efficient as possible, to get you your equipment fast. Expect to hear from us in 1 business day regarding your application.`,
   },
+  {
+    header:
+      "My revenue is impacted seasonally. Can I get a payment plan that provides some flexibility in months when sales are lower?",
+    content: `Our lease contracts stipulate monthly lease payments throughout the term.  However, if this is something that may cause issues for you, we ask that you let us know in advance of any approval we provide so we can determine how to best work with the seasonal nature of your business to find a solution that will work for both of us.`,
+  },
 ]
 
 const equipmentFaq = [
@@ -60,6 +65,11 @@ const capitalFaq = [
   {
     header: "How do capital leases affect financial statements?",
     content: `Leasing keeps your financial statements healthy. A lease is written as a rental agreement, and in many cases, 100% of the monthly rental can be written off as a rental expense on your financial statements, rather than a depreciating asset. Talk to your accountant about the potential benefits and current tax information.`,
+  },
+  {
+    header:
+      "What is the difference between a capital lease and a finance lease?",
+    content: `A capital lease refers to a lease for an asset which is financed for most of its useful life and is consequently reported as a liability on the lessee’s financial statements.  An operating lease, in contrast, refers to a lease for an asset which is financed for less than its useful life and can be either returned to the lessor or purchased outright at the end of the lease term.  An operating lease is consequently not capitalized on a lessee’s books, providing the opportunity for it to be an off-balance sheet financing alternative.`,
   },
 ]
 

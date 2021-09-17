@@ -17,7 +17,7 @@ const pageSections = {
     title: "Industries we serve",
     subtitle: `Here to serve you.
     Whatever the industry.`,
-    description: `As one of Western Canada’s top equipment leasing companies, we serve all industries in British Columbia, Alberta, Manitoba and Saskatchewan.`,
+    description: `As one of Western Canada’s top equipment leasing companies, we serve most industries in British Columbia, Alberta, Saskatchewan, and Manitoba.`,
     button: (
       <Button color="primary" to={routes.industries.path}>
         View more industries
@@ -29,7 +29,7 @@ const pageSections = {
     subtitle: "40 years of heavy equipment leasing",
     content: `From construction equipment to used restaurant equipment, we customize equipment leases to fit your unique needs. We find the most competitive and flexible capital leasing solutions, and find them fast. 
 
-    Arbutus Capital is one of the top equipment leasing companies serving British-Columbia, Alberta, Saskatchewan and Manitoba. That’s because even if you find yourself with imperfect credit, we work with you to find the best solution. 
+    Arbutus Capital is one of the top equipment leasing companies serving British Columbia, Alberta, Saskatchewan, and Manitoba. That’s because even if you find yourself with imperfect credit, we work with you to find the best solution. 
     
     We’re here to find ways to say yes.`,
     image: {
