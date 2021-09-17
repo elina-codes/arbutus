@@ -1,7 +1,7 @@
 ---
 templateKey: success-story
 title: A sticky situation
-location: Wyoming, USA
+location: Leduc, Alberta
 tags:
   - financing
   - repairs
