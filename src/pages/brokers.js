@@ -8,7 +8,7 @@ import {
   Banner,
   Section,
   IconList,
-  RecentDeals,
+  // RecentDeals,
   Text,
 } from "components"
 import * as Mui from "@material-ui/core"
@@ -170,7 +170,7 @@ const BrokersPage = () => {
       <Section {...moreReasonsSection}>
         <IconList data={moreReasonsContent} />
       </Section>
-      <RecentDeals />
+      {/* <RecentDeals /> */}
     </Layout>
   )
 }

@@ -49,15 +49,15 @@ collections:
       - { label: "Cover Image", name: "featuredimage", widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   
-  - name: 'recent-deals'
-    label: 'Recent Deals'
-    label_singular: 'Recent Deal'
-    folder: 'src/pages/recent-deals'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "recent-deal" }
-      - { label: 'Equipment/Deal Name', name: 'title', widget: 'string' }
-      - { label: 'Amount', name: 'amount', widget: 'number', value_type: "int" }
-      - { label: "Cover Image", name: "featuredimage", widget: image }
-      - { label: 'Description', name: 'description', widget: 'text' }
+  # - name: 'recent-deals'
+  #   label: 'Recent Deals'
+  #   label_singular: 'Recent Deal'
+  #   folder: 'src/pages/recent-deals'
+  #   create: true
+  #   slug: '{{slug}}'
+  #   fields:
+  #     - { label: "Template Key", name: "templateKey", widget: "hidden", default: "recent-deal" }
+  #     - { label: 'Equipment/Deal Name', name: 'title', widget: 'string' }
+  #     - { label: 'Amount', name: 'amount', widget: 'number', value_type: "int" }
+  #     - { label: "Cover Image", name: "featuredimage", widget: image }
+  #     - { label: 'Description', name: 'description', widget: 'text' }

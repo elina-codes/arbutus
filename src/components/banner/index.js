@@ -1,7 +1,6 @@
 import React from "react"
 import useStyles from "./styles"
 import { Section, Text } from "components"
-import * as Mui from "@material-ui/core"
 
 const Banner = ({ children, cta, data }) => {
   const classes = useStyles()
