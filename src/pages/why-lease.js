@@ -10,12 +10,24 @@ import {
   Text,
   Card,
 } from "components"
-import images from "src/images"
+import { StaticImage } from "gatsby-plugin-image"
 import pageSections from "src/page-content/why-lease"
 
 const seo = {
   title: "Why Lease",
 }
+
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-whylease.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
 
 const WhyLeasePage = () => {
   const { benefits, leasingFaq } = pageSections || {}
@@ -26,7 +38,7 @@ const WhyLeasePage = () => {
     description:
       "Explore the benefits of leasing vs. buying equipment to help choose what’s right for you.",
     cta: <OpenContactModalButton>Start your lease</OpenContactModalButton>,
-    bgImage: images.banners.whyLease,
+    topImage: BgImage,
   }
 
   const {

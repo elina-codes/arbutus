@@ -70,6 +70,7 @@ const Section = ({
   subtitle,
   successStory,
   title,
+  topImage: TopImage,
   variant,
   verticalCenter,
   wideTitle,
@@ -116,7 +117,6 @@ const Section = ({
         {
           [classes.light]: light,
           [classes.dark]: dark || hero,
-          [classes.dense]: dense,
           [classes.black]: black,
           [classes.hero]: hero,
           [classes.blog]: blog,
@@ -131,19 +131,27 @@ const Section = ({
       {...props}
       style={{
         backgroundImage: bgImg,
+        display: "grid",
       }}
       loading="lazy"
     >
-      {homeVariant && (
+      {homeVariant ? (
         <div className={classes.homeBannerImageWrapper}>
-          <img
-            src={bgImage}
-            alt="Collage of heavy machinery"
-            className={classes.homeBannerImage}
-          />
+          {TopImage && <TopImage />}
         </div>
+      ) : (
+        TopImage && <TopImage />
       )}
-      <Container>
+      <Container
+        className={classNames(classes.sectionContainer, {
+          [classes.dense]: dense,
+          [classes.heroContent]: hero,
+        })}
+        style={{
+          gridArea: "1/1",
+          position: "relative",
+        }}
+      >
         <div
           className={classNames(classes.sectionInner, {
             imageLeft,

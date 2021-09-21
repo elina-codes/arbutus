@@ -8,7 +8,7 @@ import {
   Text,
   Section,
 } from "components"
-import images from "src/images"
+import { StaticImage } from "gatsby-plugin-image"
 import * as Mui from "@material-ui/core"
 import pageSections from "src/page-content/contact-us"
 import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
@@ -16,6 +16,18 @@ import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
 const seo = {
   title: "Contact Us",
 }
+
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-contactus.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
 
 const topBannerData = {
   title: "Contact Us",
@@ -27,7 +39,7 @@ const topBannerData = {
       <OpenContactModalButton>Apply Now</OpenContactModalButton>
     </>
   ),
-  bgImage: images.banners.contactUs,
+  topImage: BgImage,
 }
 
 const ContactUsPage = () => {

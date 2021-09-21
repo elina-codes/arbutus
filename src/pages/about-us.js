@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "components/layout"
-import images from "src/images"
 import pageSections from "src/page-content/about-us"
 import * as Mui from "@material-ui/core"
+import { StaticImage } from "gatsby-plugin-image"
 import {
   OpenContactModalButton,
   Banner,
@@ -16,12 +16,23 @@ const seo = {
   title: "About Us",
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-aboutus.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
 const topBannerData = {
   title: "Family-owned for over 40 years",
   description:
     "We value deep relationships and are well established to handle demands of any size.",
   cta: <OpenContactModalButton>Let's work together</OpenContactModalButton>,
-  bgImage: images.banners.aboutUs,
+  topImage: BgImage,
 }
 
 const AboutUsPage = () => {

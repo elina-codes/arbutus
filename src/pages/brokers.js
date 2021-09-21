@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { useForm, Controller } from "react-hook-form"
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "components/layout"
-import images from "src/images"
+
 import pageSections from "src/page-content/brokers"
 import {
   Button,
@@ -22,12 +23,24 @@ const scrollToForm = e => {
   document.getElementById("brokers-form").scrollIntoView({ behavior: "smooth" })
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-broker.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
+
 const topBannerData = {
   title: "We work hard for you and your clients",
   description:
     "We always endeavour to find a way through, structuring deals that get your clients the equipment they need with the resources they have.",
   cta: <Button onClick={scrollToForm}>Start a partnership</Button>,
-  bgImage: images.banners.broker,
+  topImage: BgImage,
 }
 
 const BrokersPage = () => {

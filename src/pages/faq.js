@@ -1,13 +1,25 @@
 import React from "react"
 import Layout from "components/layout"
 import { Button, OpenContactModalButton, PageMenu, Section } from "components"
-import images from "src/images"
+import { StaticImage } from "gatsby-plugin-image"
 import faqContent from "src/page-content/faq"
 import { renderPageContentAndMenu } from "src/helpers"
 
 const seo = {
   title: "FAQ",
 }
+
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-faq.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
 
 const FAQPage = () => {
   const { menuSections, pageSections = [] } = renderPageContentAndMenu(
@@ -34,7 +46,7 @@ const FAQPage = () => {
         <OpenContactModalButton>Chat directly with us</OpenContactModalButton>
       </>
     ),
-    bgImage: images.banners.faq,
+    topImage: BgImage,
   }
 
   return (

@@ -4,8 +4,6 @@ const styles = makeStyles(theme => ({
   section: {
     backgroundSize: "cover",
     backgroundPosition: "center",
-    padding: theme.spacing(3),
-    ...theme.sectionPadding,
   },
   dense: {
     ...theme.sectionPaddingDense,
@@ -17,12 +15,14 @@ const styles = makeStyles(theme => ({
   },
   hero: {
     minHeight: 500,
+    textAlign: "left",
+    textShadow: `1px 1px 3px rgba(0,0,0,0.8)`,
+  },
+  heroContent: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
-    textAlign: "left",
-    textShadow: `1px 1px 3px rgba(0,0,0,0.8)`,
   },
   sectionHeading: {
     textAlign: "left",
@@ -64,6 +64,10 @@ const styles = makeStyles(theme => ({
   light: {
     backgroundColor: theme.palette.background.light,
     color: theme.palette.text.main,
+  },
+  sectionContainer: {
+    padding: theme.spacing(3),
+    ...theme.sectionPadding,
   },
   sectionInner: {
     position: "relative",
@@ -183,12 +187,6 @@ const styles = makeStyles(theme => ({
       inset: "0 0 0 auto",
       width: "50%",
     },
-  },
-  homeBannerImage: {
-    height: "100%",
-    width: "100%",
-    objectFit: "cover",
-    objectPosition: "center top",
   },
   verticalCenter: {
     display: "flex",

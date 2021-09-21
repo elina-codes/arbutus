@@ -3,16 +3,29 @@ import Layout from "components/layout"
 import { graphql, StaticQuery } from "gatsby"
 import images from "src/images"
 import pageSections from "src/page-content/blog"
+import { StaticImage } from "gatsby-plugin-image"
 import { Section, CardGrid } from "components"
 const seo = {
   title: "Blog",
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-blog.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
+
 const topBannerData = {
   title: "Blog articles",
   description:
     "We have been providing equipment leases for over 40 years, and pride ourselves on being industry experts. ",
-  bgImage: images.banners.blog,
+  topImage: BgImage,
 }
 
 const BlogPage = ({ data }) => {

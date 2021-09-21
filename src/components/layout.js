@@ -71,6 +71,7 @@ const Layout = ({
     description: bannerDescription,
     cta: bannerButton,
     bgImage: bannerBg,
+    topImage,
     headerButtons,
     variant: bannerVariant,
   } = topBannerData || {}
@@ -99,6 +100,7 @@ const Layout = ({
               description={bannerDescription}
               button={bannerButton}
               bgImage={bannerBg}
+              topImage={topImage}
               headerButtons={headerButtons}
               variant={bannerVariant}
             />

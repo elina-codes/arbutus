@@ -9,6 +9,7 @@ import {
   Text,
   IconList,
 } from "components"
+import { StaticImage } from "gatsby-plugin-image"
 import images from "src/images"
 import * as Mui from "@material-ui/core"
 import pageSections from "src/page-content/home"
@@ -17,12 +18,25 @@ const seo = {
   title: "Home",
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-home.jpg"
+    fit="cover"
+    height="100%"
+    height="100%"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
+
 const topBannerData = {
   title: "Fast, flexible equipment leasing",
   description:
     "We provide flexible equipment financing solutions, no matter your credit.",
   cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
-  bgImage: images.banners.home,
+  topImage: BgImage,
   variant: "home",
 }
 

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "components/layout"
 import { OpenContactModalButton, PageMenu, Section, Text } from "components"
-import images from "src/images"
+import { StaticImage } from "gatsby-plugin-image"
 import iwsContent from "src/page-content/industries"
 import { renderPageContentAndMenu } from "src/helpers"
 
@@ -9,12 +9,24 @@ const seo = {
   title: "Industries We Serve",
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-industries.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
+
 const topBannerData = {
   title: "Equipment leasing for most industries",
   description:
     "We serve British Columbia, Alberta, Saskatchewan, and Manitoba, and have been one of Western Canada's top equipment leasing companies for over 40 years.",
   cta: <OpenContactModalButton>Get a personalized plan</OpenContactModalButton>,
-  bgImage: images.banners.industries,
+  topImage: BgImage,
 }
 
 const IndustriesWeServePage = () => {

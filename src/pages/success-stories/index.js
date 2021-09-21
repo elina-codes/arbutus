@@ -3,17 +3,30 @@ import Layout from "components/layout"
 import { graphql, StaticQuery } from "gatsby"
 import images from "src/images"
 import pageSections from "src/page-content/success-stories"
+import { StaticImage } from "gatsby-plugin-image"
 import { OpenContactModalButton, Section, CardGrid } from "components"
 const seo = {
   title: "Success Stories",
 }
+
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-success-stories.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
 
 const topBannerData = {
   title: "Success stories",
   description:
     "We have been helping Western Canada lease heavy equipment for over 40 years. Here are some stories from our happy clients.",
   cta: <OpenContactModalButton>Schedule a chat</OpenContactModalButton>,
-  bgImage: images.banners.success,
+  topImage: BgImage,
 }
 
 const SuccessStoriesPage = ({ data }) => {

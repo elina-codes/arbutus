@@ -1,19 +1,31 @@
 import React from "react"
 import Layout from "components/layout"
-import images from "src/images"
 import pageSections from "src/page-content/how-it-works"
+import { StaticImage } from "gatsby-plugin-image"
 import { Banner, IconList, OpenContactModalButton, Section } from "components"
 
 const seo = {
   title: "How it works",
 }
 
+const BgImage = () => (
+  <StaticImage
+    layout="fullWidth"
+    placeholder="blurred"
+    alt=""
+    src="../images/banner-howitworks.jpg"
+    style={{ gridArea: "1/1" }}
+    fit="cover"
+    formats={["auto", "jpg", "png", "jpeg"]}
+  />
+)
+
 const topBannerData = {
   title: "How it works",
   description:
     "Discover how to secure equipment financing with Arbutus Capital.",
   cta: <OpenContactModalButton>Start your lease</OpenContactModalButton>,
-  bgImage: images.banners.howItWorks,
+  topImage: BgImage,
 }
 
 const HowItWorksPage = () => {

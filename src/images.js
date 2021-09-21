@@ -1,14 +1,3 @@
-import BannerHome from "./images/banner-home.jpg"
-import BannerAboutUs from "./images/banner-aboutus.jpg"
-import BannerBlog from "./images/banner-blog.jpg"
-import BannerBroker from "./images/banner-broker.jpg"
-import BannerContactUs from "./images/banner-contactus.jpg"
-import BannerFaq from "./images/banner-faq.jpg"
-import BannerHowItWorks from "./images/banner-howitworks.jpg"
-import BannerIndustries from "./images/banner-industries.jpg"
-import BannerSuccess from "./images/banner-success.jpg"
-import BannerWhyLease from "./images/banner-whylease.jpg"
-
 import hospitalityEquipmentImage from "./images/hospitality-eq.jpg"
 import constructionEquipmentImage from "./images/construction-eq.jpg"
 import forestryEquipmentImage from "./images/forestry-eq.png"
@@ -57,18 +46,6 @@ const images = {
     manufacturingIndustry: manufacturingEquipmentImage,
     truckIndustry: truckEquipmentImage,
     anythingElse: anythingElseImage,
-  },
-  banners: {
-    home: BannerHome,
-    aboutUs: BannerAboutUs,
-    blog: BannerBlog,
-    broker: BannerBroker,
-    contactUs: BannerContactUs,
-    faq: BannerFaq,
-    howItWorks: BannerHowItWorks,
-    industries: BannerIndustries,
-    success: BannerSuccess,
-    whyLease: BannerWhyLease,
   },
   home: {
     aboutUsFamily: aboutUsFamilyImage,
