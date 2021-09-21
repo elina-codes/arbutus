@@ -26,7 +26,6 @@ const BgImage = () => (
     src="../images/banner-home.jpg"
     fit="cover"
     height="100%"
-    height="100%"
     formats={["auto", "jpg", "png", "jpeg"]}
   />
 )

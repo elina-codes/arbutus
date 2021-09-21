@@ -14,7 +14,7 @@ const BgImage = () => (
     layout="fullWidth"
     placeholder="blurred"
     alt=""
-    src="../images/banner-success-stories.jpg"
+    src="../../images/banner-success.jpg"
     style={{ gridArea: "1/1" }}
     fit="cover"
     formats={["auto", "jpg", "png", "jpeg"]}
