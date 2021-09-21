@@ -92,29 +92,44 @@ const Header = ({ siteTitle, ...props }) => {
 
     return (
       <>
-        <Mui.Link
-          onClick={handleSubMenuTriggerClick}
-          className={classes.navLink}
-        >
-          {title} ▾
-        </Mui.Link>
-        <Mui.Menu
-          anchorEl={anchorEl}
-          getContentAnchorEl={null}
-          keepMounted
-          disablePortal
-          open={Boolean(anchorEl)}
-          onClose={handleSubMenuClose}
-          TransitionComponent={Mui.Collapse}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
+        <Mui.Hidden mdDown>
+          <Mui.Link
+            onClick={handleSubMenuTriggerClick}
+            className={classes.navLink}
+          >
+            {title} ▾
+          </Mui.Link>
+          <Mui.Menu
+            anchorEl={anchorEl}
+            getContentAnchorEl={null}
+            keepMounted
+            disablePortal
+            open={Boolean(anchorEl)}
+            onClose={handleSubMenuClose}
+            TransitionComponent={Mui.Fade}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+          >
+            {sublinks.map(sublink => (
+              <Mui.MenuItem key={sublink.title}>
+                <NavLink
+                  {...sublink}
+                  key={sublink.title}
+                  style={{ marginLeft: 0 }}
+                />
+              </Mui.MenuItem>
+            ))}
+          </Mui.Menu>
+        </Mui.Hidden>
+
+        <Mui.Hidden lgUp>
+          <Mui.Link className={classes.navLink}>{title} ▾</Mui.Link>
           {sublinks.map(sublink => (
             <Mui.MenuItem key={sublink.title}>
               <NavLink
@@ -124,7 +139,7 @@ const Header = ({ siteTitle, ...props }) => {
               />
             </Mui.MenuItem>
           ))}
-        </Mui.Menu>
+        </Mui.Hidden>
       </>
     )
   }

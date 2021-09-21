@@ -29,12 +29,17 @@ const styles = makeStyles(theme => ({
       paddingLeft: "calc(5% + 24px)",
       paddingRight: "calc(5% + 24px)",
     },
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: 15,
+      paddingRight: 5,
+    },
   },
   mainMenuNav: {
     display: "flex",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       padding: theme.space.md,
+      color: theme.palette.primary.main,
     },
     [theme.breakpoints.up("lg")]: {
       justifyContent: "flex-end",
