@@ -66,4 +66,4 @@ Most business owners take advantage of the end of the term Purchase Option on th
 
 Check out our[ News page for a few client success stories](https://arbutuscapital.com/blog).
 
-Click here to learn more about [the industries we serve ](https://arbutuscapital.com/industries)and [how we work with business owners to get the equipment finance deal they need](https://arbutuscapital.com/steps-benefits).
+Click here to learn more about [the industries we serve ](https://arbutuscapital.com/industries)and [how we work with business owners to get the equipment finance deal they need](https://arbutuscapital.com/how-it-works).

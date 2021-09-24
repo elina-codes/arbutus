@@ -1,7 +1,8 @@
 ---
-templateKey: blog-post
+templateKey: success-story
 title: Better cash flow management through equipment leasing for restaurant owner
-date: 2018-06-14T03:46:46.128Z
+location: Victoria, BC
+date: 2018-06-14T05:13:51.617Z
 featuredpost: true
 featuredimage: /images/uploads/arbutus_cherries_alt2.jpeg
 ---
@@ -17,12 +18,10 @@ Arbutus president, Bette Benda describes Cherry as a long term, return customer.
 
 For entrepreneurs in the food and beverage business or any other, equipment leasing allows the owner to maintain a more consistent cash flow for other priorities or surprises. Arbutus Capital is a lease financing lender offering business owners like restauranteurs the option of alternative financing to get the equipment they need when they need it.
 
-[Learn more about how we are different.](http://arbutus.m3mm.com/steps-benefits)
-
- 
+[Learn more about how we are different.](https://arbutuscapital.com/why-lease)
 
 ### Want to read more about the experience of other business owners? 
 
-[Metal](https://arbutuscapital.com/manufacturing-business-success-through-leasing-and-alternative-financing)[ manufacturer builds his business through leasing and alternative financing](https://arbutuscapital.com/manufacturing-business-success-through-leasing-and-alternative-financing)
+[Metal manufacturer builds his business through leasing and alternative financing](https://arbutuscapital.com/blog/manufacturing-business-success-through-leasing-and-alternative-financing/)
 
-[Leasing offers the ability for long-haul trucker grow when he needs to need to](https://arbutuscapital.com/leasing-offers-ability-grow-when-you-need)
+[Leasing offers the ability for long-haul trucker grow when he needs to need to](https://arbutuscapital.com/success-stories/asset-backed-financing-enables-business-owner-to-buy-out-partner/)

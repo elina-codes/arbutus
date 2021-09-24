@@ -16,4 +16,4 @@ For the past ten years the Canadian Federation of Independent Business has stu
 
 #### We believe in doing our part to reduce red tape.
 
-In our business, we’ve streamlined our process so funding decisions can be made faster. Your business growth often depends on getting the equipment you need fast. Our credo:  More speed, less red tape. [Read more about our process here](https://arbutuscapital.com/steps-benefits) or contact us today to see how we can help you.
+In our business, we’ve streamlined our process so funding decisions can be made faster. Your business growth often depends on getting the equipment you need fast. Our credo:  More speed, less red tape. [Read more about our process here](https://arbutuscapital.com/how-it-works) or contact us today to see how we can help you.

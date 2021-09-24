@@ -29,7 +29,7 @@ In the case of a boat or bus, Arbutus will typically structure a sale-leaseback 
 
 ### **Lease finance solutions**
 
-Learn more about [our process here](https://arbutuscapital.com/steps-benefits). And, read our recent Done Deal describing an Arbutus lease finance solution that used a split lease tactic to solve [a finance solution that minimized turnaround time and maximized working capital generated](https://arbutuscapital.com/blog/done-deal-quick-finance-solution-supplier-oil-gas-industry).
+Learn more about [our process here](https://arbutuscapital.com/how-it-works). And, read our recent Done Deal describing an Arbutus lease finance solution that used a split lease tactic to solve [a finance solution that minimized turnaround time and maximized working capital generated](https://arbutuscapital.com/success-stories/asset-backed-financing-enables-business-owner-to-buy-out-partner/).
 
  
 

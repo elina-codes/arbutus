@@ -1,7 +1,8 @@
 ---
-templateKey: blog-post
+templateKey: success-story
 title: Manufacturing business success through leasing and alternative financing
-date: 2018-05-31T04:03:36.676Z
+location: Vancouver Island, BC
+date: 2018-05-31T05:16:50.914Z
 featuredpost: true
 featuredimage: /images/uploads/horst_custom-metal_alt1.jpeg
 ---
@@ -19,10 +20,8 @@ Mike Benda, Arbutus Capital Partner, speaks with admiration of Horst’s busines
 
 Horst can certainly attest to this. “I’ve been able to grow my business by working with Arbutus. It comes with some risk, yes, like any lease or loan, but when you need to grow right away, it’s an answer. They are flexible and work to find a solution that gets you the deal you need. And, fast! “
 
- 
-
 ### Want to read more about the experience of other business owners? 
 
-[Better cash flow management through equipment leasing for restaurant owner](https://arbutuscapital.com/better-cash-flow-management-through-equipment-leasing-restaurant-owner)
+[Better cash flow management through equipment leasing for restaurant owner](https://arbutuscapital.com/blog/better-cash-flow-management-through-equipment-leasing-for-restaurant-owner/)
 
-[Leasing offers the ability for long-haul trucker to grow when you need to](https://arbutuscapital.com/leasing-offers-ability-grow-when-you-need)
+[Leasing offers the ability for long-haul trucker to grow when you need to](https://arbutuscapital.com/success-stories/a-heavy-equipment-lessee-turns-mounting-problems-into-business-opportunity/)
