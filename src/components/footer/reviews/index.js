@@ -7,7 +7,7 @@ const Reviews = () => {
       <Helmet>
         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       </Helmet>
-      <div class="elfsight-app-65367b6b-f563-4f85-996a-c0d1cda771c5"></div>
+      <div class="elfsight-app-882ce9e3-4875-448d-862b-4b512842ec0c"></div>
     </>
   )
 }
