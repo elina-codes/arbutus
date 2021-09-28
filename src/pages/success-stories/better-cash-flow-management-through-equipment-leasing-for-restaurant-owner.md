@@ -20,8 +20,6 @@ For entrepreneurs in the food and beverage business or any other, equipment leas
 
 [Learn more about how we are different.](https://arbutuscapital.com/why-lease)
 
-### Want to read more about the experience of other business owners? 
-
-[Metal manufacturer builds his business through leasing and alternative financing](https://arbutuscapital.com/blog/manufacturing-business-success-through-leasing-and-alternative-financing/)
+### Want to read more about the experience of other business owners?
 
 [Leasing offers the ability for long-haul trucker grow when he needs to need to](https://arbutuscapital.com/success-stories/asset-backed-financing-enables-business-owner-to-buy-out-partner/)
