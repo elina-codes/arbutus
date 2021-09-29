@@ -22,6 +22,4 @@ Horst can certainly attest to this. “I’ve been able to grow my business by w
 
 ### Want to read more about the experience of other business owners? 
 
-[Better cash flow management through equipment leasing for restaurant owner](https://arbutuscapital.com/blog/better-cash-flow-management-through-equipment-leasing-for-restaurant-owner/)
-
 [Leasing offers the ability for long-haul trucker to grow when you need to](https://arbutuscapital.com/success-stories/a-heavy-equipment-lessee-turns-mounting-problems-into-business-opportunity/)
