@@ -11,6 +11,7 @@ import {
 } from "components"
 import { AiOutlineLinkedin as LinkedInIcon } from "react-icons/ai"
 import { graphql, StaticQuery } from "gatsby"
+import fullApplicationForm from "../../../arbutus-credit-application.pdf"
 
 const FooterMenu = ({ data }) => {
   const classes = useStyles()
@@ -49,7 +50,7 @@ const FooterMenu = ({ data }) => {
         },
         {
           title: "Full application form",
-          href: "/arbutus-credit-application.pdf",
+          href: fullApplicationForm,
           download: true,
         },
       ],
