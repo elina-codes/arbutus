@@ -184,6 +184,9 @@ const styles = makeStyles(theme => ({
       height: 270,
     },
     [theme.breakpoints.up("sm")]: {
+      "& .gatsby-image-wrapper": {
+        height: 600,
+      },
       inset: "0 0 0 auto",
       width: "50%",
     },

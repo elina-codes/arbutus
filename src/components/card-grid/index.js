@@ -16,7 +16,7 @@ const CardGrid = ({ data = [], leftAlign, ...cardProps }) => {
         count = count > 1 ? 0 : count + 1
 
         return (
-          <Mui.Grid item sm={6} md={4} key={`card-${i}-${title}`}>
+          <Mui.Grid item xs={12} sm={6} md={4} key={`card-${i}-${title}`}>
             <Card
               {...{
                 delay,
