@@ -7,15 +7,11 @@ const styles = makeStyles(theme => ({
   contactFormFooter: {
     marginTop: theme.space.md,
   },
-  closeButtonContainer: {
-    position: "sticky",
-    top: 0,
-    right: 0,
-  },
   closeButton: {
     position: "absolute",
     top: theme.space.xs,
     right: theme.space.xs,
+    zIndex: 1,
   },
   successCloseBtn: {
     marginTop: theme.space.xl,

@@ -45,17 +45,15 @@ const ContactModal = () => {
   }, [secondsRemaining, submitSuccess, closeModal])
 
   const CloseButton = () => (
-    <div className={classes.closeButtonContainer}>
-      <IconButton
-        {...{
-          className: classes.closeButton,
-          color: "inherit",
-          onClick: closeModal,
-        }}
-      >
-        <CloseIcon size={24} />
-      </IconButton>
-    </div>
+    <IconButton
+      {...{
+        className: classes.closeButton,
+        color: "inherit",
+        onClick: closeModal,
+      }}
+    >
+      <CloseIcon size={24} />
+    </IconButton>
   )
 
   const SuccessView = () => {
