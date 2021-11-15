@@ -3,6 +3,6 @@
     [plugins.inputs]
     buildDir = "public"
     exclude = [
-      '**/404/index.html',
+      './404/index.html',
       '**/admin/**',
     ]
