@@ -87,7 +87,7 @@ const ContactUsPage = () => {
                     external
                     title="LinkedIn"
                   >
-                    <LinkedInIcon size={26} />
+                    <LinkedInIcon size={46} />
                   </Mui.Link>
                 </Text>
               </Section>

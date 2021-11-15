@@ -23,10 +23,10 @@ const Footer = ({ showSuccessStories, showBlogPosts, showDoubleCta }) => {
       <FooterMenu />
       <footer className={classes.footer}>
         <FooterLogo icon={icons.footerLogo} />
-        <span>
+        <div>
           © {new Date().getFullYear()} ArbutusCapital. All rights reserved.
-        </span>
-        <div />
+        </div>
+        <div className={classes.footerSpacer} />
       </footer>
     </>
   )
