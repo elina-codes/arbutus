@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `https://arbutuscapital.com/`,
+        siteUrl: `https://arbutuscapital.com`,
       },
     },
     {
