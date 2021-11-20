@@ -99,7 +99,7 @@ const ArticleLayout = ({
     <ThemeProvider theme={theme}>
       <ModalProvider>
         <Mui.CssBaseline />
-        <Seo title={title} />
+        <Seo title={title} hideSuffix />
         <Header siteTitle={title || `Article`} />
         <main>
           {title && (
