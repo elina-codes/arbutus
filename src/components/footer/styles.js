@@ -17,6 +17,8 @@ const styles = makeStyles(theme => ({
   },
   footerLogo: {
     margin: 0,
+    width: 200,
+    height: 'auto'
   },
   footerSpacer: {
     [theme.breakpoints.up("md")]: {

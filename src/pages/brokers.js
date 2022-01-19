@@ -136,7 +136,7 @@ const BrokersPage = () => {
                         defaultValue=""
                         render={({ field }) => (
                           <Mui.TextField
-                            label="Full Name"
+                            label="Full name"
                             margin="dense"
                             fullWidth
                             required

@@ -1,5 +1,5 @@
 import React from "react"
-import icons from "src/icons"
+import images from "src/images"
 import FooterContactForm from "./footer-contact-form"
 import FooterMenu from "./footer-menu"
 import Reviews from "./reviews"
@@ -11,8 +11,6 @@ import FooterDoubleCta from "./footer-double-cta"
 const Footer = ({ showSuccessStories, showBlogPosts, showDoubleCta }) => {
   const classes = useStyles()
 
-  const FooterLogo = ({ icon: Icon }) => <Icon />
-
   return (
     <>
       {showDoubleCta && <FooterDoubleCta />}
@@ -22,9 +20,13 @@ const Footer = ({ showSuccessStories, showBlogPosts, showDoubleCta }) => {
       <FooterContactForm />
       <FooterMenu />
       <footer className={classes.footer}>
-        <FooterLogo icon={icons.footerLogo} />
+        <img
+          src={images.bg.footerLogo}
+          alt="Arbutus Capital logo"
+          className={classes.footerLogo}
+        />
         <div>
-          © {new Date().getFullYear()} ArbutusCapital. All rights reserved.
+          © {new Date().getFullYear()} Arbutus Capital. All rights reserved.
         </div>
         <div className={classes.footerSpacer} />
       </footer>

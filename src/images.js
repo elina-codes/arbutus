@@ -20,6 +20,7 @@ import step5Image from "./images/step5-acquire.jpg"
 
 import iconLogo from "./images/logo-icon.svg"
 import navLogo from "./images/logo-wide.svg"
+import footerLogo from "./images/logo-light.svg"
 import bgLogo from "./images/bg-logo.svg"
 import bgForm from "./images/bg-form.jpg"
 import notFound from "./images/404.svg"
@@ -30,6 +31,7 @@ const images = {
     contactForm: bgForm,
     iconLogo,
     navLogo,
+    footerLogo,
   },
   about: {
     family: aboutUsFamilyImage,

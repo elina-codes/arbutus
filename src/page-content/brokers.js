@@ -15,17 +15,17 @@ const pageSections = {
       {
         icon: OneIcon,
         text:
-          "We are a B/C lender that specializes in high-risk deals. We make the deals that no one else can or wants to do.",
+          "We are a B/C lender that specializes in high-risk deals and deals that require a quick close and flexible term. If there is a way to get the deal done, we will find it.",
       },
       {
         icon: TwoIcon,
         text:
-          "Approvals are not bound by checking off criteria boxes. We are empathetic to your client’s situation, so each deal is evaluated on its own merit, and we find a way to help you and your clients succeed. We even go the extra mile to keep your client in business during tough times.",
+          "Approvals are not bound by checking off criteria boxes. We are empathetic to your client’s situation, so each deal is evaluated on its own merit, and we find a way to help you and your clients succeed. We go the extra mile to keep your client in business during tough times.",
       },
       {
         icon: ThreeIcon,
         text:
-          "We protect your business. We refer any of your existing customers back to you, should your client contact us directly about new business.",
+          "We will assist with documentation, and are readily available to answer any questions or respond to any concerns you may have.",
       },
     ],
   },

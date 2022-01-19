@@ -17,7 +17,7 @@ const generalFAQ = [
   },
   {
     header: "I have equipment. I need cash. How can you help me with that?",
-    content: `Call us to discuss a sale-leaseback option, where we purchase your equipment &amp; lease it back to you over time to improve your cashflow.`,
+    content: `Call us to discuss a sale-leaseback option, where we purchase your equipment & lease it back to you over time to improve your cashflow.`,
   },
   {
     header: "What are my options when my lease is up?",
@@ -49,7 +49,7 @@ const equipmentFaq = [
   },
   {
     header: "Which is better, leasing or buying?",
-    content: `Leasing keeps your financials healthy and your business on track, by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
+    content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
   },
   {
     header: "What is an equipment lease agreement?",

@@ -14,7 +14,7 @@ const pageSections = {
         svg: true,
         title: `Up to 100% financing`,
         text:
-          "In most instances, we only ask for the first rental payment in advance, which is uncommon in our industry.",
+          "In most instances we only ask for the first rental payment in advance which is uncommon in our industry.",
       },
       {
         icon: icons.benefits.flexible,
@@ -28,7 +28,7 @@ const pageSections = {
         svg: true,
         title: `Potential tax savings`,
         text:
-          "Our leases are written as rental agreements, and in many instances, 100% of the monthly rental can be written off. Talk to your accountant about the tax benefits you may be entitled to.",
+          "Our leases are written as rental agreements and in many instances 100% of the monthly rental can be written off. Talk to your accountant about the tax benefits you may be entitled to.",
       },
       {
         icon: icons.benefits.balance,
@@ -49,7 +49,7 @@ const pageSections = {
         svg: true,
         title: `Get your equipment fast`,
         text:
-          "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone in the business. (else?)",
+          "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone else in the business. (else?)",
       },
     ],
   },
@@ -73,7 +73,7 @@ const pageSections = {
       },
       {
         header: "Which is better, leasing or buying?",
-        content: `Leasing keeps your financials healthy and your business on track, by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
+        content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
       },
       {
         header: "What is an equipment lease agreement?",

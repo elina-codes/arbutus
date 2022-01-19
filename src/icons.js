@@ -1,5 +1,3 @@
-import footerLogo from "./images/icons/arbutusFooterIcon.svg"
-
 import stepsDefine from "./images/icons/stepDefine.svg"
 import stepsApply from "./images/icons/stepApply.svg"
 import stepsReview from "./images/icons/stepReview.svg"
@@ -14,7 +12,6 @@ import benefitsTaxIcon from "./images/icons/benefitTax.svg"
 import benefitsFastIcon from "./images/icons/benefitFast.svg"
 
 const icons = {
-  footerLogo,
   hiwSteps: {
     define: stepsDefine,
     apply: stepsApply,

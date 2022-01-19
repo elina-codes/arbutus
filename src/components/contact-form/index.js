@@ -95,7 +95,7 @@ const ContactForm = ({
           render={({ field }) => (
             <TextField
               required
-              label="Full Name"
+              label="Full name"
               margin="dense"
               fullWidth
               variant="outlined"
@@ -125,6 +125,7 @@ const ContactForm = ({
           defaultValue=""
           render={({ field }) => (
             <TextField
+              required
               label="Email"
               margin="dense"
               fullWidth

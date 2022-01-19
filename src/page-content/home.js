@@ -15,8 +15,8 @@ import { AiOutlineLike as ApprovalIcon } from "react-icons/ai"
 const pageSections = {
   industriesWeServe: {
     title: "Industries we serve",
-    subtitle: `Here to serve you.
-    Whatever the industry.`,
+    subtitle: `Here to serve you,
+    whatever the industry.`,
     description: `As one of Western Canada’s top equipment leasing companies, we serve most industries in British Columbia, Alberta, Saskatchewan, and Manitoba.`,
     button: (
       <Button color="primary" to={routes.industries.path}>
@@ -88,15 +88,15 @@ const pageSections = {
     content: [
       {
         icon: CheckIcon,
-        title: "Challenged credit is not a problem",
+        title: "Imperfect Credit is not a problem",
         text:
-          "We provide quick approvals for equipment leasing for those with challenged or bad credit.",
+          "We provide quick approvals for equipment leasing for a wide variety of credit types, including those with an imperfect credit history.",
       },
       {
         icon: CheckIcon,
         title: "Fast and flexible",
         text:
-          "Everyone’s situation is unique. We will listen and find a way to offer easy equipment financing in as little as 1 business day.",
+          "Everyone’s situation is unique. We will listen and find a way to offer easy equipment financing in as little as one business day.",
       },
       {
         icon: CheckIcon,
@@ -115,7 +115,7 @@ const pageSections = {
   process: {
     title: "Our 5 step process",
     subtitle: `Getting equipment has never been easier.`,
-    description: `With 40 years of experience, we’ve streamlined our process and pride ourselves on financing equipment faster than anyone in the business.`,
+    description: `With 40 years of experience, we’ve streamlined our process and pride ourselves on financing equipment faster than anyone else in the business.`,
     button: (
       <Button to={routes.howItWorks.path} color="primary">
         More details
@@ -136,7 +136,7 @@ const pageSections = {
       },
       {
         icon: ApprovalIcon,
-        text: "4. Approval",
+        text: "4. Approve",
       },
       {
         icon: AcquireIcon,
