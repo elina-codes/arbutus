@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: Better cash flow management through equipment leasing for restaurant owner
+title: Equipment leasing for better cash flow management
 location: Victoria, BC
 date: 2018-06-14T05:13:51.617Z
 featuredpost: true
