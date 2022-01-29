@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: Asset-backed financing enables business owner to buy out partner
+title: Asset-backed financing enables owner to buy out partner
 location: Alberta, Canada
 tags:
   - asset-backed financing alternative financing equipment leasing
