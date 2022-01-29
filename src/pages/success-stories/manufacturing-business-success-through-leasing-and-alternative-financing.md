@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: Manufacturing business success through leasing and alternative financing
+title: Success through leasing for manufacturing equipment operator
 location: Vancouver Island, BC
 date: 2018-05-31T05:16:50.914Z
 featuredpost: true
