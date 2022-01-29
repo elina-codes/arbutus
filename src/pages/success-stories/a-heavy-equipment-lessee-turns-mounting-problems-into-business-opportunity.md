@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: A heavy equipment lessee turns mounting problems into business opportunity
+title: Lessee turns mounting problems into business opportunity
 location: Alberta, Canada
 tags:
   - Construction
