@@ -5,9 +5,9 @@ date: 2018-11-06T04:03:39.268Z
 featuredpost: true
 featuredimage: /images/uploads/man-sleeping-on-paperwork.jpeg
 ---
-### We talk to business owners everyday about their financial situations and their need for equipment to grow or even stay in business.
+### We talk to business owners every day about their financial situations and their need for equipment to grow or even stay in business.
 
-For those new to equipment leasing and looking for an alternative to a traditional lender, there are important criteria that can help or hurt you secure your equipment lease deal:
+For those new to equipment leasing and looking for an alternative to a traditional lender, there are important criteria that can help in securing your equipment lease deal:
 
 * **Financing new vs. used**
 * **Financing equipment that retains value vs. equipment that immediately depreciates**
@@ -16,8 +16,6 @@ For those new to equipment leasing and looking for an alternative to a tradition
 * **Current with CRA, financials, etc.**
 
 Business owners who know and understand the criteria typically used to approve an equipment lease or sale & leaseback deal will be more likely to be approved.
-
-
 
 ## **Considering equipment lease financing? Arbutus Capital's top five credit criteria:**
 
@@ -35,7 +33,7 @@ What assets are you willing to use as collateral? Collateral may be property, eq
 
 **4. Conditions.**
 
-Lenders will want to understand why you need the equipment. Is the equipment you want is revenue or non-revenue producing?  Will the equipment be a replacement to expand your business?  What economic conditions exist that may impact your industry or region.
+Lenders will want to understand why you need the equipment. Is the equipment you want revenue or non-revenue producing?  Will the equipment be a replacement to expand your business?  What economic conditions exist that may impact your industry or region.
 
 **5. Communication.**
 
@@ -45,16 +43,14 @@ Will you keep us apprised of challenges or opportunities that have impacts on y
 
 [Ready to apply?](https://arbutuscapital.com/contact-us)
 
-
-
 **Resources for small business owners:**
 
 British Columbia: <https://smallbusinessbc.ca/>
 
-Alberta:   <https://smallbusiness.alberta.ca/>
+Alberta: <https://smallbusiness.alberta.ca/>
 
-Saskatchewan <https://smallbusiness.alberta.ca/>
+Saskatchewan: <https://www.saskatchewan.ca/business/>
 
-Manitoba   <https://www.gov.mb.ca/business/startingsmart/index.html>
+[](https://smallbusiness.alberta.ca/)Manitoba: <https://www.gov.mb.ca/business/startingsmart/index.html>
 
 Canada: <https://www.canada.ca/en/services/business.html>
