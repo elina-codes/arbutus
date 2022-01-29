@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "Getting credit for your business: Five C’s that count"
+title: "Getting credit for your growing business: Five C’s that count"
 date: 2018-11-06T04:03:39.268Z
 featuredpost: true
 featuredimage: /images/uploads/man-sleeping-on-paperwork.jpeg
