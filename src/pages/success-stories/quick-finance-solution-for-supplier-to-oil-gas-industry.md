@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: Quick finance solution for supplier to oil & gas industry
+title: Creative financing results in quick solution
 location: Alberta, Canada
 tags: []
 date: 2018-06-20T05:08:17.550Z
