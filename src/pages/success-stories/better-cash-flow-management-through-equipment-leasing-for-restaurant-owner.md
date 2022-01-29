@@ -1,6 +1,6 @@
 ---
 templateKey: success-story
-title: Equipment leasing for better cash flow management
+title: Equipment leasing for cash flow management
 location: Victoria, BC
 date: 2018-06-14T05:13:51.617Z
 featuredpost: true
