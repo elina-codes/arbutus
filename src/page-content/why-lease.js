@@ -49,14 +49,14 @@ const pageSections = {
         svg: true,
         title: `Get your equipment fast`,
         text:
-          "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone else in the business. (else?)",
+          "Securing a contract often relies on securing certain equipment. We provide you with financing faster than anyone else in the business.",
       },
     ],
   },
   leasingFaq: {
     title: "Equipment leasing FAQ",
     subtitle:
-      "Lease financing shouldn’t be complicated.  Give us a call to learn more.",
+      "Lease financing shouldn't be complicated.  Give us a call to learn more.",
     button: (
       <Button color="primary" to={routes.faq.path}>
         Full FAQ page
@@ -73,7 +73,7 @@ const pageSections = {
       },
       {
         header: "Which is better, leasing or buying?",
-        content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
+        content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
       },
       {
         header: "What is an equipment lease agreement?",

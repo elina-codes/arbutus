@@ -24,7 +24,7 @@ const pageSections = {
   faq: {
     subtitle: "Frequently Asked Questions",
     description: `Questions about your equipment lease?
-    Chances are you’ll find answers here.`,
+    Chances are you'll find answers here.`,
     button: (
       <Button color="primary" to={routes.faq.path}>
         Read FAQ page

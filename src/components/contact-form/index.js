@@ -70,7 +70,7 @@ const ContactForm = ({
         <div className={classes.contactFormHeader}>
           <Text variant="h3">Start leasing equipment</Text>
           <Text variant="h4">
-            Tell us what you’re looking for and we will get back to you within 1
+            Tell us what you're looking for and we will get back to you within 1
             business day.
           </Text>
         </div>
@@ -142,7 +142,7 @@ const ContactForm = ({
           render={({ field }) => (
             <TextField
               required
-              label="Tell us what you’re looking for"
+              label="Tell us what you're looking for"
               placeholder="ie. What equipment do you need? How much money do you need?"
               fullWidth
               margin="dense"

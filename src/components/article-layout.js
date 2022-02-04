@@ -114,7 +114,7 @@ const ArticleLayout = ({
           <Section>
             {showShareButtons && (
               <div className={classes.shareButtons}>
-                <ShareButtons url="https://placeholder.com" title={title} />
+                <ShareButtons url={window.location.href} title={title} />
               </div>
             )}
             <div className={classes.articleContent}>{children}</div>

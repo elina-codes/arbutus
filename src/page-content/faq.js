@@ -5,14 +5,14 @@ const generalFAQ = [
   {
     header:
       "I am interested in a piece of used equipment; can you help me with that?",
-    content: `Yes! We provide fast, flexible equipment leasing on new or used equipment for any industry. Give us a call and we can get you started.`,
+    content: `Yes! We provide fast, flexible equipment leasing on new or used equipment for any industry. Give us a call and we can get you started.`,
   },
   {
     header: "How do I know I will qualify?",
-    content: `As an independent financing company, we are not bound by the same decision-making practices and regulations of banks. We own our lease portfolio, so credit decisions are made in house. Give us a call – we’re here to find ways to say “yes”.`,
+    content: `As an independent financing company, we are not bound by the same decision-making practices and regulations of banks. We own our lease portfolio, so credit decisions are made in house. Give us a call – we're here to find ways to say “yes.”`,
   },
   {
-    header: "How much do I have to pay upfront? ",
+    header: "How much do I have to pay upfront?",
     content: `We understand cash-flow and in many cases only need for the first rental payment in advance. This sets us apart from most lenders who require down payments.`,
   },
   {
@@ -25,11 +25,11 @@ const generalFAQ = [
   },
   {
     header: "My credit is not the best, can I still qualify for a lease?",
-    content: `Even with imperfect credit, we will work with you to find a solution. Unlike our competitors, we base our decisions on a multitude of parameters including relationship, business performance and potential. We look at the big picture and don’t get stuck on the usual business algorithms and metrics.`,
+    content: `Even with imperfect credit, we will work with you to find a solution. Unlike our competitors, we base our decisions on a multitude of parameters including relationship, business performance and potential. We look at the big picture and don't get stuck on the usual business algorithms and metrics.`,
   },
   {
     header: "How long will it take to approve my equipment lease application?",
-    content: `We aim to make the lease financing process as simple and efficient as possible, to get you your equipment fast. Expect to hear from us in 1 business day regarding your application.`,
+    content: `We aim to make the lease financing process as simple and efficient as possible, to get you your equipment fast. Expect to hear from us in one business day regarding your application.`,
   },
   {
     header:
@@ -49,7 +49,7 @@ const equipmentFaq = [
   },
   {
     header: "Which is better, leasing or buying?",
-    content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you, instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
+    content: `Leasing keeps your financials healthy and your business on track by allowing you to keep your cash in your business – working for you instead of tied up in a piece of equipment. Leasing also has potential tax advantages versus a lump sum purchase. `,
   },
   {
     header: "What is an equipment lease agreement?",
@@ -69,7 +69,7 @@ const capitalFaq = [
   {
     header:
       "What is the difference between a capital lease and a finance lease?",
-    content: `A capital lease refers to a lease for an asset which is financed for most of its useful life and is consequently reported as a liability on the lessee’s financial statements.  An operating lease, in contrast, refers to a lease for an asset which is financed for less than its useful life and can be either returned to the lessor or purchased outright at the end of the lease term.  An operating lease is consequently not capitalized on a lessee’s books, providing the opportunity for it to be an off-balance sheet financing alternative.`,
+    content: `A capital lease refers to a lease for an asset which is financed for most of its useful life and is consequently reported as a liability on the lessee's financial statements.  An operating lease, in contrast, refers to a lease for an asset which is financed for less than its useful life and can be either returned to the lessor or purchased outright at the end of the lease term.  An operating lease is consequently not capitalized on a lessee's books, providing the opportunity for it to be an off-balance sheet financing alternative.`,
   },
 ]
 
@@ -78,7 +78,7 @@ const pageSections = {
     {
       description: (
         <>
-          If you still can’t find an answer to your question, please give us a
+          If you still can't find an answer to your question, please give us a
           call at <PhoneLink /> or send us an email at{" "}
           <Link external href="mailto:lease@arbutuscapital.com">
             lease@arbutuscapital.com

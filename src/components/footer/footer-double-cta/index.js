@@ -7,7 +7,7 @@ import { routes } from "src/constants"
 const FooterDoubleCta = () => {
   const startLeasing = {
     subtitle: "Start leasing equipment",
-    description: `The first step takes less than a minute and we’ll get back to you within 1 business day..`,
+    description: `The first step takes less than a minute and we'll get back to you within one business day.`,
     button: <OpenContactModalButton>Get started</OpenContactModalButton>,
     inner: true,
     light: true,
@@ -15,7 +15,7 @@ const FooterDoubleCta = () => {
   }
   const areYouABroker = {
     subtitle: "Are you a broker?",
-    description: `We have great relationships with our brokers and offer quick approvals for capital leasing..`,
+    description: `We have great relationships with our brokers and offer quick approvals for capital leasing.`,
     button: (
       <Button to={routes.brokers.path} color="primary">
         Learn more

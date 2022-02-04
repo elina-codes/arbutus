@@ -17,7 +17,7 @@ const pageSections = {
     title: "Industries we serve",
     subtitle: `Here to serve you,
     whatever the industry.`,
-    description: `As one of Western Canada’s top equipment leasing companies, we serve most industries in British Columbia, Alberta, Saskatchewan, and Manitoba.`,
+    description: `As one of Western Canada's top equipment leasing companies, we serve most industries in British Columbia, Alberta, Saskatchewan, and Manitoba.`,
     button: (
       <Button color="primary" to={routes.industries.path}>
         View more industries
@@ -29,13 +29,13 @@ const pageSections = {
     subtitle: "40 years of heavy equipment leasing",
     content: `From construction equipment to used restaurant equipment, we customize equipment leases to fit your unique needs. We find the most competitive and flexible capital leasing solutions, and find them fast. 
 
-    Arbutus Capital is one of the top equipment leasing companies serving British Columbia, Alberta, Saskatchewan, and Manitoba. That’s because even if you find yourself with imperfect credit, we work with you to find the best solution. 
+    Arbutus Capital is one of the top equipment leasing companies serving British Columbia, Alberta, Saskatchewan, and Manitoba. That's because even if you find yourself with imperfect credit, we work with you to find the best solution. 
     
-    We’re here to find ways to say yes.`,
+    We're here to find ways to say yes.`,
     image: {
       src: images.about.family,
       position: "right",
-      alt: "Placeholder",
+      alt: "The Bendas family",
       direction: "Left",
       alignTop: true,
     },
@@ -47,7 +47,7 @@ const pageSections = {
   },
   benefits: {
     title: "Benefits of equipment leasing",
-    subtitle: `We’re here to help you succeed.`,
+    subtitle: `We're here to help you succeed.`,
     description: `Deciding between leasing versus buying equipment can be difficult, so here are some of the core benefits you can expect from leasing equipment with us.`,
     button: (
       <Button to={routes.whyLease.path} color="primary">
@@ -96,7 +96,7 @@ const pageSections = {
         icon: CheckIcon,
         title: "Fast and flexible",
         text:
-          "Everyone’s situation is unique. We will listen and find a way to offer easy equipment financing in as little as one business day.",
+          "Everyone's situation is unique. We will listen and find a way to offer easy equipment financing in as little as one business day.",
       },
       {
         icon: CheckIcon,
@@ -106,7 +106,7 @@ const pageSections = {
       },
       {
         icon: CheckIcon,
-        title: "We don’t say no to any industry",
+        title: "We don't say no to any industry",
         text:
           "Whatever your industry, if you need equipment lease financing, we will make it work.",
       },
@@ -115,7 +115,7 @@ const pageSections = {
   process: {
     title: "Our 5 step process",
     subtitle: `Getting equipment has never been easier.`,
-    description: `With 40 years of experience, we’ve streamlined our process and pride ourselves on financing equipment faster than anyone else in the business.`,
+    description: `With 40 years of experience, we've streamlined our process and pride ourselves on financing equipment faster than anyone else in the business.`,
     button: (
       <Button to={routes.howItWorks.path} color="primary">
         More details

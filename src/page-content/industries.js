@@ -115,7 +115,7 @@ const iwsContent = {
         "Cardio equipment",
         "Bikes",
         "Ellipticals",
-        "Barbells and dumbbells ",
+        "Barbells and dumbbells",
         "TVs",
         "Flooring",
         "Rubber floor mats",

@@ -20,7 +20,7 @@ const pageSections = {
       {
         icon: TwoIcon,
         text:
-          "Approvals are not bound by checking off criteria boxes. We are empathetic to your client’s situation, so each deal is evaluated on its own merit, and we find a way to help you and your clients succeed. We go the extra mile to keep your client in business during tough times.",
+          "Approvals are not bound by checking off criteria boxes. We are empathetic to your client's situation, so each deal is evaluated on its own merit, and we find a way to help you and your clients succeed. We go the extra mile to keep your client in business during tough times.",
       },
       {
         icon: ThreeIcon,
@@ -35,7 +35,7 @@ const pageSections = {
     
     Contact us, and Elizabeth, Mike, or Joey will speak with you directly. 
     
-    That’s our promise to you.`,
+    That's our promise to you.`,
     dark: true,
     inner: true,
     dense: true,
@@ -48,13 +48,13 @@ const pageSections = {
         icon: CheckIcon,
         title: "Fast and flexible",
         text:
-          "Everyone’s situation is unique. We will listen and find a way to offer easy equipment financing in as little as 1 business day.",
+          "Everyone's situation is unique. We will listen and find a way to offer easy equipment financing in as little as one business day.",
       },
       {
         icon: CheckIcon,
         title: "Adaptable lending criteria",
         text:
-          "We’re here to find ways to say yes. We will listen to and understand your client’s situation and find a way to make it work.",
+          "We're here to find ways to say yes. We will listen to and understand your client's situation and find a way to make it work.",
       },
       {
         icon: CheckIcon,
@@ -64,7 +64,7 @@ const pageSections = {
       },
       {
         icon: CheckIcon,
-        title: "We don’t say no to any industry",
+        title: "We don't say no to any industry",
         text:
           "Whatever your industry, if you need equipment lease financing, we will make it work.",
       },
@@ -76,9 +76,9 @@ const pageSections = {
       },
       {
         icon: CheckIcon,
-        title: "We won’t cancel",
+        title: "We won't cancel",
         text:
-          "When we say yes - we do it. We don’t reject a deal 3/4s of the way through, and we keep you in the loop at every step.",
+          "When we say yes - we do it. We don't reject a deal 3/4s of the way through, and we keep you in the loop at every step.",
       },
     ],
   },

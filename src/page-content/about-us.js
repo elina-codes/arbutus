@@ -9,7 +9,7 @@ const pageSections = {
     subtitle: `Service for you since 1976`,
     description: `Founded in 1976, our business quickly grew because we have always held a unique position in the industry - we own our lease portfolio so credit decisions are made in-house. This has enabled us to provide our clients with creative and flexible equipment leasing solutions and has turned us into one of the top equipment leasing companies in Western Canada.
     
-    Today, we are still a family-owned business and pride ourselves on the relationships we build with our clients and our brokers. Great customer service and empathy is of the utmost importance to us, and always will be. Our clients stick with us because it’s clear that we care and we listen when banks won’t.`,
+    Today, we are still a family-owned business and pride ourselves on the relationships we build with our clients and our brokers. Great customer service and empathy is of the utmost importance to us, and always will be. Our clients stick with us because it's clear that we care and we listen when banks won't.`,
     imageFirst: true,
     image: {
       src: images.about.family,
@@ -52,7 +52,7 @@ const pageSections = {
     {
       icon: PeopleIcon,
       title: "People",
-      text: `By adopting a people-first mindset, we encourage our team-members to grow personally and professionally, enabling each other to manage the customer’s experience better than anybody else in the leasing industry.`,
+      text: `By adopting a people-first mindset, we encourage our team-members to grow personally and professionally, enabling each other to manage the customer's experience better than anybody else in the leasing industry.`,
     },
     {
       icon: QualityIcon,

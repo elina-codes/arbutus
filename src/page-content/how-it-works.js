@@ -9,7 +9,7 @@ const pageSections = [
     },
     description: `Provide us with a background of your business and details on the equipment you want or need. 
     
-    To get started, contact us via our website and we’ll give you a call back within one business day. That’s our promise to you. `,
+    To get started, contact us via our website and we'll give you a call back within one business day. That's our promise to you. `,
   },
   {
     subtitle: "Apply",
@@ -27,7 +27,7 @@ const pageSections = [
       src: images.hiwSteps.step3,
       alt: "How It Works: Step 3, Review",
     },
-    description: `We’ll then review your application and business situation and chat with you over the phone to work out the best route to an approval.
+    description: `We'll then review your application and business situation and chat with you over the phone to work out the best route to an approval.
     
     If you have credit issues, we help you get there with alternate solutions.`,
   },
@@ -39,7 +39,7 @@ const pageSections = [
     },
     description: `You meet the credit conditions, and receive competitive rates and lease terms. If you have credit issues, we help you get there with alternate solutions. 
     
-    And if you are in a rush, we’ll put our foot on the gas too. `,
+    And if you are in a rush, we'll put our foot on the gas too. `,
   },
   {
     subtitle: "Acquire",
@@ -47,7 +47,7 @@ const pageSections = [
       src: images.hiwSteps.step5,
       alt: "How It Works: Step 5, Acquire",
     },
-    description: `Congratulations - you’re done! Time to get to work with your newly acquired equipment. 
+    description: `Congratulations - you're done! Time to get to work with your newly acquired equipment. 
 
     We look forward to a great partnership, and are rooting for you as you grow your business.`,
   },

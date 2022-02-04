@@ -34,9 +34,9 @@ const HowItWorksPage = () => {
       <Section
         title="5 simple steps for leasing equipment"
         subtitle="We make the lease financing process as simple and efficient as possible"
-        description={`Your situation and needs are unique, that’s why decisions are made on a case by case basis.
+        description={`Your situation and needs are unique, that's why decisions are made on a case by case basis.
         
-        Through these 5 easy steps, we’ll find a plan that works for you and your business.`}
+        Through these 5 easy steps, we'll find a plan that works for you and your business.`}
       />
       {pageSections.map((section, i) => {
         const { subtitle, description, image } = section

@@ -66,7 +66,7 @@ const ContactModal = () => {
           day.
         </Text>
         <Text variant="h4" strong>
-          That’s our promise to you.
+          That's our promise to you.
         </Text>
         <Button
           color="primary"

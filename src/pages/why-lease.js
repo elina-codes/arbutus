@@ -36,7 +36,7 @@ const WhyLeasePage = () => {
   const topBannerData = {
     title: "Why lease?",
     description:
-      "Explore the benefits of leasing vs. buying equipment to help choose what’s right for you.",
+      "Explore the benefits of leasing vs. buying equipment to help choose what's right for you.",
     cta: <OpenContactModalButton>Start your lease</OpenContactModalButton>,
     topImage: BgImage,
   }
@@ -81,7 +81,7 @@ const WhyLeasePage = () => {
       <Banner
         cta={<OpenContactModalButton>Get started</OpenContactModalButton>}
       >
-        Have questions about financing an equipment lease? We’re here to help.
+        Have questions about financing an equipment lease? We're here to help.
       </Banner>
       <Section {...leasingFaqSection}>
         <Accordion data={leasingFaqContent} />
