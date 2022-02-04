@@ -68,6 +68,8 @@ function ScrollTop({ children }) {
   )
 }
 
+const url = typeof window !== 'undefined' ? window.location.href : '';
+
 const ArticleLayout = ({
   bgImage,
   title,
@@ -114,7 +116,7 @@ const ArticleLayout = ({
           <Section>
             {showShareButtons && (
               <div className={classes.shareButtons}>
-                <ShareButtons url={window?.location?.href} title={title} />
+                <ShareButtons url={url} title={title} />
               </div>
             )}
             <div className={classes.articleContent}>{children}</div>
