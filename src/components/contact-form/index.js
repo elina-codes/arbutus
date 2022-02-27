@@ -70,7 +70,7 @@ const ContactForm = ({
         <div className={classes.contactFormHeader}>
           <Text variant="h3">Start leasing equipment</Text>
           <Text variant="h4">
-            Tell us what you're looking for and we will get back to you within 1
+            Tell us what you're looking for and we will get back to you within one
             business day.
           </Text>
         </div>
