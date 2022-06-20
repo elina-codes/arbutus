@@ -15,7 +15,7 @@ import * as Mui from "@material-ui/core"
 import pageSections from "src/page-content/home"
 
 const seo = {
-  title: "Equipment Leasing for Western Canada",
+  title: "Equipment leasing for small business owners",
 }
 
 const BgImage = () => (
