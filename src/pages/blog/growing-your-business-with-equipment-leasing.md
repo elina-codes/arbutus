@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Growing Your Business With Equipment Leasing
 date: 2023-01-25T22:51:36.228Z
 featuredpost: true
-featuredimage: /images/uploads/kitchen-appliances-in-professional-kitchen-in-a-re-2021-09-03-12-22-08-utc.jpg
+featuredimage: /images/uploads/arbutuscapital-hero-img.jpg
 ---
 If you’re looking to grow your business, you might be wondering if now is a good time to invest in new equipment. Well, wonder no more! Equipment leasing is a great way to get the equipment you need for your business without breaking the bank. 
 
