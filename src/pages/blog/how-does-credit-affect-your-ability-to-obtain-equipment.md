@@ -3,7 +3,7 @@ templateKey: blog-post
 title: How Credit Affects Your Ability To Obtain Business Supplies
 date: 2023-03-01T14:50:41.303Z
 featuredpost: true
-featuredimage: /images/uploads/paperwork.jpeg
+featuredimage: /images/uploads/cropped-view-of-man-holding-pen-near-paper-with-cr-2022-12-16-16-05-09-utc.jpg
 ---
 We’ve all been there — our credit score makes an impact on big purchases in our personal life as well as with purchases for our business. If you’re looking to lease equipment for your business, you may be wondering if your credit score will impact your ability to obtain the supplies you need. In this blog, we will explore how credit can affect your ability to secure the supplies and equipment necessary for your business to succeed. 
 
