@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How Does Credit Affect Your Ability to Obtain Equipment?
+title: How Credit Affects Your Ability To Obtain Business Supplies
 date: 2023-03-01T14:50:41.303Z
 featuredpost: true
 featuredimage: /images/uploads/paperwork.jpeg
