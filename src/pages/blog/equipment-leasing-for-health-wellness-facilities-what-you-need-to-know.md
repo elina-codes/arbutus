@@ -5,7 +5,7 @@ date: 2023-08-28T17:42:46.739Z
 featuredpost: true
 featuredimage: /images/uploads/arbutuscapital-blogpost-img.jpg
 ---
-Are you a health and wellness facility owner wondering if leasing equipment is the best option for your business? Having the right equipment in place to deliver the best quality care for your patients will go a long way helping your business stay competitive in the industry. Equipment leasing is a way that you can acquire essential equipment without the upfront costs; by providing financial security for your business and freeing up cash flow, you are better able to take advantage of opportunities as they arise. To help you determine whether or not equipment leasing could be a beneficial solution for your business over purchasing, here is what you need to know about equipment leasing for health & wellness facilities.
+Are you a health and wellness facility owner wondering if leasing equipment is the best option for your business? Having the right equipment in place to deliver the best quality care for your patients and clients will go a long way helping your business stay competitive in the industry. Equipment leasing is a way that you can acquire essential equipment without the upfront costs; by providing financial security for your business and freeing up cash flow, you are better able to take advantage of opportunities as they arise. To help you determine whether or not equipment leasing could be a beneficial solution for your business over purchasing, here is what you need to know about equipment leasing for health & wellness facilities. 
 
 ## What is equipment leasing?
 
