@@ -52,5 +52,30 @@ While having clear objectives is crucial, it is also important to maintain some 
 To conclude, the duration of equipment leasing emerges as a strategically pivotal aspect for businesses. Achieving the right balance between flexibility and stability is paramount, considering the distinctive requirements of the industry, the company's growth trajectory, and the current financial landscape. For comprehensive guidance in navigating this crucial decision, trust Arbutus Capital to provide expert assistance—from initial considerations to the implementation of a tailored leasing strategy. Contact our team today and embark on a leasing journey that aligns seamlessly with your business goals and financial objectives!
 
 ```
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arbutuscapital.com/blog/time-matters-navigating-the-depths-of-equipment-leasing-duration/"
+  },
+  "headline": "Time Matters: Navigating the Depths of Equipment Leasing Duration",
+  "description": "Discover the significance of time in equipment leasing durations. Gain insights on navigating the depths of this crucial aspect.",
+  "image": "https://arbutuscapital.com/static/7d978961bb0d550910c6014eb0516552/d0b9c/screen.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "Arbutus Capital"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": ""
+    }
+  },
+  "datePublished": "2024-03-18"
+}
+</script>
 ```
